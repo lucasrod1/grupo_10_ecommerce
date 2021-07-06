@@ -11,3 +11,12 @@ Julio Avila     juliojose20@gmail.com
 Alejandro Sanchez     alejandrojsanc@gmail.com
 Lucas Rodriguez      lucasfarina97@gmail.com
 Ariel Couso     ariel.couso@gmail.com
+
+
+Inspuracion en los referentes del mercado:
+
+1. Guido (https://zapateriaguido.com/) - La razon de seleccionar este referente pasa por los productos que comercializa (zapatos, accesorios de hombre) y por la estetica en general del sitio. En donde encontramos un diseno simple, minimalista y con buena estetica.
+
+2. Velez (https://www.velez.com.co/) - La razon de seleccionar este referente se basa en la amplia gama de productos, tanto para hombres como para mujeres, esta bien seccionado en cuanto. Diseno moderno, muy visual.
+
+3. 
