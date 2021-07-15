@@ -1,0 +1,10 @@
+Colores: 
+
+	C4C4C4 
+	000000
+	FFFFFF
+	B6AB9A
+
+Tipos de Letra
+	
+	Roboto Slab
