@@ -1,8 +1,8 @@
 {
-  "name": "grupo_10_oldMilano",
+  "name": "grupo_10_oldmilano",
   "version": "1.0.0",
   "description": "La empresa Old Milano ofrece productos de alta calidad confeccionados artesanalmente. En nuestra web se ofrece pocas unidades por tipo y modelo de estos productos para poder preservar la exclusividad en nuestros diseños comercializados. Forman parte de estos diseños:",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/lucasrod1/grupo_10_oldMilano.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
