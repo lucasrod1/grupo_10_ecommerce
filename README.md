@@ -24,3 +24,6 @@ Inspiración en los referentes del mercado:
 4. R.M. Williams (https://www.rmwilliams.com.au) La razon de seleccionar este referente se basa en los menus intuitivos que posee, asi como un sencillo y buen diseño del detalle de producto y del carrito de compras.
 
 5. Martinelli (https://www.martinelli.es/es-es/) La razon de seleccionar esta página como referente se basa en la buena categorización de productos que posee la marca, tanto para productos de hombre como de mujer.
+
+link de tablero de trabajo "TRELLO"
+https://trello.com/b/UMfiO7Y2/proyecto-integrador-digital-house
