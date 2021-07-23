@@ -1,0 +1,32 @@
+* {
+    font-family: 'Roboto Slab', serif;
+}
+
+
+/* ----------Estilos del Main---------- */
+
+/* -----Title Box----- */
+
+.titleBox {
+    border: 1px dotted blue;
+    width: 80%;
+    margin: auto;
+}
+
+.titleBox .title {
+    text-align: center;
+    font-size: 22px;
+}
+
+.titleBox div p {
+    border-top: 1px solid black;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+
+}
+
+/* Marco de items */
+/* .itemsFrame */

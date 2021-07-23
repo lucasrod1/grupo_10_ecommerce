@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/shopping_bag.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <title>oldMilano - Carrito de compras</title>
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <!-- Titulo y recordadorio de entre lineas de que tener en cuenta a la hora de la finalizar la compra -->
+        <div class="titleBox">
+            <H1 class="title">TU COMPRA</H1>
+            <div>
+                <p>Recorda validar el talle de tu producto, las devoluciones las recibimos atravez de nuestro servicio de entrega y devoluciones</p>
+            </div>
+        </div>
+
+        <!-- Titulos de los items relacionados con el producto -->
+        <div class="itemsFrame">
+            <div class="titleItems">
+                <h2>PRODUCTO</h2>
+                <h2>ENVIO</h2>
+                <h2>PRECIO</h2>
+                <h2>CANTIDAD</h2>
+                <h2>TOTAL</h2>
+            </div>
+
+        <!-- Items de los items relacionados con el producto -->
+            <div class="itemsDesc">
+                <img src="#" class="productImage">
+                <p class="productInfo">Descripcion del producto en este caso tenemos un cuadro de imagen unico, letra roboto slab color negro, transparencia 90%</p>
+                <p class="itemShipmentType">a calcular</p>
+                <p class="itemPrice">$30.000</p>
+                <input id="itemQuantity" class="quantity" min="0" value="0" type="number">
+                <p class="itemTotalPrice">$30.000</p>
+            </div>
+        </div>
+
+        <!-- Totales a pagar y descuentos -->
+        <div class="billSummary">
+            <div class="subtotal">
+                <p id="subtotal">Subtotal</p>
+                <p id="subtotalPrice">$30.000,00</p>
+            </div>
+            <div class="billDiscount">
+                <p id="discount">Descuentos</p>
+                <p id="discountPrice">$30.000,00</p>
+            </div>
+            <div class="billTotal">
+                <p id="total">TOTAL</p>
+                <p id="totalPrice">$30.000,00</p>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
