@@ -49,7 +49,7 @@ body{
     justify-content: center;
     flex-direction: column;
     color: white;
-    margin-left: 90px;
+    margin-left: 20px;
     margin-top: 25px;
     margin-bottom: 25px;
     
@@ -74,14 +74,15 @@ body{
 
 .mainBox{
     display: flex;
-    width: 900px;
-    height: 530px;
+    width: 80%;
+    height: auto;
     border: solid 2px black;
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin-left: 100px;
+    margin-left: 80px;
     margin-top: 25px;
+    margin-bottom: 25px;
     font-size: 50px;
 }
 
@@ -90,12 +91,14 @@ body{
 .container1 {
     display: flex;
     flex-direction: column;
+    margin-right: 20px;
+    margin-bottom: 25px;
 }
 
 /* detalles de producto */
 
 .detailProduct{
-    margin-left: 110px;
+    margin-left: 60px;
     margin-top: 20px;
     margin-bottom: 10px;
 }
@@ -105,6 +108,7 @@ body{
 .container2{
     display: flex;
     flex-direction: row;
+    margin-left: 60px;
 }
 
 /* cajas de colores para seleccion */
@@ -125,6 +129,7 @@ body{
 .container3{
     display: flex;
     flex-direction: row;
+    margin-left: 60px;
 }
 
 /* caja para las tallas */
@@ -150,7 +155,7 @@ body{
     align-items: center;
     text-align: center;
     justify-content: center;
-    margin-left: 110px;
+    margin-left: 60px;
     margin-top: 15px;
     font-size: 25px;
 }
@@ -165,7 +170,7 @@ body{
     align-items: center;
     text-align: center;
     justify-content: center;
-    margin-left: 110px;
+    margin-left: 60px;
     margin-top: 15px;
     margin-bottom: 5px;
     font-size: 15px;
