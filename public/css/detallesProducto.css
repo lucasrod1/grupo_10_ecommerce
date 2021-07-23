@@ -1,0 +1,202 @@
+/* Paleta de colores
+    #B6AB9A
+    #C4C4C4
+    Fuente: Roboto
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+/*---------------HEADER---------------*/
+
+header{
+    display: flex;
+    background-color: #C4C4C4;
+    color: black;
+    height: 160px;
+    text-align: center;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+/*---------------BODY---------------*/
+
+body{
+    font-family: 'Roboto';
+    background-color: #B6AB9A;
+}
+
+/* masterContainer contiene todas las cajas */
+
+.masterContainer{
+    width: 100%;
+    height: 100%;
+    border: black solid 2px;
+    display: flex;
+
+}
+
+/* container: es padre de box contiene vistas miniatura de galeria producto*/
+
+.container {
+    display: flex;
+    width: 120px;
+    height: auto;
+    border: solid 2px black;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    margin-left: 90px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    
+}
+
+/* box es para ubicar miniaturas de las imagenes producto */
+
+.box{
+    display: flex;
+    height: 45px;
+    width: 90px;
+    background-color: #C4C4C4;
+    color: black;
+    border: solid 1px black;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 15px; 
+}
+
+/* mainBox es para la foto mas grande del producto */
+
+.mainBox{
+    display: flex;
+    width: 900px;
+    height: 530px;
+    border: solid 2px black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 25px;
+    font-size: 50px;
+}
+
+/* container1: es padre de subBox */
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* detalles de producto */
+
+.detailProduct{
+    margin-left: 110px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* contendor para caja de colores */
+
+.container2{
+    display: flex;
+    flex-direction: row;
+}
+
+/* cajas de colores para seleccion */
+
+.box1{
+    display: flex;
+    width: 60px;
+    height: 30px;
+    border: solid black 1px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+/* contiene cajas de las tallas */
+
+.container3{
+    display: flex;
+    flex-direction: row;
+}
+
+/* caja para las tallas */
+
+.box2{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border: solid black 1px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 3px;
+}
+
+/* caja para detalles de producto */
+
+.subBox1 {
+    display: flex;
+    width: 450px;
+    height: 200px;
+    border: solid 2px black;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-left: 110px;
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+/* subBox2 N : son para caracteristicas tecnicas, envio y devoluciones y mas informacion */
+
+.subBox2 {
+    display: flex;
+    width: 450px;
+    height: 20px;
+    border: solid 2px black;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-left: 110px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+/*---------------FOOTER---------------*/
+
+footer{
+    display: flex;
+    height: 180px;
+    background-color: #C4C4C4; 
+}
+
+.footerContainer{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    border: black solid 2px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.boxFooter{
+    display: flex;
+    width: 25%;
+    height: 80%;
+    border: solid black 2px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+}
