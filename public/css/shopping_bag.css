@@ -8,7 +8,7 @@
 /* -----Title Box----- */
 
 .titleBox {
-    border: 1px dotted blue;
+    /* border: 1px dotted blue; */
     width: 80%;
     margin: auto;
 }
@@ -30,3 +30,144 @@
 
 /* Marco de items */
 /* .itemsFrame */
+
+.itemsFrame {
+    padding-top: 10px;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+
+
+/* -------------------Titulos ITEMS------------------- */
+.titleItems {
+    margin: 10px;
+    /* border: 1px solid gray; */
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.titleItems h2 {
+    font-size: 14px;
+    border: 1px  solid itemTotalPrice;
+}
+
+
+.titleItems #producto {
+    margin-left: 10px;
+    /* border: 1px solid gray; */
+    width: 25%;
+}
+
+.titleItems #envio {
+    /* border: 1px solid gray; */
+    width: 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.titleItems #precio {
+    text-align: center;
+    /* border: 1px solid gray; */
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.titleItems #cantidad {
+    text-align: center;
+    margin-left: 10px;
+    /* border: 1px solid red; */
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.titleItems #total {
+    text-align: center;
+    margin-left: 10px;
+    /* border: 1px solid gray; */
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+
+
+
+
+
+
+/* -------------------ITEMS------------------- */
+
+.itemsDesc {
+    margin: 10px;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: row;
+}
+
+.itemsDesc img {
+    margin: 10px;
+    border: 1px solid gray;
+    width: 15%;
+}
+
+.itemsDesc .productInfo {
+    margin-left: 10px;
+    /* border: 1px solid gray; */
+    width: 10%;
+    font-size: 12px;
+}
+
+.itemsDesc .itemShipmentType {
+    margin-left: 10px;
+    /* border: 1px solid gray; */
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    font-size: 14px;
+    text-align: center;
+}
+
+.itemsDesc .itemPrice {
+    margin-left: 10px;
+    /* border: 1px solid gray; */
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    font-size: 14px;
+    text-align: center;
+}
+
+.itemsDesc #itemQuantity {
+    margin-left: 10px;
+    /* border: 1px solid red; */
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    font-size: 14px;
+    text-align: center;
+}
+
+.itemsDesc .itemTotalPrice {
+    margin-left: 10px;
+    /* border: 1px solid gray; */
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    font-size: 14px;
+    text-align: center;
+}
