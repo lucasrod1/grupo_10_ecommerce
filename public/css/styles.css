@@ -1,0 +1,133 @@
+/* Paleta de colores
+    #B6AB9A
+    #C4C4C4
+    Fuente: Roboto
+*/
+
+/*---------------HEADER---------------*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+    background-color: #C4C4C4;
+}
+header{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#menuPequenio{
+    background-color: black;
+    width: 100%;
+    margin: 0;
+}
+#menuPequenio div{
+    width: calc(33% - 30px);
+    display: inline-block;
+    color: white;
+    margin: 0;
+    padding: 5px 15px;
+}
+#menuPequenio i{
+    margin-right: 5px;
+    font-size: 25px;
+}
+.textLeft{
+    text-align: left;
+}
+.TextRight{
+    text-align: right;
+}
+.TextCenter{
+    text-align: center;
+}
+
+.cajaLogo {
+    width:100%;
+    text-align: center;
+    position: relative;
+}
+.cajaLogo img{
+    margin: 0 auto;
+    width:200px ;
+    height: 155px;
+    margin-top: 20px;
+}
+.padreIcons{
+    position: absolute;
+    top: 100px;
+    right: 35px;
+}
+.padreIcons div{
+    display: inline-block;
+    font-size: 25px;
+    padding: 10px;
+}
+
+/* ---------------BODY------------------*/
+#menuGrande{
+    font-size: 18px;
+    padding: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+#menuGrande ul{
+    margin: 0 auto;
+}
+li{
+    padding: 12px 26px;
+    display: inline-block;
+     
+}
+a{
+    text-decoration: none;
+    color: black;   
+    font-weight: 650; 
+}
+
+.carrusel{
+    margin: 25px;
+    position: relative;
+    height: 600px;
+    background-color:white;
+    border-radius: 10px;
+    border: solid;
+    padding: 10px;
+    font-size: 35px;
+}
+.carrusel i{
+    position: absolute;
+    top: 50%;
+}
+.carrusel .Derecho{
+    right: 10px;;
+}
+
+.destacadoContenedor{
+    padding: 40px;
+    box-sizing: border-box;
+}
+.destacadoImagen{
+height: 600px;
+background-color: white;
+border: solid;
+margin-bottom: 10px;
+
+border-radius: 10px;
+}
+.destacado{
+    display: inline-block;
+    width: calc(32.5% - 160px);
+   margin: 80px;
+}
+.destacado p{
+    margin:15px ;
+    text-align: left;
+}
