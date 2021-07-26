@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Old Milano - Login</title>
+    <meta charset="UTF-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet" />
+    
+</head>
+<body>
+    <header></header>
+    <div class="login-page">MI CUENTA</div>
+    <div class="verticalLine"></div>
+    <main>
+        
+        <section id="logearse"> 
+            <h3>YA TENGO CUENTA</h3>
+            <div class="logIn">
+                <p class="infoLogIn">Si ya estas registrado en www.Old-Milano.com, solamente tienes que introducir tu e-mail y contraseña.</p><br>
+                <form action="/log-In" method="GET">
+                <input type="email" name="email" id="email" placeholder="*E-mail">
+                <p>
+                </p>
+                <input type="password" name="password" id="password" placeholder="*Contraseña">
+                <p></p>
+                <input type="checkbox" name="remember" id="remember"style="width: auto;">
+                <label for="remember" style="font-size: smaller;">Mantener sesion Iniciada</label>
+                <a id="password-reset" title="No recuerdo mi contraseña" href="#">No recuerdo mi contraseña</a>
+                <p></p>
+                <button type="submit">ENTRAR</button>
+                </form>
+            </div>           
+            
+        </div>
+        </section>
+        <section id="registrarse">
+            <h3>AUN NO TENGO CUENTA</h3>
+            <div class="signIn">
+                <p class="infoSignIn">Si todavia no tienes una cuenta de usuario en www.Old-Milano.com, utiliza esta opcion para acceder al formulario de registro.</p>
+                <p class="infoSignIn">Todos los campos del formulario son obligatorios.</p>
+                <form action="/sign-in" method="POST">
+                    <input type="text" name="name" id="name" placeholder="*Nombre">
+                    <p></p>
+                    <input type="text" name="surname" id="surname" placeholder="*Apellido">
+                    <p></p>
+                    <input type="tel" name="cell" id="cell" placeholder="*Telefono">
+                    <p></p>
+                    <input type="email" name="emailSign" id="emailSign" placeholder="*E-mail">
+                    <p></p>
+                    <input type="email" name="emailValid" id="emailValid" placeholder="*Confirmar E-mail">
+                    <p></p>
+                    <input type="password" name="passwordSign" id="passwordSign" placeholder="*Contrasena">
+                    <p></p>
+                    <input type="password" name="passwordSign" id="passwordSign" placeholder="*Confirmar Contrasena">
+                    <p></p>
+                    <input type="checkbox" name="newsletter" id="newsletter" style="width: auto;">
+                    <label for="newsletter" style="font-size: smaller;">Quiero suscribirme a la newsletter.</label>
+                    <p></p>
+                    <button type="submit">REGISTRARME</button>
+                    <div class="linksSignIn">
+                        <a href="#">Politica de Privacidad</a>
+                        <a href="#">Terminos y Condiciones</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>

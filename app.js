@@ -10,6 +10,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './view/home.html'));
 })
 
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'view/login-registro.html'));
+})
+
 app.listen(port, () => {
     console.log("OldMilano On-Line on http://127.0.0.1:" + port + " or http://localhost:"+port);
 })

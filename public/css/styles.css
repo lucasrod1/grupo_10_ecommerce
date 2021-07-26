@@ -1,0 +1,95 @@
+/*----------------------Login&Registro-INICIO----------------------*/
+
+body{
+    display: block;
+    font-family: 'Roboto Slab', serif;
+    background-color: #fff;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+}
+.login-page{
+    padding: 0 3%;
+    height: auto;
+    margin: 20px 0 10px;
+    top: initial;
+    display: block;
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgb(180, 180, 180);
+    font-weight: 500;
+    line-height: 1.2;
+    box-sizing: border-box;
+}
+.verticalLine{
+    border-left: thick solid rgb(180, 180, 180);
+}
+h3{
+    text-align: center;
+    font-size: 22px;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.infoLogIn{
+    font-size: 14px;
+    text-align: center;
+    width: auto;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.infoSignIn{
+    font-size: 14px;
+    text-align: center;
+    width: auto;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+#logearse{
+    width: 50%;
+    border-bottom: none;
+    border-right: 1px solid #000;
+    margin-bottom: 0;
+    height: 490px;
+}
+#password-reset{
+    font-size: 12px;
+    font-weight: 400;
+    box-sizing: border-box;
+    text-align: right;
+}
+#registrarse{
+    text-align: center;
+    width: 50%;
+}
+input{
+    width: 500px;
+}
+.logIn{
+    text-align: center;
+}
+.signIn{
+    text-align: center;
+}
+.linksSignIn{
+    font-size: 12px;
+    font-weight: 400;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/*----------------------Login&Registro-FIN----------------------*/
