@@ -2,9 +2,7 @@
     font-family: 'Roboto Slab', serif;
 }
 
-
 /* ----------Estilos del Main---------- */
-
 /* -----Title Box----- */
 
 .titleBox {
@@ -25,8 +23,8 @@
     font-size: 12px;
     padding-bottom: 5px;
     border-bottom: 1px solid black;
-
 }
+
 
 /* Marco de items */
 /* .itemsFrame */
@@ -44,10 +42,8 @@
 /* -------------------Titulos ITEMS------------------- */
 .titleItems {
     margin: 10px;
-    /* border: 1px solid gray; */
     display: flex;
     flex-direction: row;
-    
 }
 
 .titleItems h2 {
@@ -55,15 +51,12 @@
     border: 1px  solid itemTotalPrice;
 }
 
-
 .titleItems #producto {
     margin-left: 10px;
-    /* border: 1px solid gray; */
     width: 25%;
 }
 
 .titleItems #envio {
-    /* border: 1px solid gray; */
     width: 10%;
     text-align: center;
     display: flex;
@@ -73,7 +66,6 @@
 
 .titleItems #precio {
     text-align: center;
-    /* border: 1px solid gray; */
     width: 10%;
     display: flex;
     flex-direction: column;
@@ -83,7 +75,6 @@
 .titleItems #cantidad {
     text-align: center;
     margin-left: 10px;
-    /* border: 1px solid red; */
     width: 10%;
     display: flex;
     flex-direction: column;
@@ -93,7 +84,6 @@
 .titleItems #total {
     text-align: center;
     margin-left: 10px;
-    /* border: 1px solid gray; */
     width: 10%;
     display: flex;
     flex-direction: column;
@@ -101,13 +91,7 @@
 }
 
 
-
-
-
-
-
 /* -------------------ITEMS------------------- */
-
 .itemsDesc {
     margin: 10px;
     border: 1px solid gray;
@@ -123,14 +107,12 @@
 
 .itemsDesc .productInfo {
     margin-left: 10px;
-    /* border: 1px solid gray; */
     width: 10%;
     font-size: 12px;
 }
 
 .itemsDesc .itemShipmentType {
     margin-left: 10px;
-    /* border: 1px solid gray; */
     width: 10%;
     display: flex;
     flex-direction: column;
@@ -141,7 +123,6 @@
 
 .itemsDesc .itemPrice {
     margin-left: 10px;
-    /* border: 1px solid gray; */
     width: 10%;
     display: flex;
     flex-direction: column;
@@ -152,7 +133,6 @@
 
 .itemsDesc #itemQuantity {
     margin-left: 10px;
-    /* border: 1px solid red; */
     width: 10%;
     display: flex;
     flex-direction: column;
@@ -163,11 +143,88 @@
 
 .itemsDesc .itemTotalPrice {
     margin-left: 10px;
-    /* border: 1px solid gray; */
     width: 10%;
     display: flex;
     flex-direction: column;
     margin: auto;
     font-size: 14px;
     text-align: center;
+}
+
+.billSummary {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: flex-end;
+    margin: auto;
+}
+
+
+/* SUBTOTAL DESCUENTOS TOTA */
+.billSummary .subtotal {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    padding-right: 8%;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.billSummary .subtotal #subtotal{
+    width: 15%;
+    text-align: left;
+}
+
+.billSummary .subtotal #subtotalPrice{
+    text-align: center;
+    width: 30%;
+    text-align: right;
+}
+
+
+/* DISCOUNT */
+.billSummary .billDiscount {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    padding-right: 8%;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.billSummary .billDiscount #discount{
+    width: 15%;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+.billSummary .billDiscount #discountPrice{
+    text-align: center;
+    width: 30%;
+    text-align: right;
+    border-bottom: 1px solid black;
+}
+
+/* BILL TOTAL */
+.billSummary .billTotal {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    padding-right: 8%;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.billSummary .billTotal #total{
+    width: 15%;
+    text-align: left;
+}
+
+.billSummary .billTotal #totalPrice{
+    text-align: center;
+    width: 30%;
+    text-align: right;
 }
