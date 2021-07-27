@@ -26,9 +26,6 @@ body{
     line-height: 1.2;
     box-sizing: border-box;
 }
-.verticalLine{
-    border-left: thick solid rgb(180, 180, 180);
-}
 h3{
     text-align: center;
     font-size: 22px;
