@@ -72,7 +72,7 @@ header{
 
 /* ---------------BODY------------------*/
 #menuGrande{
-    font-size: 18px;
+    font-size: 22px;
     padding: 22px;
     margin-bottom: 20px;
     text-align: center;
@@ -107,27 +107,116 @@ a{
     top: 50%;
 }
 .carrusel .Derecho{
-    right: 10px;;
+    right: 10px;
 }
 
 .destacadoContenedor{
-    padding: 40px;
+    display: flex;
     box-sizing: border-box;
+    padding: 30px;
+    flex-wrap: wrap;
+
 }
 .destacadoImagen{
-height: 600px;
+height: 500px;
 background-color: white;
 border: solid;
 margin-bottom: 10px;
-
 border-radius: 10px;
 }
 .destacado{
-    display: inline-block;
-    width: calc(32.5% - 160px);
-   margin: 80px;
+    width: 33%;
+    padding: 60px;
+    box-sizing: border-box;
 }
 .destacado p{
     margin:15px ;
     text-align: left;
 }
+
+
+/*--------- FOOTER -------*/
+ footer{
+     width: 100%;
+     margin: 0;
+     padding: 0;
+ }
+#registro{
+    width: 100%;
+    background-color: rgb(189, 183, 183);
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+#registro i{
+    font-size: 55px;
+    align-content: center;
+    padding-bottom: 15px;
+}
+.TextoRegistro{
+    padding: 40px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 15px;
+
+}
+.Registrarme {
+        font-size:17px;     
+        color:white;
+        background:black;
+        text-align: center;
+        padding: 10px 60px;
+        border-radius: 5px;
+}
+
+.contenedorFooter{
+    display: flex;
+    box-sizing: border-box;
+    padding: 30px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.contenedorFooter li{
+    width: 20%;
+    box-sizing: border-box;
+
+
+}
+.contenedorFooter .bordeRedes{
+    border: none;
+}
+
+.contenedorFooter img{
+    width: 90%;
+}
+
+.contenedorFooter .info{
+    border-left: 1px black solid;
+    width: 100%;
+    height: calc(100% - 30px);
+}
+.contenedorFooter p{
+   padding-top: 25px;
+   text-align: left;
+   padding-left: 15px;
+   padding-right: 15px;
+   font-size: 15px;
+}
+.contenedorFooter .contenedorIcons a{
+    padding: 2px 5px;
+    font-size: 25px;
+    
+}
+.contenedorFooter .contenedorIcons{
+    text-align: center;
+    padding-top: 1px;
+}
+
+
+
+
+
+
+
+
