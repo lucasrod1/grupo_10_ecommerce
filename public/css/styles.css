@@ -10,7 +10,7 @@
     padding: 0;
 }
 
-html, body {
+html, body, footer {
     margin: 0;
     padding: 0;
     font-family: 'Roboto Slab', serif;
@@ -120,7 +120,7 @@ a{
 .destacadoImagen{
 height: 500px;
 background-color: white;
-border: 1px solid;
+border:1px solid;
 margin-bottom: 10px;
 border-radius: 10px;
 }
@@ -138,8 +138,8 @@ border-radius: 10px;
 /*--------- FOOTER -------*/
 /*------- PALETA DE COLORES ------*/
 /*
-rgba(196, 196, 196, 0.42) FONDO
-rgba(0, 0, 0, 0.47) BOTON
+rgba(196, 196, 196, 0.42)
+
 */
 
  footer{
@@ -167,57 +167,87 @@ rgba(0, 0, 0, 0.47) BOTON
 
 }
 .Registrarme {
-        font-size:17px;     
-        color:white;
-        background:black;
-        text-align: center;
-        padding: 10px 60px;
-        border-radius: 5px;
-}
+      font-size:17px;     
+      color:white;
+      background:black;
+      text-align: center;
+      padding: 10px 60px;
+      border-radius: 5px;
+      font-family:'Roboto Slab'
+}   
 
 .contenedorFooter{
-    display: flex;
-    box-sizing: border-box;
-    padding: 30px;
-    flex-wrap: wrap;
-    text-align: center;
+     display: flex;
+     box-sizing: border-box;
+     padding: 30px;
+     flex-wrap: wrap;
+     text-align: center;
 }
 
 .contenedorFooter li{
-    width: 20%;
-    box-sizing: border-box;
+     width: 20%;
+     box-sizing: border-box;
 
 
 }
 .contenedorFooter .bordeRedes{
-    border: none;
+     border: none;
 }
 
 .contenedorFooter img{
-    width: 90%;
+     width: 90%;
 }
 
 .contenedorFooter .info{
-    border-left: 1px rgba(0, 0, 0, 0.47);
-    width: 100%;
-    height: calc(100% - 30px);
+     border-left: 1px black solid;
+     width: 100%;
+     height: calc(100% - 30px);
 }
-.contenedorFooter p{
-   padding-top: 25px;
-   text-align: left;
-   padding-left: 15px;
-   padding-right: 15px;
-   font-size: 15px;
+.contenedorFooter p {
+     padding-top: 25px;
+     text-align: left;
+     padding-left: 15px;
+     padding-right: 15px;
+     font-size: 15px;
 }
 .contenedorFooter .contenedorIcons a{
-    padding: 2px 5px;
-    font-size: 25px;
-    
+     padding: 2px 5px;
+     font-size: 25px;
+     
 }
 .contenedorFooter .contenedorIcons{
-    text-align: center;
-    padding-top: 1px;
+     text-align: center;
+     padding-top: 1px;
 }
+
+.Logochico{
+    text-align: right;
+    background-color:rgba(150, 146, 146, 0.11); ;
+    width: 100%;
+}
+.Logochico img{
+    width: 85px;
+    text-align: left;
+    padding-right: 55px;
+}
+.Logochico .infoHecho{
+    text-align: right;
+    padding-right: 30px;
+    border-bottom: 1px rgba(0, 0, 0, 0.226) solid;
+    margin-bottom: 10px;
+}
+
+#infoFinal {
+    background-color: black;
+    width: 100%;
+    margin: 0;
+    color: white;
+    display: inline-flex;
+}
+
+
+
+
 
 
 
