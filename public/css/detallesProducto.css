@@ -10,15 +10,71 @@
 
 /*---------------HEADER---------------*/
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body, footer {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+    background-color: #F6F6F6
+}
 header{
-    display: flex;
-    background-color: #C4C4C4;
-    color: black;
-    height: 160px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#menuPequenio{
+    background-color: black;
+    width: 100%;
+    margin: 0;
+}
+#menuPequenio div{
+    width: calc(33% - 30px);
+    display: inline-block;
+    color: white;
+    margin: 0;
+    padding: 5px 15px;
+}
+#menuPequenio i{
+    margin-right: 5px;
+    font-size: 15px;
+}
+.textLeft{
+    text-align: left;
+}
+.TextRight{
+    text-align: right;
+}
+.TextCenter{
     text-align: center;
-    font-size: 50px;
-    justify-content: center;
-    align-items: center;
+}
+
+.cajaLogo {
+    width:100%;
+    text-align: center;
+    position: relative;
+}
+.cajaLogo img{
+    margin: 0 auto;
+    width:130px ;
+    height: 110px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    
+}
+.padreIcons{
+    position: absolute;
+    top: 20%;
+    right: 35px;
+}
+.padreIcons div{
+    display: inline-block;
+    font-size: 30px;
+    padding: 10px;
 }
 
 /*---------------BODY---------------*/
@@ -179,29 +235,128 @@ body{
 /*---------------FOOTER---------------*/
 
 footer{
-    display: flex;
-    height: 180px;
-    background-color: #C4C4C4; 
-}
-
-.footerContainer{
-    display: flex;
     width: 100%;
-    height: 100%;
-    flex-direction: row;
-    border: black solid 2px;
-    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+#registro{
+   width: 100%;
+   background-color: rgba(196, 196, 196, 0.42);
+   padding-top: 20px;
+   padding-bottom: 20px;
+   text-align: center;
+}
+#registro i{
+   font-size: 55px;
+   align-content: center;
+   padding-bottom: 15px;
+}
+.TextoRegistro{
+   padding: 40px;
+   text-align: center;
+   padding-top: 5px;
+   padding-bottom: 15px;
+
+}
+.Registrarme {
+     font-size:17px;     
+     color:white;
+     background:black;
+     text-align: center;
+     padding: 10px 60px;
+     border-radius: 5px;
+     font-family:'Roboto Slab'
+}   
+
+.contenedorFooter{
+    display: flex;
+    box-sizing: border-box;
+    padding: 15px;
+    flex-wrap: wrap;
     text-align: center;
-    justify-content: center;
+    flex-direction: row;
 }
 
-.boxFooter{
-    display: flex;
-    width: 25%;
-    height: 80%;
-    border: solid black 2px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin: 10px;
+.bordeLogo {
+   margin-top: 2%; 
+   width: 15%;   
+}
+
+.contenedorFooter li{
+    width: 20%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+
+
+.contenedorFooter .bordeRedes{
+    border: none;
+}
+
+.contenedorFooter img{
+    width: 70%;
+}
+
+.contenedorFooter .info{
+    border-left: 1px black solid;
+    width: 100%;
+    height: calc(100% - 30px);
+}
+.contenedorFooter p {
+    padding-top: 25px;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 15px;
+}
+.contenedorFooter .contenedorIcons a{
+    padding: 2px 5px;
+    font-size: 25px;
+    
+}
+.contenedorFooter .contenedorIcons{
+    text-align: left;
+    padding-top: 1px;
+}
+
+.Logochico{
+   text-align: right;
+   background-color:rgba(150, 146, 146, 0.11); ;
+   width: 100%;
+}
+.Logochico img{
+   width: 85px;
+   text-align: left;
+   padding-right: 55px;
+}
+.Logochico .infoHecho{
+   text-align: right;
+   font-weight: bold;
+   padding-right: 30px;
+   border-bottom: 1px rgba(0, 0, 0, 0.226) solid;
+   margin-bottom: 10px;
+}
+
+#infoFinal {
+   background-color: black;
+   width: 100%;
+   margin: 0;
+   color: white;
+   display: inline-flex;
+}
+#infoFinal li{
+   width: 33%; 
+   box-sizing: border-box;
+   text-align: center;   
+}
+#infoFinal ul{
+   width: 100%;
+}
+
+#infoFinal .infoPolitica{
+   text-align: right;
+}
+#infoFinal span{
+   padding: 5px;
 }
