@@ -232,6 +232,7 @@ rgba(196, 196, 196, 0.42)
 }
 .Logochico .infoHecho{
     text-align: right;
+    font-weight: bold;
     padding-right: 30px;
     border-bottom: 1px rgba(0, 0, 0, 0.226) solid;
     margin-bottom: 10px;
@@ -244,8 +245,21 @@ rgba(196, 196, 196, 0.42)
     color: white;
     display: inline-flex;
 }
+#infoFinal li{
+    width: 33%; 
+    box-sizing: border-box;
+    text-align: center;   
+}
+#infoFinal ul{
+    width: 100%;
+}
 
-
+#infoFinal .infoPolitica{
+    text-align: right;
+}
+#infoFinal span{
+    padding: 5px;
+}
 
 
 
