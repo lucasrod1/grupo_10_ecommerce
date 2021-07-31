@@ -22,6 +22,8 @@ header{
     padding: 0;
 }
 
+/* -----BODY----- */
+
 #menuPequenio{
     background-color: black;
     width: 100%;
@@ -36,7 +38,7 @@ header{
 }
 #menuPequenio i{
     margin-right: 5px;
-    font-size: 25px;
+    font-size: 15px;
 }
 .textLeft{
     text-align: left;
@@ -55,32 +57,47 @@ header{
 }
 .cajaLogo img{
     margin: 0 auto;
-    width:200px ;
-    height: 155px;
-    margin-top: 20px;
+    width:130px ;
+    height: 110px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    
 }
 .padreIcons{
     position: absolute;
-    top: 100px;
+    top: 20%;
     right: 35px;
 }
 .padreIcons div{
     display: inline-block;
-    font-size: 25px;
+    font-size: 30px;
     padding: 10px;
 }
 
 /* ---------------BODY------------------*/
 #menuGrande{
-    font-size: 22px;
-    padding: 22px;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    margin-bottom: 5px;
     text-align: center;
     box-sizing: border-box;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
 }
 #menuGrande ul{
+    display: flex;
     margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 55%;
+    text-align: center;
 }
+
+#menuGrande li{
+    margin: 0;
+    text-align: center;
+}
+
 li{
     padding: 12px 26px;
     display: inline-block;
@@ -151,7 +168,7 @@ rgba(196, 196, 196, 0.42)
     width: 100%;
     background-color: rgba(196, 196, 196, 0.42);
     padding-top: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     text-align: center;
 }
 #registro i{
@@ -179,23 +196,31 @@ rgba(196, 196, 196, 0.42)
 .contenedorFooter{
      display: flex;
      box-sizing: border-box;
-     padding: 30px;
+     padding: 15px;
      flex-wrap: wrap;
      text-align: center;
+     flex-direction: row;
+}
+
+.bordeLogo {
+    margin-top: 2%; 
+    width: 15%;   
 }
 
 .contenedorFooter li{
      width: 20%;
      box-sizing: border-box;
-
-
+     text-align: left;
 }
+
+
+
 .contenedorFooter .bordeRedes{
      border: none;
 }
 
 .contenedorFooter img{
-     width: 90%;
+     width: 70%;
 }
 
 .contenedorFooter .info{
@@ -216,7 +241,7 @@ rgba(196, 196, 196, 0.42)
      
 }
 .contenedorFooter .contenedorIcons{
-     text-align: center;
+     text-align: left;
      padding-top: 1px;
 }
 
