@@ -9,6 +9,7 @@
     /* border: 1px dotted blue; */
     width: 80%;
     margin: auto;
+    margin-bottom: 20px;
 }
 
 .titleBox .title {
@@ -158,6 +159,7 @@
     width: 80%;
     align-items: flex-end;
     margin: auto;
+    margin-top: 20px;
 }
 
 
