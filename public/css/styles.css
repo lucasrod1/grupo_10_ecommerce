@@ -68,7 +68,7 @@ header{
 }
 .padreIcons div{
     display: inline-block;
-    font-size: 30px;
+    font-size: 125%;
     padding: 10px;
 }
 
@@ -108,7 +108,7 @@ a{
 }
 
 .carrusel{
-    margin: 25px;
+    /* margin: 25px; */
     position: relative;
     height: 600px;
     background-color:white;
