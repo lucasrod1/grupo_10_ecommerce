@@ -6,7 +6,6 @@
 /* -----Title Box----- */
 
 .titleBox {
-    /* border: 1px dotted blue; */
     width: 80%;
     margin: auto;
     margin-bottom: 20px;
@@ -14,7 +13,7 @@
 
 .titleBox .title {
     text-align: center;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .titleBox div p {
@@ -24,6 +23,8 @@
     font-size: 12px;
     padding-bottom: 5px;
     border-bottom: 1px solid black;
+    width: 95%;
+    margin: auto;
 }
 
 
@@ -37,9 +38,8 @@
     flex-direction: column;
     width: 80%;
     margin: auto;
-    border-radius: 15px;
+    border-radius: 10px;
 }
-
 
 /* -------------------Titulos ITEMS------------------- */
 .titleItems {
@@ -99,17 +99,18 @@
     border: 1px solid gray;
     display: flex;
     flex-direction: row;
+    border-radius: 10px;
 }
 
 .itemsDesc img {
     margin: 10px;
     border: 1px solid gray;
-    width: 15%;
+    width: 10%;
 }
 
 .itemsDesc .productInfo {
-    margin-left: 10px;
-    width: 10%;
+    margin: 10px;
+    width: 13%;
     font-size: 12px;
 }
 
@@ -133,14 +134,19 @@
     text-align: center;
 }
 
+
+
 .itemsDesc #itemQuantity {
     margin-left: 10px;
     width: 10%;
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin-right: 7%;
     font-size: 14px;
-    text-align: center;
+    text-align: right;
+    border-width:0px;
+    border:none;
+    background-color: #F6F6F6
 }
 
 .itemsDesc .itemTotalPrice {

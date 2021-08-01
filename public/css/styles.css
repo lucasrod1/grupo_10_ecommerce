@@ -109,24 +109,6 @@ a{
     font-weight: 650; 
 }
 
-.carrusel{
-    margin: 25px;
-    position: relative;
-    height: 600px;
-    background-color:white;
-    border-radius: 10px;
-    border: 1px solid;
-    padding: 10px;
-    font-size: 35px;
-}
-.carrusel i{
-    position: absolute;
-    top: 50%;
-}
-.carrusel .Derecho{
-    right: 10px;
-}
-
 .destacadoContenedor{
     display: flex;
     box-sizing: border-box;
