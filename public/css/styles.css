@@ -71,6 +71,39 @@ header{
     font-size: 125%;
     padding: 10px;
 }
+#menuGrande{
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+}
+#menuGrande ul{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 55%;
+    text-align: center;
+    letter-spacing: 1.45PX;
+}
+
+#menuGrande li{
+    margin: 0;
+    text-align: center;
+}
+li{
+    padding: 12px 26px;
+    display: inline-block;
+     
+}
+a{
+    text-decoration: none;
+    color: black;   
+    font-weight: 650; 
+}
 
 /* ---------------BODY------------------*/
 #menuGrande{
@@ -183,13 +216,18 @@ rgba(196, 196, 196, 0.42)
 }
 .Registrarme {
       font-size:17px;     
-      color:white;
-      background:black;
       text-align: center;
       padding: 10px 60px;
       border-radius: 5px;
-      font-family:'Roboto Slab'
-}   
+      font-family:'Roboto Slab';
+      background-color: #d2c0b4;
+      color: #fff;
+      border: 1px solid #d2c0b4;
+      transition: all 0.2s ease;
+}
+.Registrarme:hover{
+    background-color: rgb(63, 35, 3);
+} 
 
 .contenedorFooter{
      display: flex;
@@ -283,13 +321,3 @@ rgba(196, 196, 196, 0.42)
 #infoFinal span{
     padding: 5px;
 }
-
-
-
-
-
-
-
-
-
-
