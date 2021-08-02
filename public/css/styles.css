@@ -1,4 +1,10 @@
-/*----------------------HEADER----------------------*/
+/* Paleta de colores
+    #B6AB9A
+    #C4C4C4
+    Fuente: Roboto
+*/
+
+/*---------------HEADER---------------*/
 *{
     margin: 0;
     padding: 0;
@@ -65,9 +71,40 @@ header{
     font-size: 125%;
     padding: 10px;
 }
+#menuGrande{
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+}
+#menuGrande ul{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 55%;
+    text-align: center;
+    letter-spacing: 1.45PX;
+}
 
+#menuGrande li{
+    margin: 0;
+    text-align: center;
+}
+li{
+    padding: 12px 26px;
+    display: inline-block;
+     
+}
+a{
+    text-decoration: none;
+    color: black;   
+    font-weight: 650; 
+}
 
-/*----------------------FIN DE HEADER----------------------*/
 /*----------------------Login&Registro-BODY----------------------*/
 
 main{
@@ -83,27 +120,37 @@ main{
 .login-page{
     padding: 0 3%;
     height: auto;
-    margin: 20px 0 10px;
+    margin: 30px 0 10px;
     top: initial;
     display: block;
     text-align: center;
-    font-size: 28px;
-    letter-spacing: 0.5px;
+    font-size: 25px;
+    letter-spacing: 1px;
     margin-bottom: 30px;
-    border-bottom: 1px solid rgb(180, 180, 180);
     font-weight: 500;
     line-height: 1.2;
     box-sizing: border-box;
+    font-weight: bold;
 }
 h3{
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
+    letter-spacing: 0.5px;
 }
 main{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+#logearse{
+    width: 50%;
+    border-bottom: none;
+    border-right: 1px solid #000;
+    margin-bottom: 0;
+    height: 575px;
 }
 .infoLogIn{
     font-size: 14px;
@@ -114,23 +161,18 @@ main{
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+    margin-left: 150px;
+    margin-right: 150px;
 }
-.infoSignIn{
-    font-size: 14px;
+.logIn{
     text-align: center;
-    width: auto;
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
 }
-#logearse{
-    width: 50%;
-    border-bottom: none;
-    border-right: 1px solid #000;
-    margin-bottom: 0;
-    height: 490px;
+.logIn input{
+    border-width: 0px;
+    border: none;
+    border-bottom: 1px solid #848281;
+    margin-bottom: 20px;
+    background-color: #F6F6F6
 }
 #password-reset{
     font-size: 12px;
@@ -143,19 +185,23 @@ main{
     text-align: center;
     width: 50%;
 }
+.infoSignIn{
+    font-size: 14px;
+    text-align: center;
+    width: auto;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
 input{
     width: 500px;
 }
-.logIn{
-    text-align: center;
-}
-.logIn input{
-    border-width: 0px;
-    border: none;
-    border-bottom: 1px solid #848281;
-    margin-bottom: 20px;
-    background-color: #F6F6F6
-}
+
 .signIn input{
         border-width: 0px;
         border: none;
@@ -186,130 +232,176 @@ main button:hover{
     box-sizing: border-box;
     text-align: center;
 }
+.benefits{
+    color: #333;
+    padding: 0 3%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+.benefits h3{
+    font-size: 16px;
+    margin: 0;
+    text-align: center;
+}
+.advantages{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 20px 0 80px;
+    padding: 10px 0;
+}
+.advantage{
+    width: 100%;
+    margin-bottom: 10px;
+    min-width: 266px;
+    max-width: 280px;
+    padding: 10px;
+}
+.advantage i{
+    margin-right: 5px;
+    width: 25px;
+    height: 25px; 
+}
 
 /*----------------------Login&Registro-BODY FIN----------------------*/
 
-/*----------------------FOOTER----------------------*/
-footer{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
+/*--------- FOOTER -------*/
+/*------- PALETA DE COLORES ------*/
+/*
+rgba(196, 196, 196, 0.42)
+
+*/
+
+ footer{
+     width: 100%;
+     margin: 0;
+     padding: 0;
+ }
 #registro{
-   width: 100%;
-   background-color: rgba(196, 196, 196, 0.42);
-   padding-top: 20px;
-   padding-bottom: 20px;
-   text-align: center;
+    width: 100%;
+    background-color: rgba(196, 196, 196, 0.42);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
 }
 #registro i{
-   font-size: 55px;
-   align-content: center;
-   padding-bottom: 15px;
+    font-size: 55px;
+    align-content: center;
+    padding-bottom: 15px;
 }
 .TextoRegistro{
-   padding: 40px;
-   text-align: center;
-   padding-top: 5px;
-   padding-bottom: 15px;
+    padding: 40px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 15px;
 
 }
 .Registrarme {
-     font-size:17px;     
-     color:white;
-     background:black;
-     text-align: center;
-     padding: 10px 60px;
-     border-radius: 5px;
-     font-family:'Roboto Slab'
-}   
+      font-size:17px;     
+      text-align: center;
+      padding: 10px 60px;
+      border-radius: 5px;
+      font-family:'Roboto Slab';
+      background-color: #d2c0b4;
+      color: #fff;
+      border: 1px solid #d2c0b4;
+      transition: all 0.2s ease;
+}
+.Registrarme:hover{
+    background-color: rgb(63, 35, 3);
+} 
 
 .contenedorFooter{
-    display: flex;
-    box-sizing: border-box;
-    padding: 15px;
-    flex-wrap: wrap;
-    text-align: center;
-    flex-direction: row;
+     display: flex;
+     box-sizing: border-box;
+     padding: 15px;
+     flex-wrap: wrap;
+     text-align: center;
+     flex-direction: row;
 }
 
 .bordeLogo {
-   margin-top: 2%; 
-   width: 15%;   
+    margin-top: 2%; 
+    width: 15%;   
 }
 
 .contenedorFooter li{
-    width: 20%;
-    box-sizing: border-box;
-    text-align: left;
+     width: 20%;
+     box-sizing: border-box;
+     text-align: left;
 }
+
+
+
 .contenedorFooter .bordeRedes{
-    border: none;
+     border: none;
 }
 
 .contenedorFooter img{
-    width: 70%;
+     width: 70%;
 }
 
 .contenedorFooter .info{
-    border-left: 1px black solid;
-    width: 100%;
-    height: calc(100% - 30px);
+     border-left: 1px black solid;
+     width: 100%;
+     height: calc(100% - 30px);
 }
 .contenedorFooter p {
-    padding-top: 25px;
-    text-align: left;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 15px;
+     padding-top: 25px;
+     text-align: left;
+     padding-left: 15px;
+     padding-right: 15px;
+     font-size: 15px;
 }
 .contenedorFooter .contenedorIcons a{
-    padding: 2px 5px;
-    font-size: 25px;
-    
+     padding: 2px 5px;
+     font-size: 25px;
+     
 }
 .contenedorFooter .contenedorIcons{
-    text-align: left;
-    padding-top: 1px;
+     text-align: left;
+     padding-top: 1px;
 }
 
 .Logochico{
-   text-align: right;
-   background-color:rgba(150, 146, 146, 0.11); ;
-   width: 100%;
+    text-align: right;
+    background-color:rgba(150, 146, 146, 0.11); ;
+    width: 100%;
 }
 .Logochico img{
-   width: 85px;
-   text-align: left;
-   padding-right: 55px;
+    width: 85px;
+    text-align: left;
+    padding-right: 55px;
 }
 .Logochico .infoHecho{
-   text-align: right;
-   font-weight: bold;
-   padding-right: 30px;
-   border-bottom: 1px rgba(0, 0, 0, 0.226) solid;
-   margin-bottom: 10px;
+    text-align: right;
+    font-weight: bold;
+    padding-right: 30px;
+    border-bottom: 1px rgba(0, 0, 0, 0.226) solid;
+    margin-bottom: 10px;
 }
 
 #infoFinal {
-   background-color: black;
-   width: 100%;
-   margin: 0;
-   color: white;
-   display: inline-flex;
+    background-color: black;
+    width: 100%;
+    margin: 0;
+    color: white;
+    display: inline-flex;
 }
 #infoFinal li{
-   width: 33%; 
-   box-sizing: border-box;
-   text-align: center;   
+    width: 33%; 
+    box-sizing: border-box;
+    text-align: center;   
 }
 #infoFinal ul{
-   width: 100%;
+    width: 100%;
 }
 
 #infoFinal .infoPolitica{
-   text-align: right;
+    text-align: right;
 }
 #infoFinal span{
-   padding: 5px;
+    padding: 5px;
 }
