@@ -79,6 +79,32 @@ input{
 .logIn{
     text-align: center;
 }
+.logIn input{
+    border-width: 0px;
+    border: none;
+    border-bottom: 1px solid #848281;
+    margin-bottom: 5px;
+}
+.signIn input{
+        border-width: 0px;
+        border: none;
+        border-bottom: 1px solid #848281;
+        margin-bottom: 5px;
+}
+main button{
+    height: 35px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 25%;
+    text-align: center;
+    background-color: #d2c0b4;
+    color: #fff;
+    border: 1px solid #d2c0b4;
+    transition: all 0.2s ease;
+}
+main button:hover{
+    background-color: rgb(63, 35, 3);
+}
 .signIn{
     text-align: center;
 }

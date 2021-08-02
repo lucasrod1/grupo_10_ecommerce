@@ -24,10 +24,10 @@
             <div class="logIn">
                 <p class="infoLogIn">Si ya estas registrado en www.Old-Milano.com, solamente tienes que introducir tu e-mail y contraseña.</p><br>
                 <form action="/log-In" method="GET">
-                <input type="email" name="email" id="email" placeholder="*E-mail">
+                <input type="email" name="email" id="email" placeholder="*E-mail" required>
                 <p>
                 </p>
-                <input type="password" name="password" id="password" placeholder="*Contraseña">
+                <input type="password" name="password" id="password" placeholder="*Contraseña"required>
                 <p></p>
                 <input type="checkbox" name="remember" id="remember"style="width: auto;">
                 <label for="remember" style="font-size: smaller;">Mantener sesion Iniciada</label>
@@ -45,19 +45,19 @@
                 <p class="infoSignIn">Si todavia no tienes una cuenta de usuario en www.Old-Milano.com, utiliza esta opcion para acceder al formulario de registro.</p>
                 <p class="infoSignIn">Todos los campos del formulario son obligatorios.</p>
                 <form action="/sign-in" method="POST">
-                    <input type="text" name="name" id="name" placeholder="*Nombre">
+                    <input type="text" name="name" id="name" placeholder="*Nombre"required>
                     <p></p>
-                    <input type="text" name="surname" id="surname" placeholder="*Apellido">
+                    <input type="text" name="surname" id="surname" placeholder="*Apellido"required>
                     <p></p>
-                    <input type="tel" name="cell" id="cell" placeholder="*Telefono">
+                    <input type="tel" name="cell" id="cell" placeholder="*Telefono"required>
                     <p></p>
-                    <input type="email" name="emailSign" id="emailSign" placeholder="*E-mail">
+                    <input type="email" name="emailSign" id="emailSign" placeholder="*E-mail"required>
                     <p></p>
-                    <input type="email" name="emailValid" id="emailValid" placeholder="*Confirmar E-mail">
+                    <input type="email" name="emailValid" id="emailValid" placeholder="*Confirmar E-mail"required>
                     <p></p>
-                    <input type="password" name="passwordSign" id="passwordSign" placeholder="*Contrasena">
+                    <input type="password" name="passwordSign" id="passwordSign" placeholder="*Contrasena"required>
                     <p></p>
-                    <input type="password" name="passwordSign" id="passwordSign" placeholder="*Confirmar Contrasena">
+                    <input type="password" name="passwordSign" id="passwordSign" placeholder="*Confirmar Contrasena"required>
                     <p></p>
                     <input type="checkbox" name="newsletter" id="newsletter" style="width: auto;">
                     <label for="newsletter" style="font-size: smaller;">Quiero suscribirme a la newsletter.</label>
