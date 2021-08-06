@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/shopping_bag', (req, res) => {
-    res.sendFile(path.join(__dirname, './view/productCart.html.html'));
+    res.sendFile(path.join(__dirname, './view/productCart.html'));
 })
 
 app.listen(port, () => {

@@ -14,7 +14,7 @@
 </head>
 <body>
     <!-- Aca empieza el header -->
-    <header>
+    <!-- <header>
         <div id="menuPequenio">
             <div class="TextLeft"><i class="fab fa-whatsapp"></i>Telefono</div>
             <div class="TextCenter">10% descuento en Productos seleccionados</div>
@@ -41,7 +41,7 @@
             </ul>
         </nav>
     
-    </header>
+    </header> -->
 
     <!-- Aca empieza el main -->
     <main>
@@ -58,7 +58,6 @@
         <div class="itemsFrame">
             <div class="titleItems">
                 <h2 id="producto">PRODUCTO</h2>
-                <h2 id="envio">ENVIO</h2>
                 <h2 id="precio">PRECIO</h2>
                 <h2 id="cantidad">CANTIDAD</h2>
                 <h2 id="total">TOTAL</h2>
@@ -69,11 +68,21 @@
                 <img src="#" class="productImage">
                 <p class="productInfo">Descripcion del producto en este caso tenemos un cuadro de imagen unico, letra roboto slab color negro, transparencia 90%</p>
                 <p class="itemShipmentType">a calcular</p>
-                <p class="itemPrice">$30.000</p>
-                <input id="itemQuantity" class="quantity" min="0" value="0" type="number">
-                <p class="itemTotalPrice">$30.000</p>
+                <div class="itemPriceFlex">
+                        <p class="precio">Precio</p>
+                        <p class="itemPrice">$30.000</p>    
+                </div>
+                <div class="cantidadFlex">
+                    <p class="cantidad">Cantidad</p>
+                    <input class="itemQuantity" class="quantity" min="0" value="0" type="number">
+                </div>
+                <div class="precioFlex">
+                    <label class="costo">Costo</label>
+                    <input class="itemTotalPrice" class="Costo" min="0" value="$30.000" type="text">
+                </div>
             </div>
         </div>
+        
 
         <!-- Totales a pagar y descuentos -->
         <div class="billSummary">
@@ -83,18 +92,18 @@
             </div>
             <div class="billDiscount">
                 <p id="discount">Descuentos</p>
-                <p id="discountPrice">$30.000,00</p>
+                <p id="discountPrice">$1.000,00</p>
             </div>
             <div class="billTotal">
                 <p id="total">TOTAL</p>
-                <p id="totalPrice">$30.000,00</p>
+                <p id="totalPrice">$29.000,00</p>
             </div>
         </div>
 
     </main><br><br>
 
     <!-- Aca empieza el footer -->
-    <footer>
+    <!-- <footer>
     
         <div class="cajaPadreRegistro">
     
@@ -187,7 +196,7 @@
             </ul>
         </div>
     
-    </footer>
+    </footer> -->
     
 </body>
 </html>
