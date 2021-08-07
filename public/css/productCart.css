@@ -2,7 +2,7 @@
     font-family: 'Roboto Slab', serif;
 }
 
-/* Aca empieza el main */
+/* Aca empieza el main
 
 
 /* Titulo y recordadorio de entre lineas de que tener en cuenta a la hora de la finalizar la compra */
@@ -100,8 +100,6 @@
 /* Totales a pagar y descuentos */
 
 .resumenCuenta{
-    display: flex;
-    flex-direction: column;
     width: 90%;
     margin: 10px auto 20px auto;
     border: 1px solid black;
@@ -117,7 +115,7 @@
 }
 .subtotalTitulo, .precioSubtotal{
     width: 50%;
-    text-align: right;
+    text-align: left;
 }
 
 /* ------------------------------------------------------------------ */
@@ -152,4 +150,163 @@
         width: 60%;
         text-align: justify;
     }
+}
+
+@media (min-width: 1280px) {
+/* Aca empieza el main */
+/* Titulo y recordadorio de entre lineas de que tener en cuenta a la hora de la finalizar la compra */
+/* ------------------------------------------------------------------ */
+    .cajaTitulo .titulo1{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 10px;
+}
+
+    .cajaTitulo .recorda1{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        font-size: 12px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+}
+
+/* Items de los items relacionados con el producto */
+/* ------------------------------------------------------------------ */
+.tituloProducto{
+    display: none;
+    font-size: 16px;
+    margin: 5px 0px 5px 5px;
+}
+.atributosProducto{
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    width: 80%;
+    margin: 10px auto auto auto;
+    border-radius: 5px;
+}
+.atributosProducto .cajaImagenDescripcion{
+    display: flex;
+    flex-direction: row;
+}
+.cajaImagenDescripcion{
+    display: flex;
+    margin-left: 5px;
+}
+.imagenProducto{
+    width: 30%;
+}
+.infoProducto{
+    font-size: 12px;
+    margin-left: 5px;
+    width: 60%;
+    text-align: justify;
+}
+
+/* ------------------------------------------------------------------ */
+.atributosProducto .precioProducto{
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    align-items: center;
+    width: 30%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.atributosProducto .precioProducto .tituloPrecio{
+    text-align: center;
+    width: 50%;
+}
+.atributosProducto .precioProducto .precio{
+    text-align: center;
+}
+.tituloPrecio, .precio{
+    font-size: 16px;
+    margin: 10px 0px 5px 5px;
+    width: 50%;
+}
+
+/* ------------------------------------------------------------------ */
+.atributosProducto .cantidadProducto{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    justify-content:start;
+}
+.atributosProducto .cantidadProducto .tituloCantidad{
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 0px 5px 5px;
+    width: 50%;
+}
+.atributosProducto .cantidadProducto .contador{
+    text-align: center;
+    height: 20px;
+    font-size: 16px;
+    margin: 10px auto 5px auto;
+    width: 12.5%;
+    border: none;
+    background-color: transparent;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+/* Totales a pagar y descuentos */
+
+.resumenCuenta{
+    margin: 10px 10% 20px auto;
+    width: 25%;
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+
+/* ------------------------------------------------------------------ */
+
+.subtotal{
+    display: flex;
+}
+.subtotalTitulo, .precioSubtotal{
+    width: 50%;
+    text-align: left;
+}
+
+/* ------------------------------------------------------------------ */
+.descuentoCuenta{
+    display: flex;
+    border-bottom: 1px solid black;
+}
+.descuento, .precioDescuento{
+    width: 50%;
+    margin: 0px 0px 0px 0px;
+    text-align: left;
+}
+
+/* ------------------------------------------------------------------ */
+.totalCuenta{
+    display: flex;
+}
+.total, .precioTotal{
+    width: 50%;
+    margin: 5px 0px 10px 0px;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+
 }
