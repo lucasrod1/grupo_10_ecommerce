@@ -20,13 +20,24 @@
             <div class="TextCenter">10% descuento en Productos seleccionados</div>
             <div class="TextRight">LOCALIZA TU TIENDA </div>
         </div>
-        <div class="cajaLogo"><a href="/"><img src="img/LOGO.png" alt="LOGO"></a>
-            <div class="padreIcons">
+        <div class="cajaLogo">
+            <div class="padreIcons1">
+                <div><a href="#" onclick=" document.getElementById('menuGrande').classList.toggle('active');"><i
+                            class="fas fa-bars"></i></a></div>
                 <div><a href="#"><i class="fas fa-search"></i></a></div>
+            </div>
+
+            <img src="img/LOGO.png" alt="LOGO">
+            <div class="padreIcons">
+                <div><a href="#"><i class="soloEscritorio fas fa-search"></i></a></div>
                 <div><a href="login"><i class="far fa-user"></i> </a></div>
                 <div><a href="shopping_bag"><i class="fas fa-shopping-cart"></i></a></div>
             </div>
         </div>
+    </header>
+
+    <!-- Aca empieza el main -->
+    <main>
         <nav id="menuGrande">
             <ul>
                 <li><a href="#">HOMBRE</a></li>
@@ -37,10 +48,7 @@
                 <li><a href="#">CONTÁCTANOS</a></li>
             </ul>
         </nav>
-    </header>
 
-    <!-- Aca empieza el main -->
-    <main>
         <br>
         <!-- Titulo y recordadorio de entre lineas de que tener en cuenta a la hora de la finalizar la compra -->
         <div class="cajaTitulo">
@@ -100,14 +108,17 @@
             <div class="bordeLogo">
                 <img src="img/LOGO.png" alt="LOGO">
             </div>
-            <li><a href="#">GUIA DE COMPRA</a>
+    
+            <li><a onclick="this.parentElement.classList.toggle('active');">GUIA DE COMPRA <i
+                        class="flechita fas fa-chevron-down"></i></a>
                 <div class="info">
                     <p>FAQ'S</p>
                     <p>CAMBIO Y DEVOLUCIONES</p>
                     <p>GUIA DE TALLES</p>
                 </div>
             </li>
-            <li><a href="#">AYUDA</a>
+            <li><a onclick="this.parentElement.classList.toggle('active');">AYUDA <i
+                        class="flechita fas fa-chevron-down"></i></a>
                 <div class="info">
                     <p>+54 000 000 00</p>
                     <p>INFO@OLDMILANO.COM.AR</p>
@@ -116,7 +127,8 @@
                     <p>CONDICIONES GENERALES DE COMPRA</p>
                 </div>
             </li>
-            <li><a href="#">CONTACTANOS</a>
+            <li><a onclick="this.parentElement.classList.toggle('active');">CONTACTANOS <i
+                        class="flechita fas fa-chevron-down"></i></a>
                 <div class="info">
                     <p>ATENCION AL CLIENTE</p>
                     <p>CONTACTO</p>
@@ -131,16 +143,17 @@
                         <a href="#"><i class="fab fa-twitter-square"></i></a>
                         <a href="#"><i class="fab fa-pinterest"></i></a>
                     </p>
-                    <p> <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
+                    <p> <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     </p>
                     <p> Valoracion de clientes 4.5/5</p>
                     <p> 379 Opiniones</p>
                 </div>
             </li>
+    
         </div>
         <div class="Logochico"><img src="img/LOGO.png" alt="LOGO">
             <p class="infoHecho">HECHO A MANO</p>
@@ -160,6 +173,5 @@
             </ul>
         </div>
     </footer>
-    
 </body>
 </html>
