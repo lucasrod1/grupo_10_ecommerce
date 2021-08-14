@@ -2,13 +2,13 @@ const express = require('express');
 const routesCarrito = require('./routes/routesCarrito')
 const path = require('path');
 const app = express();
-const publicPath = path.join(__dirname, './public');
+const publicPath = path.join(__dirname, '../public');
 const port = 3000;
 
 app.use(express.static(publicPath));
 
 // Configuracion EJS
-app.set('views', './view');
+app.set('views', './src/views');
 app.set('views engine', 'ejs');
 
 // Configuracion de rutas a sitio
