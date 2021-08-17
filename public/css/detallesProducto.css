@@ -1,55 +1,15 @@
-<<<<<<< HEAD
-/* Paleta de colores
-    #B6AB9A
-    #C4C4C4
-    Fuente: Roboto
-
-/* masterContainer contiene todas las cajas */
-
-.masterContainer{
-=======
 .img{
     width: 100%;
     height: 100%;
 }
 
 .masterContainer{ /* masterContainer contiene todas las cajas */
->>>>>>> desarrollo
     box-sizing: border-box;
     width: 100%;
     height: 100%;
     border: black solid 1px;
     display: flex;
     border-radius: 10px;
-<<<<<<< HEAD
-    /* margin-top: 1%; */
-}
-
-/* container: es padre de box contiene vistas miniatura de galeria producto*/
-
-.container {
-    display: flex;
-    width: 120px;
-    height: auto;
-    /* border: solid 2px black; */
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    color: white;
-    margin-left: 2%;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    
-}
-
-/* box es para ubicar miniaturas de las imagenes producto */
-
-.box{
-    display: flex;
-    height: 45px;
-    width: 90px;
-    background-color: #C4C4C4;
-=======
 }
 
 .container { /* container: es padre de box contiene vistas miniatura de galeria producto*/
@@ -67,111 +27,24 @@
     display: flex;
     height: 90%;
     width: 90%;
->>>>>>> desarrollo
     color: black;
     border: solid 1px black;
     border-radius: 5px;
     align-items: center;
     text-align: center;
     justify-content: center;
-<<<<<<< HEAD
-    margin: 15px; 
-}
-
-/* mainBox es para la foto mas grande del producto */
-
-.mainBox{
-    display: flex;
-    width: 80%;
-=======
     margin: 1%; 
 }
 
 .mainBox{ /* mainBox es para la foto mas grande del producto */
     display: flex;
     width: 90%;
->>>>>>> desarrollo
     height: auto;
     border: solid 1px black;
     border-radius: 5px;
     text-align: center;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD
-    margin-left: 80px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    font-size: 50px;
-}
-
-/* container1: es padre de subBox */
-
-.container1 {
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
-    margin-bottom: 25px;
-}
-
-/* detalles de producto */
-
-.detailProduct{
-    margin-left: 60px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-/* contendor para caja de colores */
-
-.container2{
-    display: flex;
-    flex-direction: row;
-    margin-left: 60px;
-}
-
-/* cajas de colores para seleccion */
-
-.box1{
-    display: flex;
-    width: 60px;
-    height: 30px;
-    border: solid black 1px;
-    border-radius: 3px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin: 5px;
-}
-
-/* contiene cajas de las tallas */
-
-.container3{
-    display: flex;
-    flex-direction: row;
-    margin-left: 60px;
-}
-
-/* caja para las tallas */
-
-.box2{
-    display: flex;
-    width: 30px;
-    height: 30px;
-    border: solid black 1px;
-    border-radius: 5px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin: 3px;
-}
-
-/* caja para detalles de producto */
-
-.subBox1 {
-    display: flex;
-    width: 450px;
-    height: 200px;
-=======
     /* margin: 1%; */
     font-size: 50px;
 }
@@ -226,37 +99,11 @@
     
     width: 100%;
     height: 10%;
->>>>>>> desarrollo
     border: solid 1px black;
     border-radius: 5px;
     align-items: center;
     text-align: center;
     justify-content: center;
-<<<<<<< HEAD
-    margin-left: 60px;
-    margin-top: 15px;
-    font-size: 25px;
-}
-
-/* subBox2 N : son para caracteristicas tecnicas, envio y devoluciones y mas informacion */
-
-.subBox2 {
-    display: flex;
-    width: 450px;
-    height: 20px;
-    border: solid 1px black;
-    border-radius: 5px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin-left: 60px;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-size: 15px;
-}
-
-/*---------------FOOTER---------------*/
-=======
     margin-top: 1.2%;
     font-size: 15px;
     box-sizing: border-box;
@@ -385,4 +232,3 @@
     }
 
 }
->>>>>>> desarrollo
