@@ -1,7 +1,7 @@
-const controllerOldMilano = require('../controllers/controllerOldMilano');
+const controllerCarrito = require('../controllers/controllerCarrito');
 const express = require('express');
 const router = express.Router();
 
-router.get('/', controllerOldMilano.carrito);
+router.get('/', controllerCarrito.carrito);
 
 module.exports = router;
