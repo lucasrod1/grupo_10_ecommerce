@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/productCart.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <title>oldMilano - Carrito de compras</title>
+</head>
+<body>
+    <!-- Aca empieza el header -->
+    <%- include('./partials/header.ejs') %>
+
+    <!-- Aca empieza el main -->
+    <main>
+        <nav id="menuGrande">
+            <ul>
+                <li><a href="#">HOMBRE</a></li>
+                <li><a href="#">MUJER</a> </li>
+                <li><a href="#">OFERTAS</a></li>
+                <li><a href="#">ACCESORIOS</a></li>
+                <li><a href="#">SOBRE NOSOTROS</a></li>
+                <li><a href="#">CONTÁCTANOS</a></li>
+            </ul>
+        </nav>
+
+        <br>
+        <!-- Titulo y recordadorio de entre lineas de que tener en cuenta a la hora de la finalizar la compra -->
+        <div class="cajaTitulo">
+            <h2 class="titulo1">TU COMPRA</h2>
+            <div>
+                <p class="recorda1">Recorda validar el talle de tu producto, las devoluciones las recibimos atravez de nuestro servicio de entrega y devoluciones</p>
+            </div>
+        </div>
+
+        <!-- Items de los items relacionados con el producto -->
+            <div class="atributosProducto">
+                <div class="descripcionProducto">
+                    <p class="tituloProducto">PRODUCTO</p>
+                    <div class="cajaImagenDescripcion">
+                        <img src="#" class="imagenProducto">
+                        <p class="infoProducto">Descripcion del producto en este caso tenemos un cuadro de imagen unico, letra roboto slab color negro, transparencia 90%</p>
+                    </div>
+                </div>
+                <div class=precioProducto>
+                    <p class="tituloPrecio">PRECIO</p>
+                    <p class="precio">$30.000</p>
+                </div>
+                <div class="cantidadProducto">
+                    <p class="tituloCantidad">CANTIDAD</p>
+                    <input class="contador" class="cantidad" min="0" value="0" type="number">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Totales a pagar y descuentos -->
+        <div class="resumenCuenta">
+            <div class="subtotal">
+                <p class="subtotalTitulo">Subtotal</p>
+                <p class="precioSubtotal">$30.000,00</p>
+            </div>
+            <div class="descuentoCuenta">
+                <p class="descuento">Descuentos</p>
+                <p class="precioDescuento">$1.000,00</p>
+            </div>
+            <div class="totalCuenta">
+                <p class="total">TOTAL</p>
+                <p class="precioTotal">$29.000,00</p>
+            </div>
+        </div>
+
+    </main><br><br>
+
+    <!-- Aca empieza el footer -->
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

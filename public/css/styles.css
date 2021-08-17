@@ -9,7 +9,10 @@
     margin: 0;
     padding: 0;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> desarrollo
 html, body, footer {
     margin: 0;
     padding: 0;
@@ -21,18 +24,31 @@ header{
     margin: 0;
     padding: 0;
 }
+<<<<<<< HEAD
 
 #menuPequenio{
     background-color: black;
+=======
+#menuPequenio{
+    background-color: #4e4e4e;
+>>>>>>> desarrollo
     width: 100%;
     margin: 0;
 }
 #menuPequenio div{
+<<<<<<< HEAD
     width: calc(33% - 30px);
     display: inline-block;
     color: white;
     margin: 0;
     padding: 5px 15px;
+=======
+    width: calc(35% - 30px);
+    display: inline-block;
+    color: white;
+    margin: 0;
+    padding: 5px 0;
+>>>>>>> desarrollo
 }
 #menuPequenio i{
     margin-right: 5px;
@@ -47,7 +63,10 @@ header{
 .TextCenter{
     text-align: center;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> desarrollo
 .cajaLogo {
     width:100%;
     text-align: center;
@@ -65,11 +84,30 @@ header{
     position: absolute;
     top: 20%;
     right: 35px;
+<<<<<<< HEAD
 }
 .padreIcons div{
     display: inline-block;
     font-size: 125%;
     padding: 10px;
+=======
+
+}
+.padreIcons1{
+    position: absolute;
+    top: 20%;
+    left: 35px;
+    display: none;
+}   
+.padreIcons div, .padreIcons1 div{
+    display: inline-block;
+    font-size: 125%;
+    padding: 10px;
+
+}
+.soloEscritorio{
+    display: block;
+>>>>>>> desarrollo
 }
 #menuGrande{
     font-size: 1rem;
@@ -97,7 +135,11 @@ header{
 li{
     padding: 12px 26px;
     display: inline-block;
+<<<<<<< HEAD
      
+=======
+
+>>>>>>> desarrollo
 }
 a{
     text-decoration: none;
@@ -186,8 +228,15 @@ border-radius: 10px;
 /*--------- FOOTER -------*/
 /*------- PALETA DE COLORES ------*/
 /*
+<<<<<<< HEAD
 rgba(196, 196, 196, 0.42)
 
+=======
+#4e4e4e ***color fondo top header y footer bottom***
+rgba(196, 196, 196, 0.42)
+
+
+>>>>>>> desarrollo
 */
 
  footer{
@@ -249,8 +298,11 @@ rgba(196, 196, 196, 0.42)
      text-align: left;
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> desarrollo
 .contenedorFooter .bordeRedes{
      border: none;
 }
@@ -300,7 +352,11 @@ rgba(196, 196, 196, 0.42)
 }
 
 #infoFinal {
+<<<<<<< HEAD
     background-color: black;
+=======
+    background-color: #4e4e4e;
+>>>>>>> desarrollo
     width: 100%;
     margin: 0;
     color: white;
@@ -320,4 +376,127 @@ rgba(196, 196, 196, 0.42)
 }
 #infoFinal span{
     padding: 5px;
+<<<<<<< HEAD
 }
+=======
+}
+
+.contenedorFooter li a .flechita{
+    display: none;
+}
+
+/*----------- MEDIA QUERY --------------*/
+
+/*-------- IPAD Y TELEFONO --------------*/
+/*-----------EMPIEZA AQUI ---------------*/
+@media  (max-width: 768px )  {
+       
+/*----------HEADER -------------*/
+    #menuPequenio div {
+         width: 100%;
+         text-align: center;
+    }
+        #menuGrande {
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+    .padreIcons1{
+        display: block;
+    } 
+    /*--------BODY ----------*/    
+    .destacadoContenedor .destacado{
+        width: 100%;
+        padding: 0;
+        margin-top: 15px;
+    }  
+        
+    .destacadoContenedor{
+        padding: 0;
+    }
+    .destacadoContenedor p{
+        text-align: left;
+    }
+
+    .soloEscritorio{
+        display: none !important;
+    }
+     #menuGrande.active{
+         display: block;
+    } 
+     #menuGrande ul, #menuGrande li{
+         display: inline-block;
+         width: 100%;
+         box-sizing: border-box;
+         text-align: left;
+    }
+    /*----------------FOOTER ----------------*/
+    .contenedorFooter .bordeLogo, .Logochico{
+        display: none;
+    }
+
+    #infoFinal .moneda, #infoFinal .infoPolitica{
+        display : none;
+
+    }
+    #infoFinal .infoOld{
+        width: 100%;
+        text-align: center;
+    }
+
+    .contenedorFooter li{
+        width: 100%;
+        
+    }
+    .contenedorFooter li:not(.bordeRedes, .active) .info{
+        display: none;
+
+    }
+
+    .contenedorFooter li:not(.bordeRedes) a{
+        position: relative;
+        width: 100%;
+        display: inline-block;
+        border-bottom: 1px rgba(0, 0, 0, 0.219) solid; 
+
+    }
+    .contenedorFooter li:not(.bordeRedes) i{
+        position: absolute;
+        right: 0;
+        display: block;
+        top: 0;
+
+    }
+    .contenedorFooter li.active a i{
+        transform: rotate(180deg);
+    }
+    .contenedorFooter li .info {
+        border: none;
+        text-align: left;
+    }
+    .bordeRedes p{
+        padding-top: 5px;
+    }
+    .bordeRedes {
+        padding-bottom: 0;
+    }
+
+    /*----------------FOOTER ----------------*/
+
+}
+/*-----------TERMINA AQUI-------------------*/
+/*--------------telefono pequeño------------------*/
+/* ---------------AQUI EMPIEZA -------------------*/
+@media (max-width : 480px ){
+}
+/*--------------AQUI TERMINA --------------*/
+
+
+
+
+
+
+
+
+
+>>>>>>> desarrollo

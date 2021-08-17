@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/detallesProducto.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Old Milano - Detalles de Producto</title>
+</head>
+<body>
+    <%- include('./partials/header.ejs') %> <!-- Header -->
+    <main>
+        <div class="masterContainer"> <!-- Version Desktop Inicio -->
+            <div class="container">
+                <div class="box">BOX 1</div>
+                <div class="box">BOX 2</div>
+                <div class="box">BOX 3</div>
+                <div class="box">BOX 4</div>
+                <div class="box">BOX 5</div>
+                <div class="box">BOX 6</div>
+                <div class="box">BOX 7</div>
+            </div>
+            <div class="mainBox">
+                <img class="img" src="/img/fotoP.jpg">
+            </div>
+            <div class="container1">
+                <p class="detailProduct">Nombre de Producto</p>
+                <p class="detailProduct">Precio</p>
+                <p class="detailProduct">Color</p>
+                <div class="container2">
+                    <div class="box1">1</div>
+                    <div class="box1">2</div>
+                    <div class="box1">3</div>
+                    <div class="box1">4</div>
+                    <div class="box1">5</div>
+                </div>
+                <p class="detailProduct">Envios y Devoluciones</p>
+                <p class="detailProduct">Seleccione su talla</p>
+                <div class="container3">
+                    <div class="box1">1</div>
+                    <div class="box1">2</div>
+                    <div class="box1">3</div>
+                    <div class="box1">4</div>
+                    <div class="box1">5</div>
+                    <div class="box1">6</div>
+                </div>
+                <button type="submit">COMPRAR</button>
+                <div class="subBox1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laudantium, maiores sit facere est nesciunt repellat corporis alias natus quisquam, ratione sunt esse tempore nostrum nisi iste facilis? Numquam, iusto!</p>
+                </div>
+                <div class="subBox2">CaracteristicasTecnicas</div>
+                <div class="subBox2">Envios y Devoluciones</div>
+                <div class="subBox2">¿Necesitas más información?</div>
+            </div>
+        </div> <!-- Version Desktop Fin -->
+        <div class="masterContainerM"> <!-- Version Mobile Inicio -->
+            <p>Nombre del Producto</p>
+            <div class="mainBoxM">
+                <img class="img" src="/img/fotoP.jpg">
+            </div>
+            <div class="miniContainer">
+                <div class="box1M">1</div>
+                <div class="box1M">2</div>
+                <div class="box1M">3</div>
+                <div class="box1M">4</div>
+                <div class="box1M">5</div>
+            </div>
+            <div class="descProM">Color: IdColor</div>
+            <div class="colorContainer">
+                <div class="box2M">1</div>
+                <div class="box2M">2</div>
+                <div class="box2M">3</div>
+                <div class="box2M">4</div>
+                <div class="box2M">5</div>
+                <div class="box2M">6</div>
+            </div>    
+            <div class="descProM">Seleccione una Talla</div>   
+            <div class="tallaContainer">
+                <div class="box3M">1</div>
+                <div class="box3M">2</div>
+                <div class="box3M">3</div>
+                <div class="box3M">4</div>
+                <div class="box3M">5</div>
+                <div class="box3M">6</div>
+            </div>  
+            <div class="descProductM">
+                <p>Detalles de Producto Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ut suscipit? Descripcion del Producto</p>
+            </div>
+        <div>          
+           <ul class="ListaCollapse">
+             <li> <a onclick="this.parentElement.classList.toggle('active');"> Caracteristicas Tecnicas <i class= "flechita fas fa-chevron-down"></i></a>
+                    <div class="info">  
+                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, quisquam esse ipsa culpa obcaecati minus, possimus earum minima maxime ullam error velit, consequatur reiciendis voluptatibus a. Excepturi eveniet commodi ipsam!</p>
+                    </div>
+                </li>
+                <li><a onclick="this.parentElement.classList.toggle('active');">Evio y Devoluciones <i class="flechita fas fa-chevron-down"></i></a>
+                    <div class="info">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minima id amet placeat minus, quisquam, quod sed ipsa reprehenderit repudiandae aut praesentium quasi perferendis alias soluta? Fugiat eligendi illum neque?</p>
+                    </div>
+                </li>
+                <li><a onclick="this.parentElement.classList.toggle('active');">Necesitas mas Informacion? <i class="flechita fas fa-chevron-down"></i></a>
+                    <div class="info">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde facere quae excepturi eligendi enim ipsa cumque laudantium perferendis dolorem? Numquam commodi reprehenderit facere saepe quibusdam sit ullam, atque laboriosam maiores?</p>
+                    </div>
+                </li>
+             </ul>         
+        </div> 
+        </div> <!-- Version Mobile Fin-->
+    </main><br><br>
+</body>
+    <%- include('./partials/footer.ejs') %> <!-- Footer -->
+</html>
