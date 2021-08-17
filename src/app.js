@@ -1,6 +1,7 @@
 const express = require('express');
-const routesCarrito = require('./routes/routesCarrito')
+const routesCarrito = require('./routes/routesCarrito');
 const routeHome = require('./routes/routeHome');
+const routeDetallesP = require('./routes/routeDetallesP');
 const path = require('path');
 const app = express();
 const publicPath = path.join(__dirname, '../public');
@@ -15,6 +16,7 @@ app.set('views engine', 'ejs');
 // Configuracion de rutas a sitio
 app.use('/shopping_bag', routesCarrito);
 app.use('/', routeHome);
+app.use('/detallesProducto', routeDetallesP);
 
 // Configuracion Server
 app.listen(port, () => {
