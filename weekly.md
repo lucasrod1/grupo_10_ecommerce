@@ -7,3 +7,8 @@ Fecha: 16-08-2021.
 Que hicimos: Completamos puntos 4,5,6 del sprint.
 Ahora estamos: Estamos viendo detalles de puntos 4,5,6.
 Durante el transcurso de las semana: Debemos hacer el merge de con la rama develop para probar funcionalidades y finalizar el punto 7 entre hoy o mañana al cierre del sprint.
+
+Fecha: 23-08-2021.
+Que hicimos:
+Ahora estamos:
+Durante el transcurso de las semanas:
