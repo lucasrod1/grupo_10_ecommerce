@@ -21,12 +21,15 @@ SPRINT2 to SPRINT3:
 -Si finalizamos con las tareas que tenemos asignadas comenzar con otras siempre preguntando si alguno la tiene asignada 
 si podemos seguir adelante, la idea seria poder adelantar trabajo para estar al dia.
 -Mover las tareas (tarjetas/historias de usuario) a los estados que correspondan cuando realicemos alguna accion (Ej: de TODO a DOING o TESTING o DONE).
-2. Hacer más.
+2. Hacer más. 
+-Resolver dudas y temas que no se entendieron para poder estar todos en la misma pagina.
 3. Continuar haciendo.
 -Pair programming.
 -Definir parametros que estandaricen nuestro trabajo, los cuales vamos a utilizar en el dia a dia (datos, formatos, convenciones de codigo, formatos de variables etc).
 4. Hacer menos.
+-
 5. Dejar de hacer.
+-Dejar las correcciones de detalles para actividad individual y en las reuniones grupales enfocarnos en temas que requieran mas aporte de todos los integrantes.
 
 SPRINT3 to SPRINT4:
 1. Comenzar a hacer.
