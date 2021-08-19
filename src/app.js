@@ -4,6 +4,7 @@ const routesCarrito = require('./routes/routesCarrito');
 const routeHome = require('./routes/routeHome');
 const routeDetallesP = require('./routes/routeDetallesP');
 const routesLoginReg = require('./routes/routesLoginReg');
+const routeFormulario = require('./routes/routeFormulario');
 
 const path = require('path');
 const app = express();
@@ -21,6 +22,7 @@ app.use('/', routeHome);
 app.use('/login', routesLoginReg);
 app.use('/detallesProducto', routeDetallesP);
 app.use('/shopping_bag', routesCarrito);
+app.use('/edicionP', routeFormulario);
 
 // Configuracion Server
 app.listen(port, () => {
