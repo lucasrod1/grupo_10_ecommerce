@@ -37,6 +37,7 @@ SPRINT3 to SPRINT4:
 si podemos seguir adelante, la idea seria poder adelantar trabajo para estar al dia.
 -Mover las tareas (tarjetas/historias de usuario) a los estados que correspondan cuando realicemos alguna accion (Ej: de TODO a DOING o TESTING o DONE).
 2. Hacer más. 
+- Comunicacion entre los integrantes del equipo para evitar trabajar sobre el mismo tema
 3. Continuar haciendo. 
 -Pair programming.
 -Definir parametros que estandaricen nuestro trabajo, los cuales vamos a utilizar en el dia a dia (datos, formatos, convenciones de codigo, formatos de variables etc).
