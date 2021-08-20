@@ -1,0 +1,42 @@
+[
+    {
+    "id": 1,
+    "first_name": "Ram",
+    "last_name": "Iglesiaz",
+    "email": "riglesiaz0@google.fr",
+    "password": "IKd8KM",
+    "category": "user"
+  }, 
+  {
+    "id": 2,
+    "first_name": "Wilburt",
+    "last_name": "Elion",
+    "email": "welion1@jalbum.net",
+    "password": "UXMBzgs0",
+    "category": "user"
+  }, 
+  {
+    "id": 3,
+    "first_name": "Thalia",
+    "last_name": "Giraudeau",
+    "email": "tgiraudeau2@yale.edu",
+    "password": "H1Em7WU",
+    "category": "user"
+  }, 
+  {
+    "id": 4,
+    "first_name": "Franni",
+    "last_name": "Heinschke",
+    "email": "fheinschke3@toplist.cz",
+    "password": "7Ubb70sds",
+    "category": "user"
+  }, 
+  {
+    "id": 5,
+    "first_name": "Zondra",
+    "last_name": "Eusden",
+    "email": "zeusden4@baidu.com",
+    "password": "m6xFgAQDTQ"
+  }
+
+]
