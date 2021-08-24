@@ -3,11 +3,11 @@ const express = require('express');
 const router = express.Router();
 
 //Visualizacion de productos
-router.get('/lista', controllerEdicionProducto.lista);
-router.get('/lista/:id', controllerEdicionProducto.uniq);
+router.get('/', controllerEdicionProducto.lista);
+router.get('/:id/edit', controllerEdicionProducto.uniq);
 
 //Edicion de producto
-router.put('/edit', controllerEdicionProducto.edit);
-router.delete('/delete/:id', controllerEdicionProducto.delete);
+router.put('/:id', controllerEdicionProducto.edit);
+router.delete('/:id', controllerEdicionProducto.delete);
 
 module.exports = router;

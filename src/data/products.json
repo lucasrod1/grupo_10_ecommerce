@@ -1,5 +1,32 @@
 [
   {
+    "id": 1,
+    "nombre": "Duomo",
+    "description": "Blucher sin cordones",
+    "image": "1duomo.jpg",
+    "category": "Male",
+    "color": "cacao",
+    "price": "10995"
+  },
+  {
+    "id": 2,
+    "nombre": "Dean",
+    "description": "Blucher con cordones y en serraje",
+    "image": "2dean.jpg",
+    "category": "Male",
+    "color": "cacao",
+    "price": "10995"
+  },
+  {
+    "id": 3,
+    "nombre": "Lenny",
+    "description": "zapato versátil que te permite combinar entre oficina y momentos de ocio",
+    "image": "3lenny.jpg",
+    "category": "Male",
+    "color": "grey",
+    "price": "8995"
+  },
+  {
     "id": 4,
     "nombre": "Empire",
     "description": "Elegante y versátil, sin olvidar su gran comodidad y flexibilidad",

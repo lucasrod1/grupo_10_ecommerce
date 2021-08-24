@@ -28,7 +28,7 @@ app.use('/', routeHome);
 app.use('/login', routesLoginReg);
 app.use('/detallesProducto', routeDetallesP);
 app.use('/shopping_bag', routesCarrito);
-app.use('/abmProductos', routeFormulario);
+app.use('/products', routeFormulario);
 
 // Configuracion Server
 app.listen(port, () => {
