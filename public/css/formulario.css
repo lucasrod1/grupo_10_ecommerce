@@ -39,7 +39,8 @@
    
 }
 #masterContenedor  input, .fondoGris{
-    background-color: rgba(128, 128, 128, 0.788);
+    /* background-color: rgba(128, 128, 128, 0.788); */
+    background-color: transparent;
     
 }
 #masterContenedor .imagenId input{
@@ -48,7 +49,8 @@
 .imagenId .cuadradito{
     width: 100%;
     height: 100px;
-    background-color: rgba(128, 128, 128, 0.712);
+    /* background-color: rgba(128, 128, 128, 0.712); */
+    background-color: transparent;
     display: inline-block;
     cursor: pointer;
 
@@ -70,7 +72,12 @@
 .botonEnviar {
     width: 60%;
     margin: auto;
-    padding-top: 20px;
+    padding-top: 0px;
+    padding-bottom: 40px;
     text-align: right;
     font-size: 32px
+}
+
+img {
+    width: 50%;
 }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/formulario.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <p><h2 class="title">CREACION Y EDICION DE PRODUCTOS</h2></p> 
+    <% product.forEach( (item) => { %>
+    <form action="/edicionProducto/edit?_method=PUT" method="POST">
+    <div id= "masterContenedor">  
+        <div class="primero elementoId">
+            <label>ID</label> <input type="text" name="id" value="<%= item.id %>">
+        </div>
+        <div class="primero elementoId">
+            <label>NOMBRE</label> <input type="text" name="nombre" value="<%= item.nombre %>">
+        </div>
+        <div class="primero elementoId">
+            <label>DESCRIPCION</label> <input type="text" name= "descripcion" value="<%= item.descripcion %>">
+        </div>
+        <div class="imagenId elementoId">
+            <label>IMAGEN</label> <input type="file" id="imagenProducto" name= "imagen" hidden>
+            <div class ="bordeCuadrito">
+                <div onclick="document.getElementById('imagenProducto').click()" class="fondoGris cuadradito"><img src="/img/<%= item.image %>" /></div>
+            </div>
+        </div>
+        <div class="segundo elementoId">
+            <label>CATEGORIA</label> 
+                <select name = "categoria"> 
+                    <option value="H">Hombre </option> 
+                    <option value="M">Mujer</option> 
+                    <option value="Acc"> Accesorios</option>
+                </select> 
+        </div>
+        <div class="segundo elementoId">
+            <div class="doble">
+                <label>Color</label> 
+                <input type="color" value="#bcbcbc" name="color" value="<%= item.color %>">
+            </div>
+            <div class="doble">
+                <label>TALLA</label> 
+                    <select name = "talla"> 
+                        <option value="S">S</option> 
+                        <option value="M">M</option> 
+                        <option value="XL">XL</option>
+                        <option value="XLL">XLL</option>
+                        <option value="35">35</option> 
+                        <option value="38">38</option>
+                        <option value="40">40</option>
+                    </select>
+                </div> 
+            </div>
+            <div class="precio elementoId">
+                <label>PRECIO</label> 
+                <div class ="bordeCuadrito">
+                <input class = "ancho" type="text" name="price" value="<%= item.price %>">      
+                </div>
+            </div>
+    </div>
+        <div class="botonEnviar">
+            <input type="submit">
+        </div>
+    </form>
+    <% }) %>
+</body>
+</html>

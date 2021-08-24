@@ -1,14 +1,23 @@
 const path = require('path')
 const fs = require('fs');
-const jsonFileRead = fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8')
 
 function productos(){
+    let jsonFileRead = fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8')
     return JSON.parse(jsonFileRead)
 }
 
 const mainController = {
-    formulario: function (req, res) {
-        res.render('editProducto.ejs')
+    lista: (req, res) => {
+        let products = productos();
+        res.render('productCreate/editProductoList.ejs', {products});
+    },
+    uniq: (req, res) => {
+        let products = productos();
+        let product = products.filter( item => {
+            return item.id == req.params.id;
+        })
+        // console.log(product)
+        res.render('productCreate/editProductoUniq.ejs', {product});
     },
     edit: (req, res) => {
         console.log(req.body)
