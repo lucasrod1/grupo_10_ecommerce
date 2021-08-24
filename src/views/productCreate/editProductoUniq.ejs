@@ -11,7 +11,7 @@
 <body>
     <p><h2 class="title">CREACION Y EDICION DE PRODUCTOS</h2></p> 
     <% product.forEach( (item) => { %>
-    <form action="/edicionProducto/edit?_method=PUT" method="POST">
+    <form action="/abmProductos/edit?_method=PUT" method="POST">
     <div id= "masterContenedor">  
         <div class="primero elementoId">
             <label>ID</label> <input type="text" name="id" value="<%= item.id %>">
@@ -60,11 +60,17 @@
                 <input class = "ancho" type="text" name="price" value="<%= item.price %>">      
                 </div>
             </div>
-    </div>
+    
         <div class="botonEnviar">
-            <input type="submit">
+            <button type="submit">Modificar</button>
         </div>
     </form>
+    
+        <form action="/abmProductos/delete/<%= item.id %>?_method=DELETE" method="POST" style="display: inline-flex" class="botonDelete">
+            <button type="submit" class="action-button delete">ELIMINAR</button>
+        </form>
+    
+    </div>
     <% }) %>
 </body>
 </html>

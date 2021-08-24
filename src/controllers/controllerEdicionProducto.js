@@ -20,7 +20,18 @@ const mainController = {
         res.render('productCreate/editProductoUniq.ejs', {product});
     },
     edit: (req, res) => {
+        res.redirect('/abmProductos/lista');
         console.log(req.body)
+    },
+    delete: (req, res) => {
+        let products = productos();
+        let productsItemDeleted = products.filter( item => {
+            return item.id != req.params.id;
+        })
+        fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(productsItemDeleted, null, 2))
+        res.redirect('/abmProductos/lista');
+
+        console.log(productsItemDeleted)
     }
 }
 module.exports = mainController;
