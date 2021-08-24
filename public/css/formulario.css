@@ -67,6 +67,10 @@
     width: 100%;
 }
 
-
-
-
+.botonEnviar {
+    width: 60%;
+    margin: auto;
+    padding-top: 20px;
+    text-align: right;
+    font-size: 32px
+}
