@@ -11,7 +11,6 @@
 <body>
     <p><h2 class="title">CREACION Y EDICION DE PRODUCTOS</h2></p> 
     <% products.forEach( (item) => { %>
-    <form action="/abmProductos/edit?_method=PUT" method="POST">
     <div id= "masterContenedor">  
         <div class="primero elementoId">
             <label>ID</label> <input type="text" name="id" value="<%= item.id %>">
@@ -20,7 +19,7 @@
             <label>NOMBRE</label> <input type="text" name="nombre" value="<%= item.nombre %>">
         </div>
         <div class="primero elementoId">
-            <label>DESCRIPCION</label> <input type="text" name= "descripcion" value="<%= item.descripcion %>">
+            <label>DESCRIPCION</label> <input type="text" name= "description" value="<%= item.description %>">
         </div>
         <div class="imagenId elementoId">
             <label>IMAGEN</label> <input type="file" id="imagenProducto" name= "imagen" hidden>

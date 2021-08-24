@@ -19,8 +19,21 @@ const mainController = {
         res.render('productCreate/editProductoUniq.ejs', {product});
     },
     edit: (req, res) => {
-        res.redirect('/abmProductos/lista');
         console.log(req.body)
+        let products = productos();
+        let productEnd = products.map(function(item){
+            if(item.id == req.params.id){
+                item.nombre = req.body.nombre;
+                item.description = req.body.description;
+                item.imagen = req.body.imagen;
+                item.categoria = req.body.categoria;
+                item.color = req.body.color;
+                item.price = req.body.price;
+                item.talla = req.body.talla;
+            }
+        })
+        console.log(productEnd)
+        res.redirect('/products');
     },
     delete: (req, res) => {
         let products = productos();
