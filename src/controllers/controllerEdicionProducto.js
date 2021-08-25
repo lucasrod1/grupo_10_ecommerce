@@ -31,8 +31,11 @@ const mainController = {
                 item.price = req.body.price;
                 item.talla = req.body.talla;
             }
+            return item;
         })
+        fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(productEnd, null, 2))
         console.log(productEnd)
+
         res.redirect('/products');
     },
     delete: (req, res) => {
