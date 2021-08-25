@@ -9,12 +9,18 @@
    text-align: center;
 
 }
+
+.botonCrear{
+    /* border: 1px solid red; */
+    width:60%;
+    margin: 10px auto 10px auto;
+}
+
 #masterContenedor{
     width: 60%;
     border: 1px solid black;
     margin: auto;
     border-radius: 3px;
-
 }
 .elementoId{
     width: 100%;

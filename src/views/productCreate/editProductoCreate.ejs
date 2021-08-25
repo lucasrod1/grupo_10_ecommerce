@@ -9,27 +9,19 @@
     <title>Formulario</title>
 </head>
 <body>
-    <p><h2 class="title">CREACION Y EDICION DE PRODUCTOS</h2></p>
-
-    <form class="botonCrear" method="get" action="/products/create">
-        <button type="submit">Crear Producto</button>
-    </form>
-
-    <% products.forEach( (item) => { %>
+    <p><h2 class="title">CREACION Y EDICION DE PRODUCTOS</h2></p> 
+    <form action="/products" method="POST">
     <div id= "masterContenedor">  
         <div class="primero elementoId">
-            <label>ID</label> <input type="text" name="id" value="<%= item.id %>">
+            <label>NOMBRE</label> <input type="text" name="nombre">
         </div>
         <div class="primero elementoId">
-            <label>NOMBRE</label> <input type="text" name="nombre" value="<%= item.nombre %>">
-        </div>
-        <div class="primero elementoId">
-            <label>DESCRIPCION</label> <input type="text" name= "description" value="<%= item.description %>">
+            <label>DESCRIPCION</label> <input type="text" name="description">
         </div>
         <div class="imagenId elementoId">
             <label>IMAGEN</label> <input type="file" id="imagenProducto" name= "imagen" hidden>
             <div class ="bordeCuadrito">
-                <div onclick="document.getElementById('imagenProducto').click()" class="fondoGris cuadradito"><img src="/img/<%= item.image %>" /></div>
+                <div onclick="document.getElementById('imagenProducto').click()" class="fondoGris cuadradito"><img src="/img/icons/clickHere.png" /></div>
             </div>
         </div>
         <div class="segundo elementoId">
@@ -43,7 +35,7 @@
         <div class="segundo elementoId">
             <div class="doble">
                 <label>Color</label> 
-                <input type="color" value="#bcbcbc" name="color" value="<%= item.color %>">
+                <input type="color" value="#bcbcbc" name="color"">
             </div>
             <div class="doble">
                 <label>TALLA</label> 
@@ -61,17 +53,15 @@
             <div class="precio elementoId">
                 <label>PRECIO</label> 
                 <div class ="bordeCuadrito">
-                <input class = "ancho" type="text" name="price" value="<%= item.price %>">      
+                <input class = "ancho" type="text" name="price">      
                 </div>
             </div>
     
-        </form>
-        <form class="botonEnviar" method="get" action="/products/<%= item.id %>/edit">
-            <button type="submit">Editar</button>
-        </form>
+        <div class="botonEnviar">
+            <button type="submit">Agregar producto</button>
+        </div>
+    </form>
+
     </div>
-    <br>
-    <br>
-        <% }) %>
 </body>
 </html>
