@@ -216,11 +216,13 @@ rgba(196, 196, 196, 0.42)
      padding: 0;
  }
 #registro{
+    display: flex;
     width: 100%;
     background-color: rgba(196, 196, 196, 0.42);
-    padding-top: 20px;
+    padding-top: 1%;
     padding-bottom: 20px;
     text-align: center;
+    flex-direction: column;
 }
 #registro i{
     font-size: 55px;
@@ -235,15 +237,18 @@ rgba(196, 196, 196, 0.42)
 
 }
 .Registrarme {
-      font-size:17px;     
-      text-align: center;
-      padding: 10px 60px;
-      border-radius: 5px;
-      font-family:'Roboto Slab';
-      background-color: #d2c0b4;
-      color: #fff;
-      border: 1px solid #d2c0b4;
-      transition: all 0.2s ease;
+    min-width: 225px;
+    height: 35px;
+    margin: 5px auto 30px;
+    font-size: 14px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+    background-color: #d2c0b4;
+    color: #fff;
+    border: 1px solid #d2c0b4;
+    transition: all 0.2s ease;
 }
 .Registrarme:hover{
     background-color: rgb(63, 35, 3);
