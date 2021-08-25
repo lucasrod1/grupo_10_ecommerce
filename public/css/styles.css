@@ -18,32 +18,42 @@ html, body, footer {
 header{
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0;    
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    box-sizing: border-box;
 }
 #menuPequenio{
-    background-color: #4e4e4e;
-    width: 100%;
-    margin: 0;
+    color: #fff;
+    padding: 3px 20px;
+    background: #4e4e4e;
+    display: block !important;
+
+
 }
-#menuPequenio div{
-    width: calc(35% - 30px);
-    display: inline-block;
-    color: white;
-    margin: 0;
-    padding: 5px 0;
-}
-#menuPequenio i{
-    margin-right: 5px;
-    font-size: 15px;
+.bannerContainer{
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
 }
 .textLeft{
-    text-align: left;
+    display: block;
+    width: 30%;
 }
-.TextRight{
-    text-align: right;
-}
-.TextCenter{
+.textCenter{
+    display: block;
     text-align: center;
+    width: 40%;
+}
+.textRight{
+    display: flex ;
+    justify-content: flex-end;
+    width: 30%;
+    -webkit-box-pack: end;
 }
 .cajaLogo {
     width:100%;
@@ -338,12 +348,29 @@ rgba(196, 196, 196, 0.42)
 
 /*-------- IPAD Y TELEFONO --------------*/
 /*-----------EMPIEZA AQUI ---------------*/
-@media  (max-width: 768px )  {
+@media  (max-width: 769px )  {
        
 /*----------HEADER -------------*/
-    #menuPequenio div {
-         width: 100%;
-         text-align: center;
+
+    #menuPequenio{
+        display: none;
+    }
+    .bannerContainer{
+        flex-direction: column !important;
+        align-items: center !important;
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+        justify-content: space-between !important;
+    }
+    .textCenter{
+        display: block;
+        width: 100%;
+    }
+    .textLeft{
+        display: none;
+    }
+    .textRight{
+        display: none;
     }
         #menuGrande {
         display: none;
@@ -434,11 +461,7 @@ rgba(196, 196, 196, 0.42)
 
 }
 /*-----------TERMINA AQUI-------------------*/
-/*--------------telefono pequeño------------------*/
-/* ---------------AQUI EMPIEZA -------------------*/
-@media (max-width : 480px ){
-}
-/*--------------AQUI TERMINA --------------*/
+
 
 
 

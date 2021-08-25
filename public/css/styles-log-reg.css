@@ -5,6 +5,9 @@
     -webkit-tap-highlight-color: transparent;
     box-sizing: border-box;
 }
+title{
+    display: none;
+}
 body{
     font-size: 1rem;
     font-weight: 400;
