@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Old Milano - Login & Register</title>
     <meta charset="UTF-8">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/log-reg.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/styles-log-reg.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     rel="stylesheet" />
-    
+    <title>Old Milano - Login & Register</title>
 </head>
 <body>
-   <!-- Aca empieza el headedr -->
+    <!-- Aca empieza el headedr -->
     <%- include('./partials/header.ejs') %>
 
     <!-- Aca empieza el contenido login-registro -->
@@ -46,7 +44,7 @@
                     
                 </div>
                 </section>
-                <section id="registrarse">
+                <section id="signUp">
                     <h3>AUN NO TENGO CUENTA</h3>
                     <div class="signIn">
                         <p class="infoSignIn">Si todavia no tienes una cuenta de usuario en www.Old-Milano.com, utiliza esta opcion para acceder al formulario de registro.</p>
@@ -71,8 +69,8 @@
                                 <label for="newsletter" style="font-size: smaller;">Quiero suscribirme a la newsletter.</label>
                                 <p></p>
                             </div>
-                            <button type="submit">REGISTRARME</button>
-                            <div class="linksSignIn">
+                            <button type="submit">CREAR MI CUENTA</button>
+                            <div class="linksSignUp">
                                 <a href="#">Politica de Privacidad</a>
                                 <a href="#">Terminos y Condiciones</a>
                             </div>
@@ -107,5 +105,4 @@
     <!-- Aca comienza el FOOTER -->
     <%- include('./partials/footer.ejs') %>
 </body>
-
 </html>
