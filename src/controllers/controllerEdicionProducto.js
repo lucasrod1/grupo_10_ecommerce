@@ -23,13 +23,12 @@ const mainController = {
     },
     //Esta es es metodo que edita el proeducto que se muestra con el metodo (Uniq)
     edit: (req, res) => {
-        console.log(req.body)
         let products = productos();
         let productEnd = products.map(function(item){
             if(item.id == req.params.id){
                 item.nombre = req.body.nombre;
                 item.description = req.body.description;
-                item.imagen = req.body.imagen;
+                item.imagen = req.body.image;
                 item.categoria = req.body.categoria;
                 item.color = req.body.color;
                 item.price = req.body.price;
@@ -58,6 +57,7 @@ const mainController = {
     },
     //Este es el metodo para poder crear de un nuevo producto (esta en el boton agregar producto)
     createProduct: (req, res) => {
+        console.log(req.file)
         let products = productos();
         let lastProduct = products.pop();
         products.push(lastProduct);
@@ -65,13 +65,13 @@ const mainController = {
             id: lastProduct.id+1,
             nombre: req.body.nombre,
             description: req.body.description,
-            imagen: req.body.imagen,
+            imagen: req.file.filename,
             categoria: req.body.categoria,
             color: req.body.color,
             talla: req.body.talla,
             price: req.body.price
         }
-        // console.log(newProduct)
+        console.log(newProduct)
         products.push(newProduct)
         fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(products, null, 2))
         res.redirect('/products');

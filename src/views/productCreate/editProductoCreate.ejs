@@ -10,7 +10,7 @@
 </head>
 <body>
     <p><h2 class="title">CREACION Y EDICION DE PRODUCTOS</h2></p> 
-    <form action="/products" method="POST">
+    <form action="/products" method="POST" enctype="multipart/form-data">
     <div id= "masterContenedor">  
         <div class="primero elementoId">
             <label>NOMBRE</label> <input type="text" name="nombre">
@@ -19,7 +19,7 @@
             <label>DESCRIPCION</label> <input type="text" name="description">
         </div>
         <div class="imagenId elementoId">
-            <label>IMAGEN</label> <input type="file" id="imagenProducto" name= "imagen" hidden>
+            <label>IMAGEN</label> <input type="file" id="imagenProducto" name="imagen" hidden>
             <div class ="bordeCuadrito">
                 <div onclick="document.getElementById('imagenProducto').click()" class="fondoGris cuadradito"><img src="/img/icons/clickHere.png" /></div>
             </div>

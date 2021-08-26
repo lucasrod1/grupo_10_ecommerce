@@ -1,17 +1,5 @@
 [
   {
-    "id": 1,
-    "nombre": "Duomo",
-    "description": "Blucher sin cordones",
-    "image": "1duomo.jpg",
-    "category": "Male",
-    "color": "#bcbcbc",
-    "price": "10995",
-    "imagen": "",
-    "categoria": "H",
-    "talla": "S"
-  },
-  {
     "id": 2,
     "nombre": "Dean",
     "description": "Blucher con cordones y en serraje",
@@ -19,15 +7,6 @@
     "category": "Male",
     "color": "cacao",
     "price": "10995"
-  },
-  {
-    "id": 3,
-    "nombre": "Lenny",
-    "description": "zapato versátil que te permite combinar entre oficina y momentos de ocio",
-    "image": "3lenny.jpg",
-    "category": "Male",
-    "color": "grey",
-    "price": "8995"
   },
   {
     "id": 4,
@@ -55,5 +34,15 @@
     "category": "Male",
     "color": "bluejeans",
     "price": "8976"
+  },
+  {
+    "id": 7,
+    "nombre": "ariel",
+    "description": "b",
+    "imagen": "imagen-1629946695358.jpg",
+    "categoria": "H",
+    "color": "#bcbcbc",
+    "talla": "S",
+    "price": "500000"
   }
 ]
