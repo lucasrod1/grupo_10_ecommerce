@@ -11,7 +11,7 @@ const storage = multer.diskStorage({
         callBack(null, folder);
     },
     filename: (req, file, callBack) => {
-        let imageName = file.fieldname + "-" + Date.now() + path.extname(file.originalname)
+        let imageName = file.fieldname + Date.now() + path.extname(file.originalname)
         callBack(null, imageName)
     }
 })
@@ -28,6 +28,6 @@ router.put('/:id', controllerEdicionProducto.edit);
 router.delete('/:id', controllerEdicionProducto.delete);
 
 //Creacion de productos
-router.post('/', uploadFile.single('imagen'),controllerEdicionProducto.createProduct);
+router.post('/', uploadFile.single('image'),controllerEdicionProducto.createProduct);
 
 module.exports = router;

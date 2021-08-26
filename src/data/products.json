@@ -1,5 +1,14 @@
 [
   {
+    "id": 1,
+    "nombre": "Duomo",
+    "description": "Blucher sin cordones",
+    "image": "1duomo.jpg",
+    "category": "Male",
+    "color": "cacao",
+    "price": "10995"
+  },
+  {
     "id": 2,
     "nombre": "Dean",
     "description": "Blucher con cordones y en serraje",
@@ -7,6 +16,15 @@
     "category": "Male",
     "color": "cacao",
     "price": "10995"
+  },
+  {
+    "id": 3,
+    "nombre": "Lenny",
+    "description": "zapato versátil que te permite combinar entre oficina y momentos de ocio",
+    "image": "3lenny.jpg",
+    "category": "Male",
+    "color": "grey",
+    "price": "8995"
   },
   {
     "id": 4,
@@ -37,12 +55,20 @@
   },
   {
     "id": 7,
-    "nombre": "ariel",
-    "description": "b",
-    "imagen": "imagen-1629946695358.jpg",
-    "categoria": "H",
-    "color": "#bcbcbc",
-    "talla": "S",
-    "price": "500000"
+    "nombre": "Newman",
+    "description": "Zapato inglés de antik",
+    "image": "7newman.jpg",
+    "category": "Male",
+    "color": "burdeos",
+    "price": "9895"
+  },
+  {
+    "id": 8,
+    "nombre": "Barton",
+    "description": "blucher de charol para los looks más elegantes",
+    "image": "barton.jpg",
+    "category": "Male",
+    "color": "black",
+    "price": "10795"
   }
 ]

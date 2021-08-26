@@ -28,7 +28,7 @@ const mainController = {
             if(item.id == req.params.id){
                 item.nombre = req.body.nombre;
                 item.description = req.body.description;
-                item.imagen = req.body.image;
+                item.image = req.body.image;
                 item.categoria = req.body.categoria;
                 item.color = req.body.color;
                 item.price = req.body.price;
@@ -65,7 +65,7 @@ const mainController = {
             id: lastProduct.id+1,
             nombre: req.body.nombre,
             description: req.body.description,
-            imagen: req.file.filename,
+            image: req.file.filename,
             categoria: req.body.categoria,
             color: req.body.color,
             talla: req.body.talla,
