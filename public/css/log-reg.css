@@ -5,6 +5,9 @@
     -webkit-tap-highlight-color: transparent;
     box-sizing: border-box;
 }
+title{
+    display: none;
+}
 body{
     font-size: 1rem;
     font-weight: 400;
@@ -41,7 +44,7 @@ main{
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: transparent;
     background-clip: border-box;
     border-radius: .1875rem;
     margin-bottom: 1em;
@@ -119,11 +122,11 @@ main button{
 main button:hover{
     background-color: rgb(63, 35, 3);
 }
-input{
+main input{
     border-width: 0px;
     border: none;
     border-bottom: 1px solid #848281;
-    background-color: #fff;
+    background-color: transparent;
 }
 
 .advantages{
@@ -169,7 +172,7 @@ input{
         display: block;
         border-right: 1px solid black;
     }
-    input{
+    main input{
         width: 450px;
     }
     .signIn input{
@@ -178,7 +181,7 @@ input{
             border-bottom: 1px solid #848281;
             background-color: none;
     }
-    .linksSignIn{
+    .linksSignUp{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
