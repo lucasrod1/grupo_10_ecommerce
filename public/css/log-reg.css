@@ -1,20 +1,20 @@
-*{
+/* *{
     display: block;
     font-family: 'Roboto Slab', serif;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
     box-sizing: border-box;
-}
+} */
 title{
     display: none;
 }
-body{
+/* body{
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
     text-align: left;
-}
+} */
 .mainDiv{
     display: block;
     min-height: calc(100vh - 380px);
@@ -151,14 +151,14 @@ main input{
     height: 25px; 
 }
 @media (min-width: 900px){
-    *{
+    /* *{
         display: block;
         font-family: 'Roboto Slab', serif;
         box-sizing: border-box;
         font-size: 1rem;
         font-weight: 400;
         line-height: 1.5;
-    }
+    } */
     main{
         display: flex;
         flex-direction: row;
