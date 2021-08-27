@@ -11,7 +11,7 @@
 <body>
     <p><h2 class="title">CREACION Y EDICION DE PRODUCTOS</h2></p> 
     <% product.forEach( (item) => { %>
-    <form action="/products/<%= item.id %>?_method=PUT" method="POST">
+    <form action="/products/<%= item.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
     <div id= "masterContenedor">  
         <div class="primero elementoId">
             <label>ID</label> <input type="text" name="id" value="<%= item.id %>">
@@ -23,7 +23,7 @@
             <label>DESCRIPCION</label> <input type="text" name="description" value="<%= item.description %>">
         </div>
         <div class="imagenId elementoId">
-            <label>IMAGEN</label> <input type="file" id="imagenProducto" name= "image" hidden>
+            <label>IMAGEN</label> <input type="file" id="imagenProducto" name="image" hidden>
             <div class ="bordeCuadrito">
                 <div onclick="document.getElementById('imagenProducto').click()" class="fondoGris cuadradito"><img src="/img/products/<%= item.image %>" /></div>
             </div>

@@ -28,11 +28,14 @@ const mainController = {
             if(item.id == req.params.id){
                 item.nombre = req.body.nombre;
                 item.description = req.body.description;
-                item.image = req.body.image;
+                if(req.file){
+                    item.image = req.file.filename;
+                }
                 item.categoria = req.body.categoria;
                 item.color = req.body.color;
                 item.price = req.body.price;
                 item.talla = req.body.talla;
+                return item;
             }
             return item;
         })
@@ -61,6 +64,7 @@ const mainController = {
         let products = productos();
         let lastProduct = products.pop();
         products.push(lastProduct);
+        console.log(req.file.filename);
         let newProduct = {
             id: lastProduct.id+1,
             nombre: req.body.nombre,
@@ -71,7 +75,6 @@ const mainController = {
             talla: req.body.talla,
             price: req.body.price
         }
-        console.log(newProduct)
         products.push(newProduct)
         fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(products, null, 2))
         res.redirect('/products');
