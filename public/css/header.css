@@ -1,0 +1,160 @@
+header{
+    width: 100%;
+    margin: 0;
+    padding: 0;    
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+#menuPequenio{
+    color: #fff;
+    padding: 3px 20px;
+    background: #4e4e4e;
+    display: block !important;
+
+
+}
+
+.bannerContainer{
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.textLeft{
+    display: block;
+    width: 30%;
+}
+
+.textCenter{
+    display: block;
+    text-align: center;
+    width: 40%;
+}
+
+.textRight{
+    display: flex ;
+    justify-content: flex-end;
+    width: 30%;
+    -webkit-box-pack: end;
+}
+
+.cajaLogo {
+    width:100%;
+    text-align: center;
+    position: relative;
+}
+
+.cajaLogo img{
+    margin: 0 auto;
+    width:130px ;
+    height: 110px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    
+}
+
+.padreIcons{
+    position: absolute;
+    top: 20%;
+    right: 35px;
+
+}
+
+.padreIcons1{
+    position: absolute;
+    top: 20%;
+    left: 35px;
+    display: none;
+}  
+
+.padreIcons div, .padreIcons1 div{
+    display: inline-block;
+    font-size: 125%;
+    padding: 10px;
+
+}
+
+.soloEscritorio{
+    display: block;
+}
+
+#menuGrande{
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+}
+
+#menuGrande ul{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 55%;
+    text-align: center;
+    letter-spacing: 1.45PX;
+}
+
+#menuGrande li{
+    margin: 0;
+    text-align: center;
+}
+
+li{
+    padding: 12px 26px;
+    display: inline-block;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;   
+    font-weight: 650; 
+}
+
+@media  (max-width: 769px ) {
+    
+    #menuPequenio{
+        display: none;
+    }
+
+    .bannerContainer{
+        flex-direction: column !important;
+        align-items: center !important;
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+        justify-content: space-between !important;
+    }
+
+    .textCenter{
+        display: block;
+        width: 100%;
+    }
+
+    .textLeft{
+        display: none;
+    }
+
+    .textRight{
+        display: none;
+    }
+    
+    #menuGrande {
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .padreIcons1{
+        display: block;
+    } 
+}
