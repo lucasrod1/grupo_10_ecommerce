@@ -1,10 +1,4 @@
-/* * {
-    font-family: 'Roboto Slab', serif;
-} */
-
 /* Aca empieza el main
-
-
 /* Titulo y recordadorio de entre lineas de que tener en cuenta a la hora de la finalizar la compra */
 /* ------------------------------------------------------------------ */
 .cajaTitulo .titulo1{
@@ -13,6 +7,7 @@
     text-align: center;
     padding-bottom: 10px;
 }
+
 .cajaTitulo .recorda1{
     padding-top: 2px;
     padding-bottom: 2px;
@@ -30,23 +25,28 @@
     font-size: 16px;
     margin: 5px 0px 5px 5px;
 }
+
 .atributosProducto{
     border: 1px solid black;
     width: 90%;
     margin: 10px auto auto auto;
     border-radius: 5px;
 }
+
 .atributosProducto .descripcionProducto{
     display: flex;
     flex-direction: column;
 }
+
 .cajaImagenDescripcion{
     display: flex;
     margin-left: 5px;
 }
+
 .imagenProducto{
     width: 30%;
 }
+
 .infoProducto{
     font-size: 12px;
     margin-left: 5px;
@@ -60,12 +60,14 @@
     flex-direction: row;
     justify-content:space-around
 }
+
 .atributosProducto .precioProducto .tituloPrecio{
     text-align: left;
 }
 .atributosProducto .precioProducto .precio{
     text-align: center;
 }
+
 .tituloPrecio, .precio{
     font-size: 16px;
     margin: 10px 0px 5px 5px;
@@ -79,12 +81,14 @@
     justify-content:space-around;
     width: 100%;
 }
+
 .atributosProducto .cantidadProducto .tituloCantidad{
     text-align: left;
     font-size: 16px;
     margin: 10px 0px 5px 5px;
     width: 50%;
 }
+
 .atributosProducto .cantidadProducto .contador{
     text-align: center;
     height: 20px;
@@ -113,6 +117,7 @@
 .subtotal{
     display: flex;
 }
+
 .subtotalTitulo, .precioSubtotal{
     width: 50%;
     text-align: left;
@@ -122,6 +127,7 @@
 .descuentoCuenta{
     display: flex;
 }
+
 .descuento, .precioDescuento{
     width: 50%;
     margin: 0px 0px 0px 0px;
@@ -132,6 +138,7 @@
 .totalCuenta{
     display: flex;
 }
+
 .total, .precioTotal{
     border-top: 1px solid white;
     width: 50%;
@@ -181,6 +188,7 @@
     font-size: 16px;
     margin: 5px 0px 5px 5px;
 }
+
 .atributosProducto{
     padding-left: 5px;
     padding-top: 10px;
@@ -192,17 +200,21 @@
     margin: 10px auto auto auto;
     border-radius: 5px;
 }
+
 .atributosProducto .cajaImagenDescripcion{
     display: flex;
     flex-direction: row;
 }
+
 .cajaImagenDescripcion{
     display: flex;
     margin-left: 5px;
 }
+
 .imagenProducto{
     width: 30%;
 }
+
 .infoProducto{
     font-size: 12px;
     margin-left: 5px;
@@ -220,13 +232,16 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
 .atributosProducto .precioProducto .tituloPrecio{
     text-align: center;
     width: 50%;
 }
+
 .atributosProducto .precioProducto .precio{
     text-align: center;
 }
+
 .tituloPrecio, .precio{
     font-size: 16px;
     margin: 10px 0px 5px 5px;
@@ -243,12 +258,14 @@
     align-items: center;
     justify-content:start;
 }
+
 .atributosProducto .cantidadProducto .tituloCantidad{
     text-align: center;
     font-size: 16px;
     margin: 10px 0px 5px 5px;
     width: 50%;
 }
+
 .atributosProducto .cantidadProducto .contador{
     text-align: center;
     height: 20px;
@@ -278,6 +295,7 @@
 .subtotal{
     display: flex;
 }
+
 .subtotalTitulo, .precioSubtotal{
     width: 50%;
     text-align: left;
@@ -288,6 +306,7 @@
     display: flex;
     border-bottom: 1px solid black;
 }
+
 .descuento, .precioDescuento{
     width: 50%;
     margin: 0px 0px 0px 0px;
@@ -298,6 +317,7 @@
 .totalCuenta{
     display: flex;
 }
+
 .total, .precioTotal{
     width: 50%;
     margin: 5px 0px 10px 0px;
