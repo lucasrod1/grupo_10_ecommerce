@@ -80,7 +80,7 @@ header{
 
 }
 
-.soloEscritorio{
+.soloEscritorio{ 
     display: block;
 }
 
@@ -134,6 +134,10 @@ a{
         -webkit-box-direction: normal !important;
         justify-content: space-between !important;
     }
+    #menuGrande.active{
+        display: block;
+        text-align: center;
+    } 
 
     .textCenter{
         display: block;
@@ -157,4 +161,7 @@ a{
     .padreIcons1{
         display: block;
     } 
+    .soloEscritorio{
+        display: none;
+    }
 }
