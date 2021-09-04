@@ -47,13 +47,11 @@ si podemos seguir adelante, la idea seria poder adelantar trabajo para estar al 
 
 SPRINT4 to SPRINT5:
 1. Comenzar a hacer.
--Si finalizamos con las tareas que tenemos asignadas comenzar con otras siempre preguntando si alguno la tiene asignada 
-si podemos seguir adelante, la idea seria poder adelantar trabajo para estar al dia.
--Mover las tareas (tarjetas/historias de usuario) a los estados que correspondan cuando realicemos alguna accion (Ej: de TODO a DOING o TESTING o DONE).
+ Normalizar variables, unificar controllers y routes.
 2. Hacer más. 
-- Comunicacion entre los integrantes del equipo para evitar trabajar sobre el mismo tema
+ Pair programming, 
 3. Continuar haciendo. 
--Pair programming.
--Definir parametros que estandaricen nuestro trabajo, los cuales vamos a utilizar en el dia a dia (datos, formatos, convenciones de codigo, formatos de variables etc).
+  Mantener la frecuencia de las reuniones del equipo (dailys).
 4. Hacer menos.
-5. Dejar de hacer.
+ No extendernos en las dailys con temas que no refieren a las dailys.
+6. Dejar de hacer.
