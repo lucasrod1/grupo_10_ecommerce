@@ -18,6 +18,6 @@ Que hicimos: Se completo el sprint (4).
 Ahora estamos: Armamos las tareas del backlog y distribuimos las stories de usuario, para posteriormente hacer la division de tareas por integrante.
 
 
-Fecha: 02-09-2021
+Fecha: 06-09-2021
 Que hicimos: Se organizaron las tarjetitas en el Trello para empezar a trabajar en conjunto para el SPRINT 5.
-Ahora estamos: trabajando con el sprint 5, unificando controllers y routes.
+Ahora estamos: trabajando con el sprint 5, normalizamos variables y unificamos controllers y routes.
