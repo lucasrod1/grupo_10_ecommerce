@@ -142,6 +142,7 @@
         border: black solid 1px;
         border-radius: 10px;
         text-align: center;
+        margin-top: 25px;
     }
 
     .mainBoxM{ /* Caja para Imagen de Producto */
@@ -206,6 +207,9 @@
     }
     .ListaCollapse li.active .info{
         display: block;
+    }
+    .ListaCollapse li.active a i{
+        transform: rotate(180deg);
     }
 
     .ListaCollapse {

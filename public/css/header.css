@@ -80,8 +80,9 @@ header{
 
 }
 
-.soloEscritorio{ 
+.soloEscritorio{
     display: block;
+
 }
 
 #menuGrande{
@@ -101,7 +102,6 @@ header{
     justify-content: space-between;
     width: 55%;
     text-align: center;
-    letter-spacing: 1.45PX;
 }
 
 #menuGrande li{
@@ -125,6 +125,13 @@ a{
     
     #menuPequenio{
         display: none;
+    }
+
+    #menuGrande ul, #menuGrande li{
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: left;
     }
 
     .bannerContainer{
@@ -162,6 +169,6 @@ a{
         display: block;
     } 
     .soloEscritorio{
-        display: none;
+        display: none !important;
     }
 }
