@@ -20,6 +20,13 @@ const controllersUser = require(path.resolve(__dirname, '../controllers/usersCon
 let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')))
 
 
+//Validaciones para registro
+const validateCreateForm = [
+    body('fistName').notEmpty().withMessage('Debes completar el campo de nombre.'),
+    body('lastName').notEmpty().withMessage('Debes completar el campo de apellido.'),
+    body('emailSign').isEmail().withMessage('Debes completar un email valido.')
+];
+
 //Aca va la informacion del storage para guardar las imagenes del usuario
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
