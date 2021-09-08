@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <link rel="stylesheet" href="css/log-reg.css">
-    <title>Old Milano - Login & Registro</title>  
+    <title>Login</title>  
     <%- include('./partials/head.ejs') %>  
 <body>
     <!-- Aca empieza el headedr -->
@@ -13,7 +13,6 @@
         <main>
             <div class="login-page">
                 <section id="logearse"> 
-                    <h3>YA TENGO CUENTA</h3>
                     <div class="logIn">
                         <p class="infoLogIn">Si ya estas registrado en www.Old-Milano.com, solamente tienes que introducir tu e-mail y contraseña.</p><br>
                         <form action="/log-In" method="GET">
@@ -26,50 +25,18 @@
                             <input type="checkbox" name="remember" id="remember"style="width: auto;">
                             <label for="remember" style="font-size: smaller;">Mantener sesion Iniciada</label>
                         </div>
-                        <a id="password-reset" title="No recuerdo mi contraseña" href="#">No recuerdo mi contraseña</a>
+                        <div class="loginLinks">
+                            <a id="password-reset" title="No recuerdo mi contraseña" href="#">NO RECUERDO MI CONTRASEÑA</a>
+                            <a id="noAccount" title="noAccount" href="#">AUN NO TENGO CUENTA</a>
+                        </div>
                         <p></p>
                         <button type="submit">ENTRAR</button>
                         </form>
                     </div>           
-                    
-                </div>
-                </section>
-                <section id="signUp">
-                    <h3>AUN NO TENGO CUENTA</h3>
-                    <div class="signIn">
-                        <p class="infoSignIn">Si todavia no tienes una cuenta de usuario en www.Old-Milano.com, utiliza esta opcion para acceder al formulario de registro.</p>
-                        <p class="infoSignIn">Todos los campos del formulario son obligatorios.</p>
-                        <form action="/sign-in" method="POST">
-                            <input type="text" name="fistName" id="fistName" placeholder="*Nombre"required>
-                            <p></p>
-                            <input type="text" name="lastName" id="lastName" placeholder="*Apellido"required>
-                            <p></p>
-                            <input type="tel" name="cell" id="cell" placeholder="*Telefono"required>
-                            <p></p>
-                            <input type="email" name="emailSign" id="emailSign" placeholder="*E-mail"required>
-                            <p></p>
-                            <input type="email" name="emailValid" id="emailValid" placeholder="*Confirmar E-mail"required>
-                            <p></p>
-                            <input type="password" name="passwordSign" id="passwordSign" placeholder="*Contrasena"required>
-                            <p></p>
-                            <input type="password" name="passwordSign" id="passwordSign" placeholder="*Confirmar Contrasena"required>
-                            <p></p>
-                            <div class="newsletterCheck">
-                                <input type="checkbox" name="newsletter" id="newsletter" style="width: auto;">
-                                <label for="newsletter" style="font-size: smaller;">Quiero suscribirme a la newsletter.</label>
-                                <p></p>
-                            </div>
-                            <button type="submit">CREAR MI CUENTA</button>
-                            <div class="linksSignUp">
-                                <a href="#">Politica de Privacidad</a>
-                                <a href="#">Terminos y Condiciones</a>
-                            </div>
-                        </form>
-                    </div>
                 </section>
             </div>
         </main>
-    </div>
+    </div> 
     <br><section class="benefits">
         <h3>Hacerse cliente tiene sus ventajas</h3>
         <div class="advantages">
@@ -95,4 +62,4 @@
     <!-- Aca comienza el FOOTER -->
     <%- include('./partials/footer.ejs') %>
 </body>
-</html>
+</html>      

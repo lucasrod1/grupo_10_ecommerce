@@ -4,7 +4,10 @@ const mainController = {
         res.render('home.ejs');
     },
     register: (req, res) => {
-        res.render('login-registro.ejs');
+        res.render('registro.ejs');
+    },
+    login: function (req, res) {
+        res.render('login.ejs')
     },
     productDetail: function (req, res) {
         res.render('detallesProducto.ejs')

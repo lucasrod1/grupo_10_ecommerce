@@ -6,10 +6,13 @@ const multer = require('multer');
 
 const controllersUser = {
     login: function(req,res){
-        res.render(path.resolve(__dirname, '../views/users/login-registro'));
+        res.render(path.resolve(__dirname, '../views/users/login'));
     },
+    // registro: function(req,res){
+    //     res.render(path.resolve(__dirname, '../views/users/login-registro'));
+    // },
     registro: function(req,res){
-        res.render(path.resolve(__dirname, '../views/users/login-registro'));
+        res.render(path.resolve(__dirname, '../views/users/register'));
     },
 
 }
