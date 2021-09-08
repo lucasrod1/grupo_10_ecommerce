@@ -14,10 +14,10 @@ function passwordEncrypt(password){
 
 const controllersUser = {
     login: function(req,res){
-        res.render('../views/login.ejs');
+        res.render('../views/users/login.ejs');
     },
     register: function(req,res){
-        res.render('../views/registro.ejs');
+        res.render('../views/users/registro.ejs');
     },
     create: (req, res) => {
         let users = userList();
