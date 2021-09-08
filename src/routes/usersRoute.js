@@ -13,7 +13,7 @@ const multer = require('multer');
 const { body } = require('express-validator');
 
 //Requerir el modulo de los controladores
-const controllersUser = require(path.resolve(__dirname, '../controllers/usersController'));
+const controllersUser = require('../controllers/usersController');
 
 //Aquí aperturo mi archivo de usuarios, ya que al registrarse un usuario es conveniente buscar que no exista una ya registrado con el mismo email o id o el campo que utlicen para identificar al usuario.
 
@@ -38,3 +38,8 @@ const storage = multer.diskStorage({
   })
    
 const upload= multer({ storage })
+
+router.get('/login', controllersUser.login);
+router.get('/register', controllersUser.register);
+
+module.exports = router;

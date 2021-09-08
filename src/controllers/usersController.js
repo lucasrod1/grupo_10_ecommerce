@@ -3,17 +3,13 @@ const fs = require('fs');
 const bcrypt = require('bcryptjs');
 const multer = require('multer');
 
-
 const controllersUser = {
     login: function(req,res){
-        res.render(path.resolve(__dirname, '../views/users/login'));
+        res.render('../views/login.ejs');
     },
-    // registro: function(req,res){
-    //     res.render(path.resolve(__dirname, '../views/users/login-registro'));
-    // },
-    registro: function(req,res){
-        res.render(path.resolve(__dirname, '../views/users/register'));
+    register: function(req,res){
+        res.render('../views/registro.ejs');
     },
-
 }
+
 module.exports = controllersUser;

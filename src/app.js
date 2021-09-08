@@ -3,6 +3,7 @@ const express = require('express');
 const methodOverride = require('method-override');
 const routeFormulario = require('./routes/routeAbmProducto.js');
 const mainRoute = require('./routes/mainRoute.js');
+const usersRoute = require('./routes/usersRoute.js');
 
 const path = require('path');
 const app = express();
@@ -24,6 +25,7 @@ app.set('views engine', 'ejs');
 
 // Configuracion de rutas a sitio
 app.use('/', mainRoute)
+app.use('/users', usersRoute)
 
 // Configuracion Server
 app.listen(port, () => {
