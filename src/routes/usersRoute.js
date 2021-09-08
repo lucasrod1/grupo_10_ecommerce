@@ -24,7 +24,9 @@ let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../da
 const validateCreateForm = [
     body('fistName').notEmpty().withMessage('Debes completar el campo de nombre.'),
     body('lastName').notEmpty().withMessage('Debes completar el campo de apellido.'),
-    body('emailSign').isEmail().withMessage('Debes completar un email valido.')
+    body('emailSign').isEmail().withMessage('Debes completar un email valido.'),
+    body('passwordSign').isEmail().withMessage('Debes Ingresar una contraseña.'),
+    body('passwordValid').isEmail().withMessage('Debes Ingresar confirmar tu contraseña.')
 ];
 
 //Aca va la informacion del storage para guardar las imagenes del usuario
@@ -33,13 +35,14 @@ const storage = multer.diskStorage({
       cb(null, path.resolve(__dirname, '../../public/images/users'));
     },
     filename: function (req, file, cb) {
-      cb(null, 'foto' + '-' + Date.now()+ path.extname(file.originalname));      
+      cb(null, "foto" + "-" + Date.now()+ path.extname(file.originalname));      
     }
   })
-   
-const upload= multer({ storage })
+
+const uploadFile= multer({ storage })
 
 router.get('/login', controllersUser.login);
 router.get('/register', controllersUser.register);
+router.post('/register/create', uploadFile.single('avatar'), controllersUser.create);
 
 module.exports = router;

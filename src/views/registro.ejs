@@ -16,8 +16,8 @@
                     <div class="signIn">
                         <p class="infoSignIn">Si todavia no tienes una cuenta de usuario en www.Old-Milano.com, utiliza esta opcion para acceder al formulario de registro.</p>
                         <p class="infoSignIn">Todos los campos del formulario son obligatorios.</p>
-                        <form action="/sign-in" method="POST">
-                            <input type="text" name="fistName" id="fistName" placeholder="*Nombre"required>
+                        <form action="/users/register/create" method="POST" enctype="multipart/form-data">
+                            <input type="text" name="firstName" id="firstName" placeholder="*Nombre"required>
                             <p></p>
                             <input type="text" name="lastName" id="lastName" placeholder="*Apellido"required>
                             <p></p>
@@ -31,7 +31,7 @@
                             <p></p>
                             <div class="customFile">
                                 <label for="avatar" style="font-size: smaller;">Debes elegir tu avatar...</label>
-                                <input type="file" id="uploadFile"   name="avatar"  placeholder="Debes eligir tu avatar...">
+                                <input type="file" id="uploadFile" name="avatar" placeholder="Debes eligir tu avatar...">
                             </div>  
                             <div class="newsletterCheck">
                                 <input type="checkbox" name="newsletter" id="newsletter" style="width: auto;">
