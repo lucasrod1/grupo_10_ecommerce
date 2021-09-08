@@ -58,6 +58,12 @@ h3{
     color: #333;
     border-right: none;
 }
+.customFile{
+    margin: -20px auto 10px;
+}
+#uploadFile{
+    border-bottom: none;
+}
 
 main p{
     margin: 5px auto 30px;
@@ -157,6 +163,37 @@ main input{
     width: 25px;
     height: 25px; 
 }
+.loginLinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 13px;
+    font-weight: 400;
+    box-sizing: border-box;
+    text-align: left;
+    margin-top: 20px;
+}
+#passwordReset{
+    transition: all 0.2s ease;
+}
+#passwordReset:hover{
+    text-decoration: underline;
+}
+#noAccount{
+    transition: all 0.2s ease;
+}
+#noAccount:hover{
+    text-decoration: underline;
+}
+.linksSignUp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 12px;
+    font-weight: 400;
+    box-sizing: border-box;
+    text-align: center;
+}
 
 @media (min-width: 900px){
 
@@ -193,7 +230,7 @@ main input{
         font-size: 12px;
         font-weight: 400;
         box-sizing: border-box;
-        text-align: left;
+        text-align: center;
     }
     
     #logearse{

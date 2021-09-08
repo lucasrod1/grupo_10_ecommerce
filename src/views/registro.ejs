@@ -9,11 +9,10 @@
 
     <!-- Aca empieza el contenido login-registro -->
     <div class="mainDiv">
-        <div class="banner">MI CUENTA</div>
+        <div class="banner">CREA TU CUENTA EN OLD MILANO</div>
         <main>
             <div class="login-page">
                 <section id="signUp">
-                    <!-- <h3>AUN NO TENGO CUENTA</h3> -->
                     <div class="signIn">
                         <p class="infoSignIn">Si todavia no tienes una cuenta de usuario en www.Old-Milano.com, utiliza esta opcion para acceder al formulario de registro.</p>
                         <p class="infoSignIn">Todos los campos del formulario son obligatorios.</p>
@@ -28,8 +27,12 @@
                             <p></p>
                             <input type="password" name="passwordSign" id="passwordSign" placeholder="*Contraseña"required>
                             <p></p>
-                            <input type="password" name="passwordSign" id="passwordSign" placeholder="*Confirmar Contraseña"required>
+                            <input type="password" name="passwordValid" id="passwordValid" placeholder="*Confirmar Contraseña"required>
                             <p></p>
+                            <div class="customFile">
+                                <label for="avatar" style="font-size: smaller;">Debes elegir tu avatar...</label>
+                                <input type="file" id="uploadFile"   name="avatar"  placeholder="Debes eligir tu avatar...">
+                            </div>  
                             <div class="newsletterCheck">
                                 <input type="checkbox" name="newsletter" id="newsletter" style="width: auto;">
                                 <label for="newsletter" style="font-size: smaller;">Quiero suscribirme a la newsletter.</label>
@@ -38,6 +41,7 @@
                             <button type="submit">CREAR MI CUENTA</button>
                             <div class="linksSignUp">
                                 <a href="#">Politica de Privacidad</a>
+                                <a href="/login" id="noAccount" title="noAccount">YA TENGO CUENTA</a>
                                 <a href="#">Terminos y Condiciones</a>
                             </div>
                         </form>
