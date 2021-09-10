@@ -15,11 +15,11 @@
                 <section id="logearse"> 
                     <div class="logIn">
                         <p class="infoLogIn">Si ya estas registrado en www.Old-Milano.com, solamente tienes que introducir tu e-mail y contraseña.</p><br>
-                        <form action="/log-In" method="GET">
-                        <input type="email" name="email" id="email" placeholder="*E-mail" required>
+                        <form action="/users/login" method="POST">
+                        <input type="email" name="email" id="email" placeholder="*E-mail">
                         <p>
                         </p>
-                        <input type="password" name="password" id="password" placeholder="*Contraseña"required>
+                        <input type="password" name="password" id="password" placeholder="*Contraseña">
                         <p></p>
                         <div class="keepMeSign">
                             <input type="checkbox" name="remember" id="remember"style="width: auto;">

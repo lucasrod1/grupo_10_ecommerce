@@ -3,8 +3,8 @@
     "id": 1,
     "firstName": "Ram",
     "lastName": "Iglesiaz",
-    "email": "riglesiaz0@google.fr",
-    "password": "IKd8KM",
+    "email": "test@test.com",
+    "password": "$2a$10$cz7wOBHs4s0kYw8nVC6WzOMze7NCmX18ukJHSZuVcAJpMg8jd0us2",
     "category": "user",
     "avatarImage": "/images/users/${DATE}-usernameImageName.jpg"
   }

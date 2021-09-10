@@ -4,6 +4,7 @@ const methodOverride = require('method-override');
 const routeFormulario = require('./routes/routeAbmProducto.js');
 const mainRoute = require('./routes/mainRoute.js');
 const usersRoute = require('./routes/usersRoute.js');
+const session = require('express-session');
 
 const path = require('path');
 const app = express();
@@ -22,6 +23,9 @@ app.use(methodOverride('_method'));
 // Configuracion EJS
 app.set('views', './src/views');
 app.set('views engine', 'ejs');
+
+// Se agrega express-session y se define como middleware:
+app.use(session({ secret: "oldMilano" }));
 
 // Configuracion de rutas a sitio
 app.use('/', mainRoute)

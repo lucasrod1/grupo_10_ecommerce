@@ -38,6 +38,12 @@ const validateCreateForm = [
     })
 ];
 
+//Validaciones para login
+const validateLogin = [
+  body('email').notEmpty().withMessage('Debes ingresar un email valido.'),
+  body('password').notEmpty().withMessage('Debes ingresar tu contraseña.'),
+];
+
 //Aca va la informacion del storage para guardar las imagenes del usuario
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -51,6 +57,7 @@ const storage = multer.diskStorage({
 const uploadFile= multer({ storage })
 
 router.get('/login', usersController.login);
+router.post('/login', usersController.loginValidation);
 router.get('/register', usersController.register);
 router.post('/register/create', uploadFile.single('avatar'), validateCreateForm, usersController.create);
 

@@ -14,12 +14,30 @@ function passwordEncrypt(password){
 }
 
 const controllersUser = {
+    //Medodo renderizacion de sitio para validacion de usuario
     login: function(req,res){
         res.render('../views/users/login.ejs');
     },
+    //Medodo para validacion de usuario
+    loginValidation: (req, res) => {
+        let userLista = userList();
+        userLista.forEach(user => {
+            if(user.email == req.body.email){
+                if(bcrypt.compareSync(req.body.password, user.password)){
+                    req.session.user = req.body.email
+                    return res.redirect('/')
+                }else{
+                    return res.render('../views/users/login.ejs')
+                }
+            }
+        });
+        res.render('../views/users/registro.ejs')
+    },
+    //Medodo renderizacion de sitio para registracion de usuario
     register: function(req,res){
         res.render('../views/users/registro.ejs');
     },
+    //Medodo para registracion de usuario
     create: (req, res) => {
         let errors = validationResult(req);
         if(errors.isEmpty()){
