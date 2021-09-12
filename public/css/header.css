@@ -79,6 +79,11 @@ header{
     padding: 10px;
 
 }
+.imgProfile{
+    border-radius: 50%;
+    width: 60px !important;
+    height: auto !important;
+}
 
 .soloEscritorio{
     display: block;

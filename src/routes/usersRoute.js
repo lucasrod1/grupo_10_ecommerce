@@ -60,5 +60,6 @@ router.get('/login', usersController.login);
 router.post('/login', usersController.loginValidation);
 router.get('/register', usersController.register);
 router.post('/register/create', uploadFile.single('avatar'), validateCreateForm, usersController.create);
+router.get('/profile', usersController.profileUser);
 
 module.exports = router;

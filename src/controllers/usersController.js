@@ -24,8 +24,8 @@ const controllersUser = {
         userLista.forEach(user => {
             if(user.email == req.body.email){
                 if(bcrypt.compareSync(req.body.password, user.password)){
-                    req.session.user = req.body.email
-                    return res.redirect('/')
+                    req.session.user = req.body.email;
+                    return res.redirect('profile')
                 }else{
                     return res.render('../views/users/login.ejs')
                 }
@@ -65,6 +65,30 @@ const controllersUser = {
             res.render('../views/users/registro.ejs', {errors: errors.mapped(), old: req.body })
         }
         
+    },
+    //metodo renderizado para ver el perfil Usuario 
+    profileUser: function(req,res){
+        if(req.session.user){
+             let emailUser = req.session.user;   
+             let fileUsers = fs.readFileSync(path.resolve(__dirname, '../data/users.json'), {
+                encoding: 'utf-8'
+              });  
+             fileUsers= JSON.parse(fileUsers);
+               let user = fileUsers.find((fileUser)=> {
+                   if(emailUser == fileUser.email){
+                    return fileUser;
+                   }           
+               })
+                res.render('../views/users/profileUser.ejs',{
+                email: user.email,
+                nombre: user.firstName,
+                apellido: user.lastName,
+                avatar: user.avatarImage
+            });
+        }else{
+         res.render('../views/users/registro.ejs');   
         }
+        
+    },
 }
 module.exports = controllersUser;

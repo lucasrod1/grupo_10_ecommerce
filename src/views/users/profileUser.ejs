@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel = "stylesheet" href=" /css/profile.css">
+    <link rel="stylesheet" href="/css/log-reg.css">
+    <title>Informacion del Pefil</title>  
+    <%- include('../partials/head.ejs') %>  
+<body>
+    <!-- Aca empieza el headedr -->
+    <%- include('../partials/header.ejs',{avatar:avatar})%>
+    <div class="mainDiv">
+        <div class="banner">TU INFORMACION DE USUARIO</div>
+            <p> email: <%= email %> </p>
+            <p> nombre:<%= nombre %></p> 
+            <p> apellido:<%= apellido %></p> 
+    </section>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>      

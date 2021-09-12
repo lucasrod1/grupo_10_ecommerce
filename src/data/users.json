@@ -7,5 +7,14 @@
     "password": "$2a$10$cz7wOBHs4s0kYw8nVC6WzOMze7NCmX18ukJHSZuVcAJpMg8jd0us2",
     "category": "user",
     "avatarImage": "/images/users/${DATE}-usernameImageName.jpg"
+  },
+  {
+    "id": 2,
+    "firstName": "julio",
+    "lastName": "avila",
+    "email": "juliojose20@gmail.com",
+    "password": "$2a$10$GhAq.HA6Qed6UZisntjTJevoekF7IGNKusuDyEKGIICNlNTG0EQRC",
+    "category": "user",
+    "avatarImage": "foto-1631470343766.jpg"
   }
 ]
