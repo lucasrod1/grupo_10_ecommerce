@@ -57,7 +57,7 @@ const controllersUser = {
             }
             users.push(newUser)
             fs.writeFileSync(path.join(__dirname, '../data/users.json'), JSON.stringify(users, null, 2))
-            res.redirect('/');
+            res.redirect('/users/login');
         }else {
             //hay que validar los datos y enviarlos a la vista nuevamente con los errores y los datos que si estan ok a sus campos enviados.
             // console.log({ errors: errors.mapped(), old: req.body } )
