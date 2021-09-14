@@ -44,3 +44,16 @@ h3{
     letter-spacing: .5px;
     font-family: 'Roboto Slab', serif;
 }
+.linksProfile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+@media (min-width: 900px){
+    .linksProfile{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 1px 300px 10px;
+    }
+}
