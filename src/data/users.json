@@ -52,5 +52,14 @@
     "password": "$2a$10$KYaaIjnj0ttW53X9.ItaAeXwNtEbOQOK0OrO3mvODGXK5nRjF7UDm",
     "category": "user",
     "avatarImage": "foto-1631483093677.jpg"
+  },
+  {
+    "id": 7,
+    "firstName": "Lucas",
+    "lastName": "Rod",
+    "email": "Lucasfarina97@gmail.com",
+    "password": "$2a$10$4cCCwPAot5a3oZ7ncLWZYOVTHPq6JEwJXdeZj7Bdu8mslAXfqMSwC",
+    "category": "user",
+    "avatarImage": "foto-1631575616990.jpg"
   }
 ]

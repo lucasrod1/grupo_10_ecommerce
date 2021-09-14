@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
     <link rel = "stylesheet" href=" /css/profile.css">
-    <link rel="stylesheet" href="/css/log-reg.css">
+    <!-- <link rel="stylesheet" href="/css/log-reg.css"> -->
     <title>Informacion del Pefil</title>  
     <%- include('../partials/head.ejs') %>  
-<body>
-    <!-- Aca empieza el headedr -->
     <%- include('../partials/header.ejs',{avatar:avatar})%>
-    <div class="mainDiv">
-        <div class="banner">TU INFORMACION DE USUARIO</div>
-            <p> email: <%= email %> </p>
-            <p> nombre:<%= nombre %></p> 
-            <p> apellido:<%= apellido %></p> 
-    </section>
+    <body>
+        <div class="mainContainer">
+            <div class="mainContent">
+                <div class="userInfo">
+                    <h3>TU PERFIL</h3>
+                    <br></br>
+                    <div class="avatar">
+                        <% if(typeof avatar !== 'undefined'){ %>
+                            <a href ="/users/profile"><img class="avatarImg" src="/images/users/<%= avatar %>"></a>
+                            <% }else{ %>
+                                <a src="/images/users/noavatar"></a>
+                            <% } %>
+                    </div>
+                    <br></br>
+                    <p> Nombre: <%= nombre %> <%= apellido %></p> 
+                    <br></br>
+                    <p> Tu e-mail: <%= email %> </p>
+                    <br></br>
+                </div> 
+            </div>
+        </div>
+    </body>
     <%- include('../partials/footer.ejs') %>
-</body>
 </html>      
