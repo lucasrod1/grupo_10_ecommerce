@@ -13,17 +13,19 @@
             <div><a href="#"><i class="fas fa-search"></i></a></div>
         </div>
 
-        <a href="/"><img src="/img/LOGO.png" alt="LOGO"></a>
+        <a href="/" class="logo"><img src="/img/LOGO.png" alt="LOGO"></a>
         <div class="padreIcons">
-            <div><a href="#"><i class="soloEscritorio fas fa-search"></i></a></div>
-            <div>
-                <% if(typeof avatar !== 'undefined'){ %>
-                    <a href ="/users/profile"><img class="imgProfile" src="/images/users/<%= avatar %>"></a>
-                 <% }else{ %>
-                    <a href="/users/login"><i class="far fa-user"></i></a>
-                  <% } %>      
-             </div>
-            <div><a href="/cart"><i class="fas fa-shopping-cart"></i></a></div>
+            <div class="smallItems">
+                <div><a href="#"><i class="soloEscritorio fas fa-search"></i></a></div>
+                <div>
+                    <% if(typeof avatar !== 'undefined'){ %>
+                        <a href ="/users/profile"><img class="imgProfile" src="/images/users/<%= avatar %>"></a>
+                    <% }else{ %>
+                        <a href="/users/login"><i class="far fa-user"></i></a>
+                    <% } %>      
+                </div>
+                <div><a href="/cart"><i class="fas fa-shopping-cart"></i></a></div>
+            </div>
         </div>
     </div>
     <nav id="menuGrande">

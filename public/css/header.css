@@ -6,6 +6,7 @@ header{
     font-weight: 400;
     line-height: 1.5;
     box-sizing: border-box;
+    background-color: #fff;
 }
 
 #menuPequenio{
@@ -61,9 +62,14 @@ header{
 
 .padreIcons{
     position: absolute;
-    top: 20%;
-    right: 35px;
-
+    top: 20px;
+    right: 0;
+}
+.smallItems{
+    margin: 1px 50px 10px;
+    display: flex !important;
+    -webkit-box-align: center !important;
+    align-items: center !important;
 }
 
 .padreIcons1{
@@ -71,7 +77,7 @@ header{
     top: 20%;
     left: 35px;
     display: none;
-}  
+} 
 
 .padreIcons div, .padreIcons1 div{
     display: inline-block;
@@ -80,8 +86,8 @@ header{
 
 }
 .imgProfile{
-    border-radius: 50%;
-    width: 60px !important;
+    border-radius: 60%;
+    width: 40px !important;
     height: auto !important;
 }
 
@@ -175,5 +181,21 @@ a{
     } 
     .soloEscritorio{
         display: none !important;
+    }
+    .padreIcons{
+        text-align: end;
+        top: 8%;
+        right: 0px;
+        left: 45%;
+    }
+    .logo{
+        vertical-align: middle;
+        border-style: none;
+        width: 150px;
+    }
+    .cajaLogo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
 }
