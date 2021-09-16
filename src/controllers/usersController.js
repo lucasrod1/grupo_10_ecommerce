@@ -25,6 +25,7 @@ const controllersUser = {
             if(user.email == req.body.email){
                 if(bcrypt.compareSync(req.body.password, user.password)){
                     req.session.user = req.body.email;
+                    req.session.avatar = user.avatarImage;
                     return res.redirect('profile')
                 }else{
                     return res.render('../views/users/login.ejs')

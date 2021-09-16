@@ -24,8 +24,11 @@ app.use(methodOverride('_method'));
 app.set('views', './src/views');
 app.set('views engine', 'ejs');
 
-// Se agrega express-session y se define como middleware:
-app.use(session({ secret: "oldMilano" }));
+// Se agrega express-session y se define como middleware (Se agragan las propiedades resave y saveUnitialized para que no salga error de deprecated de express):
+app.use(session({
+    secret: "oldMilano", 
+    resave: true,
+    saveUninitialized: true}));
 
 // Configuracion de rutas a sitio
 app.use('/', mainRoute)
