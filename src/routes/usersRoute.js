@@ -23,11 +23,11 @@ let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../da
 
 //Validaciones para registro
 const validateCreateForm = [
-    body('firstName').notEmpty().withMessage('Debes completar el campo de nombre.'),
-    body('lastName').notEmpty().withMessage('Debes completar el campo de apellido.'),
-    body('emailSign').notEmpty().withMessage('Debes completar el campo e-mail.').bail().isEmail().withMessage('Debes completar un email valido.'),
-    body('emailValid').notEmpty().withMessage('Debes completar el campo e-mail.').bail().isEmail().withMessage('Debes completar un email valido.'),
-    body('passwordSign').notEmpty().withMessage('Debes Ingresar una contraseña.'),
+    body('firstName').notEmpty().withMessage('Debes escribir tu nombre.'),
+    body('lastName').notEmpty().withMessage('Debes escribir tu apellido.'),
+    body('emailSign').notEmpty().withMessage('Debes escribir tu dirección de e-mail.').bail().isEmail().withMessage('Debes escribir un email valido.'),
+    body('emailValid').notEmpty().withMessage('Debes escribir tu dirección de e-mail.').bail().isEmail().withMessage('Debes escribir un email valido.'),
+    body('passwordSign').notEmpty().withMessage('Debes escribir una contraseña.'),
     body('passwordValid').notEmpty().withMessage('Debes confirmar tu contraseña.'),
     body('avatar').custom((value, { req }) => {
       let file = req.file;

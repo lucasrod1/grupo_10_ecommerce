@@ -195,6 +195,12 @@ main input{
     text-align: center;
 }
 
+.text-danger{
+    color: #e20026 !important;
+    font-size: 11px;
+    margin-top: .25rem;
+}
+
 @media (min-width: 900px){
 
     main{

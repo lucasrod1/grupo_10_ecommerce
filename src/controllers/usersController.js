@@ -70,10 +70,7 @@ const controllersUser = {
     profileUser: function(req,res){
         if(req.session.user){
              let emailUser = req.session.user;   
-             let fileUsers = fs.readFileSync(path.resolve(__dirname, '../data/users.json'), {
-                encoding: 'utf-8'
-              });  
-             fileUsers= JSON.parse(fileUsers);
+             let fileUsers = userList();
                let user = fileUsers.find((fileUser)=> {
                    if(emailUser == fileUser.email){
                     return fileUser;

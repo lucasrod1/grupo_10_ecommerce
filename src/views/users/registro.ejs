@@ -18,42 +18,42 @@
                         <p class="infoSignIn">Todos los campos del formulario son obligatorios.</p>
                         <form action="/users/register/create" method="POST" enctype="multipart/form-data">
                             <input type="text" name="firstName" id="firstName" placeholder="*Nombre" value="<%= locals.old ? old.firstName : null %>">
-                            <div class="text-danter" style="color: red">
+                            <div class="text-danger">
                                 <%if(locals.errors && errors.firstName) {%>
                                     <%= errors.firstName.msg %>
                                 <% } %>
                             </div>
                             <p></p>
                             <input type="text" name="lastName" id="lastName" placeholder="*Apellido" value="<%= locals.old ? old.lastName : null %>">
-                            <div class="text-danter" style="color: red">
+                            <div class="text-danger">
                                 <%if(locals.errors && errors.lastName) {%>
                                     <%= errors.lastName.msg %>
                                 <% } %>
                             </div>
                             <p></p>
                             <input type="email" name="emailSign" id="emailSign" placeholder="*E-mail" value="<%= locals.old ? old.emailSign : null %>">
-                            <div class="text-danter" style="color: red">
+                            <div class="text-danger">
                                 <%if(locals.errors && errors.emailSign) {%>
                                     <%= errors.emailSign.msg %>
                                 <% } %>
                             </div>
                             <p></p>
                             <input type="email" name="emailValid" id="emailValid" placeholder="*Confirmar E-mail" value="<%= locals.old ? old.emailValid : null %>">
-                            <div class="text-danter" style="color: red">
+                            <div class="text-danger">
                                 <%if(locals.errors && errors.emailValid) {%>
                                     <%= errors.emailValid.msg %>
                                 <% } %>
                             </div>
                             <p></p>
                             <input type="password" name="passwordSign" id="passwordSign" placeholder="*Contraseña">
-                            <div class="text-danter" style="color: red">
+                            <div class="text-danger">
                                 <%if(locals.errors && errors.passwordSign) {%>
                                     <%= errors.passwordSign.msg %>
                                 <% } %>
                             </div>
                             <p></p>
                             <input type="password" name="passwordValid" id="passwordValid" placeholder="*Confirmar Contraseña">
-                            <div class="text-danter" style="color: red">
+                            <div class="text-danger">
                                 <%if(locals.errors && errors.passwordValid) {%>
                                     <%= errors.passwordValid.msg %>
                                 <% } %>
@@ -62,7 +62,7 @@
                             <div class="customFile">
                                 <label for="avatar" style="font-size: smaller;">Debes elegir tu avatar...</label>
                                 <input type="file" id="uploadFile" name="avatar">
-                                <div class="text-danter" style="color: red">
+                                <div class="text-danger">
                                 <%if(locals.errors && errors.avatar) {%>
                                     <%= errors.avatar.msg %>
                                 <% } %>
