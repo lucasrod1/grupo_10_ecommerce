@@ -6,6 +6,7 @@ header{
     font-weight: 400;
     line-height: 1.5;
     box-sizing: border-box;
+    background-color: #fff;
 }
 
 #menuPequenio{
@@ -61,9 +62,14 @@ header{
 
 .padreIcons{
     position: absolute;
-    top: 20%;
-    right: 35px;
-
+    top: 20px;
+    right: 0;
+}
+.smallItems{
+    margin: 1px 50px 10px;
+    display: flex !important;
+    -webkit-box-align: center !important;
+    align-items: center !important;
 }
 
 .padreIcons1{
@@ -71,7 +77,7 @@ header{
     top: 20%;
     left: 35px;
     display: none;
-}  
+} 
 
 .padreIcons div, .padreIcons1 div{
     display: inline-block;
@@ -79,9 +85,15 @@ header{
     padding: 10px;
 
 }
+.imgProfile{
+    border-radius: 60%;
+    width: 40px !important;
+    height: auto !important;
+}
 
 .soloEscritorio{
     display: block;
+
 }
 
 #menuGrande{
@@ -101,7 +113,6 @@ header{
     justify-content: space-between;
     width: 55%;
     text-align: center;
-    letter-spacing: 1.45PX;
 }
 
 #menuGrande li{
@@ -127,6 +138,13 @@ a{
         display: none;
     }
 
+    #menuGrande ul, #menuGrande li{
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: left;
+    }
+
     .bannerContainer{
         flex-direction: column !important;
         align-items: center !important;
@@ -134,6 +152,10 @@ a{
         -webkit-box-direction: normal !important;
         justify-content: space-between !important;
     }
+    #menuGrande.active{
+        display: block;
+        text-align: center;
+    } 
 
     .textCenter{
         display: block;
@@ -157,4 +179,23 @@ a{
     .padreIcons1{
         display: block;
     } 
+    .soloEscritorio{
+        display: none !important;
+    }
+    .padreIcons{
+        text-align: end;
+        top: 8%;
+        right: 0px;
+        left: 45%;
+    }
+    .logo{
+        vertical-align: middle;
+        border-style: none;
+        width: 150px;
+    }
+    .cajaLogo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }

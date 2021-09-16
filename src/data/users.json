@@ -1,42 +1,74 @@
 [
-    {
+  {
     "id": 1,
-    "first_name": "Ram",
-    "last_name": "Iglesiaz",
-    "email": "riglesiaz0@google.fr",
-    "password": "IKd8KM",
-    "category": "user"
-  }, 
+    "firstName": "Ram",
+    "lastName": "Iglesiaz",
+    "email": "test@test.com",
+    "password": "$2a$10$cz7wOBHs4s0kYw8nVC6WzOMze7NCmX18ukJHSZuVcAJpMg8jd0us2",
+    "category": "user",
+    "avatarImage": "/images/users/${DATE}-usernameImageName.jpg"
+  },
   {
     "id": 2,
-    "first_name": "Wilburt",
-    "last_name": "Elion",
-    "email": "welion1@jalbum.net",
-    "password": "UXMBzgs0",
-    "category": "user"
-  }, 
+    "firstName": "julio",
+    "lastName": "avila",
+    "email": "juliojose20@gmail.com",
+    "password": "$2a$10$GhAq.HA6Qed6UZisntjTJevoekF7IGNKusuDyEKGIICNlNTG0EQRC",
+    "category": "user",
+    "avatarImage": "foto-1631470343766.jpg"
+  },
   {
     "id": 3,
-    "first_name": "Thalia",
-    "last_name": "Giraudeau",
-    "email": "tgiraudeau2@yale.edu",
-    "password": "H1Em7WU",
-    "category": "user"
-  }, 
+    "firstName": "merlys",
+    "lastName": "leal",
+    "email": "meylealz0393@gmail.com",
+    "password": "$2a$10$nzxgG3zj3qKb.7gvLowDP.ZepIyQBbycZek0Lmq0LCZJKQ0S7zvVS",
+    "category": "user",
+    "avatarImage": "foto-1631482840809.jpg"
+  },
   {
     "id": 4,
-    "first_name": "Franni",
-    "last_name": "Heinschke",
-    "email": "fheinschke3@toplist.cz",
-    "password": "7Ubb70sds",
-    "category": "user"
-  }, 
+    "firstName": "daniel",
+    "lastName": "fuentes",
+    "email": "daniel@gmail.com",
+    "password": "$2a$10$FfG5VyIcnfYSTwNYoCEFy.xpkkauIX6hecpGekzGtCNjkrP4hbS8q",
+    "category": "user",
+    "avatarImage": "foto-1631482968679.png"
+  },
   {
     "id": 5,
-    "first_name": "Zondra",
-    "last_name": "Eusden",
-    "email": "zeusden4@baidu.com",
-    "password": "m6xFgAQDTQ"
+    "firstName": "daniel",
+    "lastName": "fuentes",
+    "email": "daniel@gmail.com",
+    "password": "$2a$10$32mjMmfuQckfENB0GycRKezgiUL3j4Lb.A4Aav4/A/6s1nu1/N4d.",
+    "category": "user",
+    "avatarImage": "foto-1631482999691.jpg"
+  },
+  {
+    "id": 6,
+    "firstName": "pepe",
+    "lastName": "pepepe",
+    "email": "pepe@gmail.com",
+    "password": "$2a$10$KYaaIjnj0ttW53X9.ItaAeXwNtEbOQOK0OrO3mvODGXK5nRjF7UDm",
+    "category": "user",
+    "avatarImage": "foto-1631483093677.jpg"
+  },
+  {
+    "id": 7,
+    "firstName": "Lucas",
+    "lastName": "Rod",
+    "email": "Lucasfarina97@gmail.com",
+    "password": "$2a$10$4cCCwPAot5a3oZ7ncLWZYOVTHPq6JEwJXdeZj7Bdu8mslAXfqMSwC",
+    "category": "user",
+    "avatarImage": "foto-1631575616990.jpg"
+  },
+  {
+    "id": 8,
+    "firstName": "Ariel",
+    "lastName": "couso",
+    "email": "ariel.couso@gmail.com",
+    "password": "$2a$10$Jh/2ov0eKue/jydbUPZEieP3ECQy7swT7xUFB6bJuuG.tUp3hV6zK",
+    "category": "user",
+    "avatarImage": "foto-1631822449633.JPG"
   }
-
 ]

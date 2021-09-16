@@ -13,21 +13,29 @@
             <div><a href="#"><i class="fas fa-search"></i></a></div>
         </div>
 
-        <a href="/"><img src="img/LOGO.png" alt="LOGO"></a>
+        <a href="/" class="logo"><img src="/img/LOGO.png" alt="LOGO"></a>
         <div class="padreIcons">
-            <div><a href="#"><i class="soloEscritorio fas fa-search"></i></a></div>
-            <div><a href="login"><i class="far fa-user"></i> </a></div>
-            <div><a href="shopping_bag"><i class="fas fa-shopping-cart"></i></a></div>
+            <div class="smallItems">
+                <div><a href="#"><i class="soloEscritorio fas fa-search"></i></a></div>
+                <div>
+                    <% if(typeof avatar !== 'undefined'){ %>
+                        <a href ="/users/profile"><img class="imgProfile" src="/images/users/<%= avatar %>"></a>
+                    <% }else{ %>
+                        <a href="/users/login"><i class="far fa-user"></i></a>
+                    <% } %>      
+                </div>
+                <div><a href="/cart"><i class="fas fa-shopping-cart"></i></a></div>
+            </div>
         </div>
     </div>
     <nav id="menuGrande">
-        <ul>
+        <div>
             <li><a href="#">HOMBRE</a></li>
             <li><a href="#">MUJER</a> </li>
             <li><a href="#">OFERTAS</a></li>
             <li><a href="#">ACCESORIOS</a></li>
             <li><a href="#">SOBRE NOSOTROS</a></li>
             <li><a href="#">CONTÁCTANOS</a></li>
-        </ul>
+        </div>
     </nav>
 </header>

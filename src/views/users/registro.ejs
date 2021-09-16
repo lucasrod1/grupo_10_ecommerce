@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="/css/log-reg.css">
+    <title>Registro</title>  
+    <%- include('../partials/head.ejs') %>  
+<body>
+    <!-- Aca empieza el headedr -->
+    <%- include('../partials/header.ejs') %>
+
+    <!-- Aca empieza el contenido login-registro -->
+    <div class="mainDiv">
+        <div class="banner">CREA TU CUENTA EN OLD MILANO</div>
+        <main>
+            <div class="login-page">
+                <section id="signUp">
+                    <div class="signIn">
+                        <p class="infoSignIn">Si todavia no tienes una cuenta de usuario en www.Old-Milano.com, utiliza esta opcion para acceder al formulario de registro.</p>
+                        <p class="infoSignIn">Todos los campos del formulario son obligatorios.</p>
+                        <form action="/users/register/create" method="POST" enctype="multipart/form-data">
+                            <input type="text" name="firstName" id="firstName" placeholder="*Nombre" value="<%= locals.old ? old.firstName : null %>">
+                            <div class="text-danger">
+                                <%if(locals.errors && errors.firstName) {%>
+                                    <%= errors.firstName.msg %>
+                                <% } %>
+                            </div>
+                            <p></p>
+                            <input type="text" name="lastName" id="lastName" placeholder="*Apellido" value="<%= locals.old ? old.lastName : null %>">
+                            <div class="text-danger">
+                                <%if(locals.errors && errors.lastName) {%>
+                                    <%= errors.lastName.msg %>
+                                <% } %>
+                            </div>
+                            <p></p>
+                            <input type="email" name="emailSign" id="emailSign" placeholder="*E-mail" value="<%= locals.old ? old.emailSign : null %>">
+                            <div class="text-danger">
+                                <%if(locals.errors && errors.emailSign) {%>
+                                    <%= errors.emailSign.msg %>
+                                <% } %>
+                            </div>
+                            <p></p>
+                            <input type="email" name="emailValid" id="emailValid" placeholder="*Confirmar E-mail" value="<%= locals.old ? old.emailValid : null %>">
+                            <div class="text-danger">
+                                <%if(locals.errors && errors.emailValid) {%>
+                                    <%= errors.emailValid.msg %>
+                                <% } %>
+                            </div>
+                            <p></p>
+                            <input type="password" name="passwordSign" id="passwordSign" placeholder="*Contraseña">
+                            <div class="text-danger">
+                                <%if(locals.errors && errors.passwordSign) {%>
+                                    <%= errors.passwordSign.msg %>
+                                <% } %>
+                            </div>
+                            <p></p>
+                            <input type="password" name="passwordValid" id="passwordValid" placeholder="*Confirmar Contraseña">
+                            <div class="text-danger">
+                                <%if(locals.errors && errors.passwordValid) {%>
+                                    <%= errors.passwordValid.msg %>
+                                <% } %>
+                            </div>
+                            <p></p>
+                            <div class="customFile">
+                                <label for="avatar" style="font-size: smaller;">Debes elegir tu avatar...</label>
+                                <input type="file" id="uploadFile" name="avatar">
+                                <div class="text-danger">
+                                <%if(locals.errors && errors.avatar) {%>
+                                    <%= errors.avatar.msg %>
+                                <% } %>
+                                </div>
+                            </div>  
+                            <div class="newsletterCheck">
+                                <input type="checkbox" name="newsletter" id="newsletter" style="width: auto;">
+                                <label for="newsletter" style="font-size: smaller;">Quiero suscribirme a la newsletter.</label>
+                                <p></p>
+                            </div>
+                            <button type="submit">CREAR MI CUENTA</button>
+                            <div class="linksSignUp">
+                                <a href="#">Politica de Privacidad</a>
+                                <a href="/login" id="noAccount" title="noAccount">YA TENGO CUENTA</a>
+                                <a href="#">Terminos y Condiciones</a>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <br><section class="benefits">
+        <h3>Hacerse cliente tiene sus ventajas</h3>
+        <div class="advantages">
+            <div class="advantage" id="tracking">
+                <h4><i class="fas fa-satellite-dish"></i>Seguimiento de tu pedido</h4>
+                <p>Podrás hacer el seguimiento de tu pedido.</p>
+                </div>
+            <div class="advantage" id="refunds">
+                <h4><i class="fas fa-sync"></i>Devoluciones</h4>
+                <p>Realiza tus devoluciones de forma rápida.</p>
+                </div>
+            <div class="advantage" id="promotions">
+                <h4><i class="fas fa-percent"></i>Ofertas y promociones</h4>
+                <p>Recibe ofertas y promociones exclusivas.</p>
+                </div>
+            <div class="advantage" id="purchases">
+                <h4><i class="fas fa-bolt"></i>Compra más ágil</h4>
+                <p>Gana tiempo en tus compras futuras.</p>
+                </div>
+        </div>
+    </section>
+    <!-- Aca FIN de el contenido login-regsitro -->
+    <!-- Aca comienza el FOOTER -->
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
