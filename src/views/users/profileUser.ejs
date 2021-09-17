@@ -4,13 +4,13 @@
     <!-- <link rel="stylesheet" href="/css/log-reg.css"> -->
     <title>Informacion del Pefil</title>  
     <%- include('../partials/head.ejs') %>  
-    <%- include('../partials/header.ejs',{avatar:avatar})%>
+    <%- include('../partials/header.ejs')%>
     <body>
         <div class="mainContainer">
             <div class="mainContent">
                 <div class="userInfo">
                     <h3>TU PERFIL</h3>
-                    <br></br>
+                    <br>
                     <div class="avatar">
                         <% if(typeof avatar !== 'undefined'){ %>
                             <a href ="/users/profile"><img class="avatarImg" src="/images/users/<%= avatar %>"></a>
@@ -18,11 +18,11 @@
                                 <a src="/images/users/noavatar"></a>
                             <% } %>
                     </div>
-                    <br></br>
+                    <br>
                     <p> Nombre: <%= nombre %> <%= apellido %></p> 
-                    <br></br>
+                    <br>
                     <p> Tu e-mail: <%= email %> </p>
-                    <br></br>
+                    <br>
                     <div class="linksProfile">
                         <a href="#">Editar Perfil</a>
                         <a href="#">Borrar Cuenta</a>

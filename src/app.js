@@ -13,6 +13,9 @@ const port = 3000;
 
 app.use(express.static(publicPath));
 
+//requerimiento de Middlewares a nivel aplicacion:
+const loginValidateApp = require('./middlewares/loginValidateApp')
+
 //Configuracion para permitir envio de datos POST json
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -29,6 +32,9 @@ app.use(session({
     secret: "oldMilano", 
     resave: true,
     saveUninitialized: true}));
+
+//uso de middleware a nivel aplicacion para mantener sesion y datos de usuaril persistentes:
+app.use(loginValidateApp)
 
 // Configuracion de rutas a sitio
 app.use('/', mainRoute)
