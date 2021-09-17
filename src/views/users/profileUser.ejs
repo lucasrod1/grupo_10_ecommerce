@@ -24,10 +24,18 @@
                     <p> Tu e-mail: <%= email %> </p>
                     <br>
                     <div class="linksProfile">
-                        <a href="#">Editar Perfil</a>
-                        <a href="#">Borrar Cuenta</a>
-                        <a href="/">Volver al Sitio</a>
-                        <a href="#">Log Out</a>
+                        <form action="" method="POST">
+                            <input type="submit" value="Editar Perfil">
+                        </form>
+                        <form action="" method="POST">
+                            <input type="submit" value="Borrar Cuenta">
+                        </form>
+                        <form action="" method="POST">
+                            <input type="submit" value="Volver al Sitio">
+                        </form>
+                        <form action="/users/logout" method="POST">
+                            <input type="submit" value="logout">
+                        </form>
                     </div>
                 </div> 
             </div>
