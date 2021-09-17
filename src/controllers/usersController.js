@@ -66,27 +66,31 @@ const controllersUser = {
             res.render('../views/users/registro.ejs', {errors: errors.mapped(), old: req.body })
         }
         
-    },
-    //metodo renderizado para ver el perfil Usuario 
-    profileUser: function(req,res){
-        if(req.session.user){
-             let emailUser = req.session.user;   
-             let fileUsers = userList();
-               let user = fileUsers.find((fileUser)=> {
-                   if(emailUser == fileUser.email){
-                    return fileUser;
-                   }           
-               })
-                res.render('../views/users/profileUser.ejs',{
-                email: user.email,
-                nombre: user.firstName,
-                apellido: user.lastName,
-                avatar: user.avatarImage
-            });
-        }else{
-         res.render('../views/users/registro.ejs');   
+        },
+        //metodo renderizado para ver el perfil Usuario 
+        profileUser: function(req,res){
+            if(req.session.user){
+                 let emailUser = req.session.user;   
+                 let fileUsers = userList();
+                   let user = fileUsers.find((fileUser)=> {
+                       if(emailUser == fileUser.email){
+                        return fileUser;
+                       }           
+                   })
+                    res.render('../views/users/profileUser.ejs',{
+                    email: user.email,
+                    nombre: user.firstName,
+                    apellido: user.lastName,
+                    avatar: user.avatarImage
+                });
+            }else{
+             res.render('../views/users/registro.ejs');   
+            }
+
+        },
+        logout: (req, res) => {
+            req.session.destroy();
+            res.redirect('/')
         }
-        
-    },
-}
+    }
 module.exports = controllersUser;
