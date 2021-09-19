@@ -37,7 +37,8 @@ app.use(session({
 app.use(loginValidateApp)
 
 // Configuracion de rutas a sitio
-app.use('/', mainRoute)
+app.use('/', mainRoute);
+app.use('/products', routeFormulario)
 app.use('/users', usersRoute)
 
 // Configuracion Server
