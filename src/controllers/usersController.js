@@ -26,6 +26,9 @@ const controllersUser = {
                 if(bcrypt.compareSync(req.body.password, user.password)){
                     req.session.user = req.body.email;
                     req.session.avatar = user.avatarImage;
+                    if (req.body.remember && req.body.remember == 'on'){
+                        res.cookie('user', req.body.email, { maxAge: (1000 * 60) * 1 })
+                    }
                     return res.redirect('profile')
                 }else{
                     return res.render('../views/users/login.ejs')
@@ -69,6 +72,7 @@ const controllersUser = {
         },
         //metodo renderizado para ver el perfil Usuario 
         profileUser: function(req,res){
+            console.log(req.cookies.user)
             if(req.session.user){
                  let emailUser = req.session.user;   
                  let fileUsers = userList();

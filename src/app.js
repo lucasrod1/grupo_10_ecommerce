@@ -5,6 +5,7 @@ const routeFormulario = require('./routes/routeAbmProducto.js');
 const mainRoute = require('./routes/mainRoute.js');
 const usersRoute = require('./routes/usersRoute.js');
 const session = require('express-session');
+const cookies = require('cookie-parser');
 
 const path = require('path');
 const app = express();
@@ -35,6 +36,9 @@ app.use(session({
 
 //uso de middleware a nivel aplicacion para mantener sesion y datos de usuaril persistentes:
 app.use(loginValidateApp)
+
+//uso de cookie parser a nivel app.
+app.use(cookies())
 
 // Configuracion de rutas a sitio
 app.use('/', mainRoute);
