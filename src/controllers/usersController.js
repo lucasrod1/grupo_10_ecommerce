@@ -33,6 +33,9 @@ const controllersUser = {
                 }else{
                     res.render('../views/users/login.ejs')
                 }
+            }else{
+                // console.log("no Existe usuario")
+                res.redirect('/users/register')
             }
         });
         // res.redirect('../views/users/registro.ejs')
