@@ -26,16 +26,16 @@ const controllersUser = {
                 if(bcrypt.compareSync(req.body.password, user.password)){
                     req.session.user = req.body.email;
                     req.session.avatar = user.avatarImage;
-                    if (req.body.remember && req.body.remember == 'on'){
+                    if (req.body.remember == 'on'){
                         res.cookie('user', req.body.email, { maxAge: (1000 * 60) * 1 })
                     }
                     return res.redirect('profile')
                 }else{
-                    return res.render('../views/users/login.ejs')
+                    res.render('../views/users/login.ejs')
                 }
             }
         });
-        res.render('../views/users/registro.ejs')
+        // res.redirect('../views/users/registro.ejs')
     },
     //Medodo renderizacion de sitio para registracion de usuario
     register: function(req,res){

@@ -1,11 +1,11 @@
 function userLogged(req, res, next) {
     // res.locals.islogged = false;
 
-    console.log(req.cookies.user)
+    // console.log(req.cookies.user)
 
-    if(req.cookies){
-        req.locals.user = req.cookies
-    }
+    // if(req.cookies){
+    //     req.locals.user = res.cookies
+    // }
 
     if(req.session.user){
         // console.log(req.session)
