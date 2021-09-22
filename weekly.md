@@ -21,3 +21,11 @@ Ahora estamos: Armamos las tareas del backlog y distribuimos las stories de usua
 Fecha: 06-09-2021
 Que hicimos: Se organizaron las tarjetitas en el Trello para empezar a trabajar en conjunto para el SPRINT 5.
 Ahora estamos: trabajando con el sprint 5, normalizamos variables y unificamos controllers y routes.
+
+Fecha: 13-09-2021
+Que hicimos: Se armo middlewares, se crearon metodos de registracion, de login.
+Ahora estamos: Armando el frontend para poder mostrar el perfil del usuario logueado, terminando el middleware que permite loguearse y poder navegar por diferentes rutas menteniendo el usuario logueado, y trabajando en metodo login para que guarde una cookie con el recordame y haciendo que esta tambien sea indentificada en el middleware de login.
+
+Fecha: 21-09-2021
+Que hicimos: Ordenamos las tarjetas del sprint 5, revisamos pendientes del proyecto.
+Ahora estamos: Organizando el sprint 6, creando las tarjetas en trello para poder dar inicio con las tareas. Se definieron fechas para reunirse y trabajar con el proyecto cada 2 mas alla de las tareas que nos llevamos cada uno para poder avanzar.
