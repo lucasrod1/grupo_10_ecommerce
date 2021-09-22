@@ -55,3 +55,15 @@ SPRINT4 to SPRINT5:
 4. Hacer menos.
  No extendernos en las dailys con temas que no refieren a las dailys.
 6. Dejar de hacer.
+
+SPRINT5 to SPRINT6:
+1. Comenzar a hacer.
+ Programar las reuniones semanales para trabajo en equipo, y segmentarnos las tareas por tarjeta o punto del sprint.
+2. Hacer más.
+ -Pair programming.
+ -Normalizar variables.
+3. Continuar haciendo. 
+  Mantener la frecuencia de las reuniones del equipo (dailys).
+4. Hacer menos.
+ No extendernos en las dailys con temas que no refieren a las dailys.
+6. Dejar de hacer.
