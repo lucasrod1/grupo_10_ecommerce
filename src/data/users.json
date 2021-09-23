@@ -61,14 +61,5 @@
     "password": "$2a$10$4cCCwPAot5a3oZ7ncLWZYOVTHPq6JEwJXdeZj7Bdu8mslAXfqMSwC",
     "category": "user",
     "avatarImage": "foto-1631575616990.jpg"
-  },
-  {
-    "id": 8,
-    "firstName": "Ariel",
-    "lastName": "couso",
-    "email": "ariel.couso@gmail.com",
-    "password": "$2a$10$Jh/2ov0eKue/jydbUPZEieP3ECQy7swT7xUFB6bJuuG.tUp3hV6zK",
-    "category": "user",
-    "avatarImage": "foto-1631822449633.JPG"
   }
 ]
