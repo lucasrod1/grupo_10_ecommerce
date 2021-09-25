@@ -21,21 +21,25 @@ const controllersUser = {
     //Medodo para validacion de usuario
     loginValidation: (req, res) => {
         let userLista = userList();
-        userLista.forEach(user => {
-            if(user.email == req.body.email){
-                if(bcrypt.compareSync(req.body.password, user.password)){
-                    req.session.user = req.body.email;
-                    req.session.avatar = user.avatarImage;
-                    if (req.body.remember == 'on'){
-                        res.cookie('user', req.body.email, { maxAge: (1000 * 60) * 1 })
-                    }
-                    return res.redirect('profile')
-                }else{
-                    res.render('../views/users/login.ejs')
+        let user = userLista.find( (element) =>{
+            return element.email == req.body.email
+        })
+        
+        if(user){
+            if (bcrypt.compareSync(req.body.password, user.password)) {
+                req.session.user = req.body.email;
+                req.session.avatar = user.avatarImage;
+                if (req.body.remember == 'on') {
+                    res.cookie('user', req.body.email, { maxAge: (1000 * 60) * 1 })
                 }
+                return res.redirect('profile')
+            } else {
+                res.render('../views/users/login.ejs')
             }
-        });
+        }
+        else{
         res.render('../views/users/registro.ejs')
+        }
     },
     //Medodo renderizacion de sitio para registracion de usuario
     register: function(req,res){
