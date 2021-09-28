@@ -98,6 +98,7 @@ const controllersUser = {
         },
         logout: (req, res) => {
             req.session.destroy();
+            res.cookie('user', null, { maxAge: 1 });
             res.redirect('/')
         }
     }
