@@ -18,7 +18,7 @@
             <div class="smallItems">
                 <div><a href="#"><i class="soloEscritorio fas fa-search"></i></a></div>
                 <div>
-                    <% if(typeof avatar !== 'undefined'){ %>
+                    <% if(islogged){ %>
                         <a href ="/users/profile"><img class="imgProfile" src="/images/users/<%= avatar %>"></a>
                     <% }else{ %>
                         <a href="/users/login"><i class="far fa-user"></i></a>

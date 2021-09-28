@@ -34,11 +34,11 @@ app.use(session({
     resave: true,
     saveUninitialized: true}));
 
-//uso de middleware a nivel aplicacion para mantener sesion y datos de usuaril persistentes:
-app.use(loginValidateApp)
-
 //uso de cookie parser a nivel app.
 app.use(cookies())
+
+//uso de middleware a nivel aplicacion para mantener sesion y datos de usuaril persistentes:
+app.use(loginValidateApp)
 
 // Configuracion de rutas a sitio
 app.use('/', mainRoute);
