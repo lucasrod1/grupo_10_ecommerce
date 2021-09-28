@@ -30,7 +30,7 @@ const controllersUser = {
                 req.session.user = req.body.email;
                 req.session.avatar = user.avatarImage;
                 if (req.body.remember == 'on') {
-                    res.cookie('user', req.body.email, { maxAge: (1000 * 60) * 1 })
+                    res.cookie('user', req.body.email, { maxAge: (1000 * 60) * 10 })
                 }
                 return res.redirect('profile')
             } else {
