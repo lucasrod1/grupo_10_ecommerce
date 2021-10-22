@@ -12,22 +12,22 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 
--- Volcando estructura de base de datos para oldmilano
-CREATE DATABASE IF NOT EXISTS `oldmilano` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
-USE `oldmilano`;
+-- Volcando estructura de base de datos para oldmilano3
+CREATE DATABASE IF NOT EXISTS `oldmilano3` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE `oldmilano3`;
 
--- Volcando estructura para tabla oldmilano.category
+-- Volcando estructura para tabla oldmilano3.category
 CREATE TABLE IF NOT EXISTS `category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Volcando datos para la tabla oldmilano.category: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla oldmilano3.category: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 
--- Volcando estructura para tabla oldmilano.colorproduct
+-- Volcando estructura para tabla oldmilano3.colorproduct
 CREATE TABLE IF NOT EXISTS `colorproduct` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_colors` int(11) DEFAULT NULL,
@@ -36,22 +36,22 @@ CREATE TABLE IF NOT EXISTS `colorproduct` (
   CONSTRAINT `colorproduct_FK` FOREIGN KEY (`id_colors`) REFERENCES `colors` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Volcando datos para la tabla oldmilano.colorproduct: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla oldmilano3.colorproduct: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `colorproduct` DISABLE KEYS */;
 /*!40000 ALTER TABLE `colorproduct` ENABLE KEYS */;
 
--- Volcando estructura para tabla oldmilano.colors
+-- Volcando estructura para tabla oldmilano3.colors
 CREATE TABLE IF NOT EXISTS `colors` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `color` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Volcando datos para la tabla oldmilano.colors: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla oldmilano3.colors: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `colors` DISABLE KEYS */;
 /*!40000 ALTER TABLE `colors` ENABLE KEYS */;
 
--- Volcando estructura para tabla oldmilano.ordersummary
+-- Volcando estructura para tabla oldmilano3.ordersummary
 CREATE TABLE IF NOT EXISTS `ordersummary` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_user` int(11) DEFAULT NULL,
@@ -66,11 +66,11 @@ CREATE TABLE IF NOT EXISTS `ordersummary` (
   CONSTRAINT `ordersummary_FK_1` FOREIGN KEY (`id_productOrder`) REFERENCES `productorder` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Volcando datos para la tabla oldmilano.ordersummary: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla oldmilano3.ordersummary: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `ordersummary` DISABLE KEYS */;
 /*!40000 ALTER TABLE `ordersummary` ENABLE KEYS */;
 
--- Volcando estructura para tabla oldmilano.productorder
+-- Volcando estructura para tabla oldmilano3.productorder
 CREATE TABLE IF NOT EXISTS `productorder` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_users` int(11) DEFAULT NULL,
@@ -79,6 +79,7 @@ CREATE TABLE IF NOT EXISTS `productorder` (
   `priceTotal` float DEFAULT NULL,
   `id_colorProduct` int(11) DEFAULT NULL,
   `id_productSize` int(11) DEFAULT NULL,
+  `active_flag` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `productorder_FK` (`id_users`),
   KEY `productorder_FK_1` (`id_products`),
@@ -90,11 +91,11 @@ CREATE TABLE IF NOT EXISTS `productorder` (
   CONSTRAINT `productorder_FK_3` FOREIGN KEY (`id_productSize`) REFERENCES `productsize` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Volcando datos para la tabla oldmilano.productorder: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla oldmilano3.productorder: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `productorder` DISABLE KEYS */;
 /*!40000 ALTER TABLE `productorder` ENABLE KEYS */;
 
--- Volcando estructura para tabla oldmilano.products
+-- Volcando estructura para tabla oldmilano3.products
 CREATE TABLE IF NOT EXISTS `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) DEFAULT NULL,
@@ -112,11 +113,11 @@ CREATE TABLE IF NOT EXISTS `products` (
   CONSTRAINT `products_FK_2` FOREIGN KEY (`id_productSize`) REFERENCES `productsize` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Volcando datos para la tabla oldmilano.products: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla oldmilano3.products: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 
--- Volcando estructura para tabla oldmilano.productsize
+-- Volcando estructura para tabla oldmilano3.productsize
 CREATE TABLE IF NOT EXISTS `productsize` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_sizes` int(11) DEFAULT NULL,
@@ -125,22 +126,22 @@ CREATE TABLE IF NOT EXISTS `productsize` (
   CONSTRAINT `productsize_FK` FOREIGN KEY (`id_sizes`) REFERENCES `sizes` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Volcando datos para la tabla oldmilano.productsize: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla oldmilano3.productsize: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `productsize` DISABLE KEYS */;
 /*!40000 ALTER TABLE `productsize` ENABLE KEYS */;
 
--- Volcando estructura para tabla oldmilano.sizes
+-- Volcando estructura para tabla oldmilano3.sizes
 CREATE TABLE IF NOT EXISTS `sizes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `size` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Volcando datos para la tabla oldmilano.sizes: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla oldmilano3.sizes: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `sizes` DISABLE KEYS */;
 /*!40000 ALTER TABLE `sizes` ENABLE KEYS */;
 
--- Volcando estructura para tabla oldmilano.users
+-- Volcando estructura para tabla oldmilano3.users
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `firstName` varchar(100) DEFAULT NULL,
@@ -154,18 +155,18 @@ CREATE TABLE IF NOT EXISTS `users` (
   CONSTRAINT `users_FK` FOREIGN KEY (`id_userType`) REFERENCES `usertype` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Volcando datos para la tabla oldmilano.users: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla oldmilano3.users: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
--- Volcando estructura para tabla oldmilano.usertype
+-- Volcando estructura para tabla oldmilano3.usertype
 CREATE TABLE IF NOT EXISTS `usertype` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Volcando datos para la tabla oldmilano.usertype: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla oldmilano3.usertype: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `usertype` DISABLE KEYS */;
 /*!40000 ALTER TABLE `usertype` ENABLE KEYS */;
 
