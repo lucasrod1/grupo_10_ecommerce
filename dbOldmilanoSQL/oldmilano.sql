@@ -100,6 +100,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) DEFAULT NULL,
   `description` text DEFAULT NULL,
+  `image` varchar(1000) DEFAULT NULL,
   `id_category` int(11) DEFAULT NULL,
   `price` float DEFAULT NULL,
   `id_colorProduct` int(11) DEFAULT NULL,
