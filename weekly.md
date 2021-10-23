@@ -29,3 +29,11 @@ Ahora estamos: Armando el frontend para poder mostrar el perfil del usuario logu
 Fecha: 21-09-2021
 Que hicimos: Ordenamos las tarjetas del sprint 5, revisamos pendientes del proyecto.
 Ahora estamos: Organizando el sprint 6, creando las tarjetas en trello para poder dar inicio con las tareas. Se definieron fechas para reunirse y trabajar con el proyecto cada 2 mas alla de las tareas que nos llevamos cada uno para poder avanzar.
+
+Fecha: 12-10-2021
+Que hicimos: Ordenamos el tablero, comenzamos a trabajar con el diagrama de relaciones de la DB.
+Ahora estamos: revisando diseño de base de datos para poder realizar una compra.
+
+Fecha: 19-10-2021
+Que hicimos: Armamos diagrama de realacion y scripts para poder realizar creacion de DB y carga de datos.
+Ahora estamos: revisando funcionalidades posibles para carrito de compra, comenzando a diseñar la estrategia para poder implementar CRUD con controllers y DB con sequelize.
