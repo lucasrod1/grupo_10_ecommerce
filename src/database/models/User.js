@@ -32,20 +32,15 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
     };
-    // let config = {
-    //     timestamps: true,
-    //     createdAt: 'created_at',
-    //     updatedAt: 'updated_at',
-    //     deletedAt: false
-    // }
-    // const Actor = sequelize.define(alias, cols, config); 
+    
     const User = sequelize.define(alias, cols); 
 
-    // User.associate = function (models) {
-    //     User.belongsToMany(models., {
-            
-    //     })
-    // }
+    User.associate = function (models) {
+         User.belongsTo(models.UserType, {
+            as:"userType", 
+            foreignKey:"id_userType"
+         })
+    }
 
     return User
 };
