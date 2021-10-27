@@ -1,5 +1,6 @@
 const path = require('path')
 const fs = require('fs');
+// const db = require('../database/models');
 
 //Funcion para poder llamar a los productos desde el JSON para que pueda reulizarse y hacer update en caso de que algun menotdo lo requiera.
 function productos(){

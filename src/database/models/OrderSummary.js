@@ -2,17 +2,17 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'orderSummary';
     let cols = {
         id: {
-            type: dataTypes.INT(10),
+            type: dataTypes.INTEGER(10),
             primaryKey: true,
             autoIncrement: true,
             allowNull: false
         },
         id_users: {
-            type: dataTypes.INT(10),
+            type: dataTypes.INTEGER(10),
             allowNull: false
         },
         id_productOrder: {
-            type: dataTypes.INT(10),
+            type: dataTypes.INTEGER(10),
             allowNull: false
         },
         orderAmmount: {
@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         shippingAddress: {
-            type: dataTypes.VARCHAR(255),
+            type: dataTypes.STRING(255),
             allowNull: false
         },
         orderDate: {

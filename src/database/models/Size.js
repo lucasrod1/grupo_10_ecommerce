@@ -2,13 +2,13 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'sizes';
     let cols = {
         id: {
-            type: dataTypes.INT(10),
+            type: dataTypes.INTEGER(10),
             primaryKey: true,
             autoIncrement: true,
             allowNull: false
         },
         size: {
-            type: dataTypes.VARCHAR(45),
+            type: dataTypes.STRING(45),
             allowNull: false
         },
     };

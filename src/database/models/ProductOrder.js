@@ -2,21 +2,21 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'productOrder';
     let cols = {
         id: {
-            type: dataTypes.INT(10),
+            type: dataTypes.INTEGER(10),
             primaryKey: true,
             autoIncrement: true,
             allowNull: false
         },
         id_users: {
-            type: dataTypes.INT(10),
+            type: dataTypes.INTEGER(10),
             allowNull: false
         },
         id_products: {
-            type: dataTypes.INT(10),
+            type: dataTypes.INTEGER(10),
             allowNull: false
         },
         productQuantity: {
-            type: dataTypes.INT(10),
+            type: dataTypes.INTEGER(10),
             allowNull: false
         },
         price: {
@@ -24,15 +24,15 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         id_colorProduct: {
-            type: dataTypes.INT(10),
+            type: dataTypes.INTEGER(10),
             allowNull: false
         },
         id_productSize: {
-            type: dataTypes.INT(10),
+            type: dataTypes.INTEGER(10),
             allowNull: false
         },
         active_flag: {
-            type: dataTypes.INT(1),
+            type: dataTypes.INTEGER(1),
             allowNull: false
         },
     };

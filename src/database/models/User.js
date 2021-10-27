@@ -2,33 +2,33 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'User';
     let cols = {
         id: {
-            type: dataTypes.INT(10),
+            type: dataTypes.INTEGER(10),
             primaryKey: true,
             autoIncrement: true,
             allowNull: false
         },
         firstName: {
-            type: dataTypes.VARCHAR(45),
+            type: dataTypes.STRING(45),
             allowNull: false
         },
         lastName: {
-            type: dataTypes.VARCHAR(45),
+            type: dataTypes.STRING(45),
             allowNull: false
         },
         email: {
-            type: dataTypes.VARCHAR(120),
+            type: dataTypes.STRING(120),
             allowNull: false
         },
         password: {
-            type: dataTypes.VARCHAR(255),
+            type: dataTypes.STRING(255),
             allowNull: false
         },
         id_userType: {
-            type: dataTypes.INT(10),
+            type: dataTypes.INTEGER(10),
             allowNull: false
         },
         avatarImage: {
-            type: dataTypes.VARCHAR(255),
+            type: dataTypes.STRING(255),
             allowNull: false
         },
     };
