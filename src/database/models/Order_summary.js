@@ -30,13 +30,13 @@ module.exports = (sequelize, DataTypes) => {
     });
     
     Order_summary.associate = function (models) {
-        Order_summary.belongsTo(models.User, {
+        Order_summary.hasMany(models.User, {
            as:"user", 
            foreignKey:"users_id"
         });
         Order_summary.belongsTo(models.Product_order, {
             as:"product_order", 
-            foreignKey:"id_productOrder"
+            foreignKey:"product_order_id"
          })
    }
 

@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-const ProductOrder = sequelize.define("Product_order",
+const Product_order = sequelize.define("Product_order",
     {
         id: {
             type: DataTypes.INTEGER(10),
@@ -33,19 +33,23 @@ const ProductOrder = sequelize.define("Product_order",
         },
     });
 
-    ProductOrder.associate = function (models) {
-        ProductOrder.belongsTo(models.Product, {
+    Product_order.associate = function (models) {
+        Product_order.hasMany(models.Order_summary, {
+            as: "product_order",
+            foreignKey: "product_order_id"
+        })
+        Product_order.belongsTo(models.Product, {
             as:"products",
-            foreignKey:"products_id"
+            foreignKey:"products_id",
         });
-        ProductOrder.belongsTo(models.Product_color, {
-            as:"products_colors", 
-            foreignKey:"product_color_id"
+        Product_order.belongsTo(models.Product_color, {
+            as:"products_color", 
+            foreignKey:"product_color_id",
         });
-        ProductOrder.belongsTo(models.Product_size, {
+        Product_order.belongsTo(models.Product_size, {
             as:"product_size",
-            foreignKey:"product_size_id"
+            foreignKey:"product_size_id",
         });
     }
-    return ProductOrder
+    return Product_order
 };

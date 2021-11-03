@@ -13,5 +13,12 @@ module.exports = (sequelize, DataTypes) => {
         },
     });
     
+    Product_colors.associate = function (models) {
+        Product_colors.hasMany(models.Product_order, {
+            as: "products_color",
+            foreignKey: "product_color_id",
+        });
+    }
+
     return Product_colors
 };

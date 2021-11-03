@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const ProductSize = sequelize.define("Product_sizes",
+    const Product_size = sequelize.define("Product_sizes",
     {
         id: {
             type: DataTypes.INTEGER(10),
@@ -13,5 +13,12 @@ module.exports = (sequelize, DataTypes) => {
         },
     });
 
-    return ProductSize
+    Product_size.associate = function (models) {
+        Product_size.belongsTo(models.Product_order, {
+            as: "product_size",
+            foreignKey: "product_size_id",
+        });
+    };
+
+    return Product_size
 };

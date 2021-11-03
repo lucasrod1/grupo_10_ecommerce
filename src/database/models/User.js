@@ -34,10 +34,14 @@ module.exports = (sequelize, DataTypes) => {
     });
 
     User.associate = function (models) {
-         User.belongsToMany(models.UserType, {
+         User.belongsTo(models.User_Type, {
             as:"userType", 
             foreignKey:"user_type_id"
-         })
+         }),
+        User.belongsTo(models.Order_summary, {
+            as: "user",
+            foreignKey: "users_id"
+        });
     };
 
     return User
