@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'Product_colors';
-    let cols = {
+    const Product_colors = sequelize.define("Product_colors",
+        {
         id: {
             type: DataTypes.INTEGER(10),
             primaryKey: true,
@@ -11,9 +11,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(45),
             allowNull: false
         },
-    };
-
-    const Product_colors = sequelize.define(alias, cols);
-
+    });
+    
     return Product_colors
 };

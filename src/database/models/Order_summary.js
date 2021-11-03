@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'order_summary';
-    let cols = {
+    const Order_summary = sequelize.define("order_summary",
+    {
         id: {
             type: DataTypes.INTEGER(10),
             primaryKey: true,
@@ -27,9 +27,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER(10),
             allowNull: false
         },
-    };
-    
-    const Order_summary = sequelize.define(alias, cols); 
+    });
     
     Order_summary.associate = function (models) {
         Order_summary.belongsTo(models.User, {

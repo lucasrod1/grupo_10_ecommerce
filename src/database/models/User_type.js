@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'User_type';
-    let cols = {
+    const User_type = sequelize.define("User_type",
+    {
         id: {
             type: DataTypes.INTEGER(10),
             primaryKey: true,
@@ -11,9 +11,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(45),
             allowNull: false
         },
-    };
-    
-    const User_type = sequelize.define(alias, cols); 
+    });
 
     return User_type
 };

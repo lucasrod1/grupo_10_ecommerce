@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'Product_sizes';
-    let cols = {
+    const ProductSize = sequelize.define("Product_sizes",
+    {
         id: {
             type: DataTypes.INTEGER(10),
             primaryKey: true,
@@ -11,9 +11,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER(10),
             allowNull: false
         },
-    };
-    
-    const ProductSize = sequelize.define(alias, cols);
+    });
 
     return ProductSize
 };

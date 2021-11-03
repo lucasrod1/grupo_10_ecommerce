@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'Category';
-    let cols = {
+    const Category = sequelize.define("Category",
+    {
         id: {
             type: DataTypes.INTEGER(10),
             primaryKey: true,
@@ -11,9 +11,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(100),
             allowNull: false
         },
-    };
-    
-    const Category = sequelize.define(alias, cols); 
+    });
 
     return Category
 };

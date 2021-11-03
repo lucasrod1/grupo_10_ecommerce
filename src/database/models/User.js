@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'User';
-    let cols = {
+    const User = sequelize.define("User",
+    {
         id: {
             type: DataTypes.INTEGER(10),
             primaryKey: true,
@@ -31,17 +31,14 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(255),
             allowNull: false
         },
-
-    };
-    
-    const User = sequelize.define(alias, cols); 
+    });
 
     User.associate = function (models) {
          User.belongsToMany(models.UserType, {
             as:"userType", 
             foreignKey:"user_type_id"
          })
-    }
+    };
 
     return User
 };
