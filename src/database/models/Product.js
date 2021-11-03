@@ -1,40 +1,32 @@
-module.exports = (sequelize, dataTypes) => {
-    let alias = 'products';
+module.exports = (sequelize, DataTypes) => {
+    let alias = 'Products';
     let cols = {
         id: {
-            type: dataTypes.INTEGER(10),
+            type: DataTypes.INTEGER(10),
             primaryKey: true,
             autoIncrement: true,
             allowNull: false
         },
         name: {
-            type: dataTypes.STRING(45),
+            type: DataTypes.STRING(100),
             allowNull: false
         },
         description: {
-            type: dataTypes.TEXT(255),
+            type: DataTypes.TEXT(255),
             allowNull: false
         },
         image: {
-            type: dataTypes.STRING(255),
+            type: DataTypes.STRING(255),
             allowNull: false
         },
-        id_category: {
-            type: dataTypes.INTEGER(10),
+        category_id: {
+            type: DataTypes.INTEGER(10),
             allowNull: false
         },
         price: {
-            type: dataTypes.FLOAT(),
+            type: DataTypes.FLOAT(),
             allowNull: false
-        },
-        id_colorProduct: {
-            type: dataTypes.INTEGER(10),
-            allowNull: false
-        },
-        id_productSize: {
-            type: dataTypes.INTEGER(10),
-            allowNull: false
-        },
+        }
     };
 
     const Products = sequelize.define(alias, cols); 
@@ -42,15 +34,7 @@ module.exports = (sequelize, dataTypes) => {
     Products.associate = function (models) {
         Products.belongsTo(models.Category, {
            as:"category", 
-           foreignKey:"id_category"
-        });
-        Products.belongsTo(models.ColorProduct, {
-            as:"colorProduct", 
-            foreignKey:"id_colorProduct"
-        });
-        Products.belongsToMany(models.ProductSize, {
-            as:"productSize", 
-            foreignKey:"id_productSize"
+           foreignKey:"category_id"
         });
     }
 

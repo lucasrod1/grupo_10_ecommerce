@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'Category';
+    let alias = 'User_type';
     let cols = {
         id: {
             type: DataTypes.INTEGER(10),
@@ -8,12 +8,12 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         name: {
-            type: DataTypes.STRING(100),
+            type: DataTypes.STRING(45),
             allowNull: false
         },
     };
     
-    const Category = sequelize.define(alias, cols); 
+    const User_type = sequelize.define(alias, cols); 
 
-    return Category
+    return User_type
 };
