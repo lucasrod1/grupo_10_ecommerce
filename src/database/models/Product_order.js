@@ -34,8 +34,8 @@ const Product_order = sequelize.define("Product_order",
     });
 
     Product_order.associate = function (models) {
-        Product_order.hasMany(models.Order_summary, {
-            as: "product_order",
+        Product_order.belongsTo(models.Order_summary, {
+            as: "order_summary",
             foreignKey: "product_order_id"
         })
         Product_order.belongsTo(models.Product, {
