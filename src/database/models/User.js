@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-    const User = sequelize.define("User",
-    {
+    let alias = "User";
+    let cols = {
         id: {
             type: DataTypes.INTEGER(10),
             primaryKey: true,
@@ -31,18 +31,18 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(255),
             allowNull: false
         },
-    });
-
-    User.associate = function (models) {
-         User.belongsTo(models.User_Type, {
-            as:"userType", 
-            foreignKey:"user_type_id"
-         }),
-        User.belongsTo(models.Order_summary, {
-            as: "user",
-            foreignKey: "users_id"
-        });
     };
+    let config = {
+        tableName: 'User',
+        timestamps: false
+    }
 
+    const User = sequelize.define(alias, cols, config);
+    User.associate = function(models){
+        User.belongsTo(models.User_type, {
+            as: 'User_type',
+            foreignKey: 'user_type_id'
+        })
+    }
     return User
 };

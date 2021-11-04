@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-    const User_type = sequelize.define("User_type",
-    {
+    let alias = 'User_type';
+    let cols ={
         id: {
             type: DataTypes.INTEGER(10),
             primaryKey: true,
@@ -11,8 +11,14 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(45),
             allowNull: false
         },
-    });
+    };
 
+    let config = {
+        tableName: 'User_type',
+        timestapms: false,
+    } 
+
+    const User_type = sequelize.define(alias, cols, config);
     User_type.associate = function (models) {
         User_type.hasMany(models.User, {
             as: "user_Type",
