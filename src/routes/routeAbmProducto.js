@@ -6,6 +6,7 @@ const uploadFile = require('../middlewares/multerAbmProduct');
 
 //Visualizacion de productos
 router.get('/', controllerEdicionProducto.lista);
+router.get('/index', controllerEdicionProducto.index);
 router.get('/:id/edit', controllerEdicionProducto.uniq);
 router.get('/create', controllerEdicionProducto.create);
 

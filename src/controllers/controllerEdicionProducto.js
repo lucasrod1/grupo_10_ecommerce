@@ -1,6 +1,7 @@
 const path = require('path')
 const fs = require('fs');
 const db = require('../database/models');
+const User = db.User;
 
 
 //Funcion para poder llamar a los productos desde el JSON para que pueda reulizarse y hacer update en caso de que algun menotdo lo requiera.
@@ -10,6 +11,13 @@ function productos(){
 }
 //Controlador
 const mainController = {
+    //Probando findAll con la tabla de Users :)
+    index: (req, res) =>{
+        User.findAll()
+        .then(datos =>{
+            console.log(datos)
+        })
+    },
     //Este es el metodo para la vista donde se pueden ver todos los productos existentes
     lista: (req, res) => {
         let products = productos();

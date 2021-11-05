@@ -91,23 +91,23 @@ INSERT INTO `productsize` (`id`, `id_sizes`) VALUES
 
 
 
-INSERT INTO `usertype` (`id`, `name`) VALUES
+INSERT INTO `user_type` (`id`, `name`) VALUES
 	(1, 'admin');
-INSERT INTO `usertype` (`id`, `name`) VALUES
+INSERT INTO `user_type` (`id`, `name`) VALUES
 	(2, 'guest');
-INSERT INTO `usertype` (`id`, `name`) VALUES
+INSERT INTO `user_type` (`id`, `name`) VALUES
 	(3, 'user');
 
 
-INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`, `id_userType`, `avatarImage`) VALUES
+INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`, `user_type_id`, `avatarImage`) VALUES
 	(7, 'Pepe', 'Aguilar', 'pepe@nomail.com', 'choripan', 1, '/public/images/users/');
-INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`, `id_userType`, `avatarImage`) VALUES
+INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`, `user_type_id`, `avatarImage`) VALUES
 	(8, 'Fulanito', 'Gonzalez', 'fulanito@nomail.com', 'nopassword', 2, '/public/images/users/');
-INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`, `id_userType`, `avatarImage`) VALUES
+INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`, `user_type_id`, `avatarImage`) VALUES
 	(9, 'Sutanito', 'SinApellido', 'sutanito@nomail.com', 'sutanitonopw', 3, '/public/images/users/');
-INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`, `id_userType`, `avatarImage`) VALUES
+INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`, `user_type_id`, `avatarImage`) VALUES
 	(10, 'Mengito', 'NoLastname', 'mengito@nomail.com', 'mengitopw', 3, '/public/images/users/');
-INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`, `id_userType`, `avatarImage`) VALUES
+INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`, `user_type_id`, `avatarImage`) VALUES
 	(11, 'Piojito', 'sinNada', 'piojito@nomail.com', 'piojitonopw', 2, '/public/images/users/');
 
 
