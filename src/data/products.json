@@ -5,8 +5,10 @@
     "description": "Blucher sin cordones",
     "image": "1duomo.jpg",
     "category": "Male",
-    "color": "cacao",
-    "price": "10995"
+    "color": "#f3ff4d",
+    "price": "10995",
+    "categoria": "H",
+    "talla": "S"
   },
   {
     "id": 2,

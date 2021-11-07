@@ -1,22 +1,29 @@
 const path = require('path')
 const fs = require('fs');
 const db = require('../database/models');
-const User = db.User;
 
 
 //Funcion para poder llamar a los productos desde el JSON para que pueda reulizarse y hacer update en caso de que algun menotdo lo requiera.
 function productos(){
     let jsonFileRead = fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf-8')
+    console.log(JSON.parse(jsonFileRead))
     return JSON.parse(jsonFileRead)
 }
+
+//Funcion para listar productos utilizando Sequelize, reeemplazara la funcion anterior (LA QUE INICIA EN LINEA 7) donde se lee el archivo JSON.
+function products(){
+    db.Products.findAll({
+    })
+    .then(datos => {
+        console.log(datos)
+    })
+}
+
 //Controlador
 const mainController = {
-    //Probando findAll con la tabla de Users :)
+    //Probando findAll con la tabla de Users :) los datos salen de la funcion "products()"" de arriba.
     index: (req, res) =>{
-        User.findAll()
-        .then(datos =>{
-            console.log(datos)
-        })
+        console.log(products())
     },
     //Este es el metodo para la vista donde se pueden ver todos los productos existentes
     lista: (req, res) => {
