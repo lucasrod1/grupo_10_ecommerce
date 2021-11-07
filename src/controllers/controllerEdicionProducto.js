@@ -27,7 +27,14 @@ const mainController = {
     },
     //Este es el metodo para la vista donde se pueden ver todos los productos existentes
     lista: (req, res) => {
-        let products = productos();
+        let products = db.Products.findAll({
+        })
+        .then(datos => {
+            console.log(datos)
+            return datos
+        })
+        // let products = products();
+        console.log(products)
         res.render('productCreate/editProductoList.ejs', {products});
     },
     //Esta es esl metodo para la vista de edicion del producto y para poder eliminarlo
