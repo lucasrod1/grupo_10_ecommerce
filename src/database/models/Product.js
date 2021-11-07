@@ -39,10 +39,11 @@ module.exports = (sequelize, DataTypes) => {
            as:"category", 
            foreignKey:"category_id"
         });
-        Product.belongsTo(models.Product_order, {
-            as: "products",
-            foreignKey: "products_id",
-    });
+        //SE COMENTA HASTA QUE NO ESTE ARMADO EL CARRITO DE COMPRAS Y AGREGADO Orede_summary, Product_order, Product_color, Product_size.
+    //     Product.belongsTo(models.Product_order, {
+    //         as: "products",
+    //         foreignKey: "products_id",
+    // });
  };
 
     return Product
