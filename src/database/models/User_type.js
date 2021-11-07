@@ -14,14 +14,14 @@ module.exports = (sequelize, DataTypes) => {
     };
 
     let config = {
-        tableName: 'User_type',
+        tableName: 'user_type',
         timestapms: false,
     } 
 
     const User_type = sequelize.define(alias, cols, config);
     User_type.associate = function (models) {
         User_type.hasMany(models.User, {
-            as: "user_Type",
+            as: "User_Type",
             foreignKey: "user_type_id"
         })
     };

@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-    const Product_size = sequelize.define("Product_sizes",
-    {
+    let alias = "Product_sizes";
+    let cols = {
         id: {
             type: DataTypes.INTEGER(10),
             primaryKey: true,
@@ -11,14 +11,19 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER(10),
             allowNull: false
         },
-    });
-
+    };
+    let config = {
+        tableName: 'product_sizes',
+        timestapms: false
+    }
+    
+    const Product_size = sequelize.define(alias, cols, config);
     Product_size.associate = function (models) {
         Product_size.belongsTo(models.Product_order, {
             as: "product_size",
             foreignKey: "product_size_id",
         });
     };
-
+    
     return Product_size
 };

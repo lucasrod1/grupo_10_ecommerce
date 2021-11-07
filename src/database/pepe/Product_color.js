@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-    const Product_colors = sequelize.define("Product_colors",
-        {
+    let alias = "Product_colors";
+    let cols = {
         id: {
             type: DataTypes.INTEGER(10),
             primaryKey: true,
@@ -11,14 +11,19 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(45),
             allowNull: false
         },
-    });
+    };
+    let config = {
+        tableName: 'product_colors',
+        timestamps: false
+    }
     
+    const Product_colors = sequelize.define(alias, cols, config);
     Product_colors.associate = function (models) {
         Product_colors.hasMany(models.Product_order, {
             as: "products_color",
             foreignKey: "product_color_id",
         });
     }
-
+    
     return Product_colors
 };

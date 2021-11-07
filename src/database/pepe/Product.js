@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-    const Products = sequelize.define("Products",
-    {
+    let alias = "Products";
+    let cols = {
         id: {
             type: DataTypes.INTEGER(10),
             primaryKey: true,
@@ -27,18 +27,23 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.FLOAT(),
             allowNull: false
         }
-    });
-
-    Products.associate = function (models) {
-        Products.belongsTo(models.Category, {
+    };
+    let config = {
+        tableName: 'products',
+        timestamps: false
+    }
+    
+    const Product = sequelize.define(alias, cols, config);
+    Product.associate = function(models) {
+        Product.belongsTo(models.Category, {
            as:"category", 
            foreignKey:"category_id"
         });
-    Products.belongsTo(models.Product_order, {
-        as: "products",
-        foreignKey: "products_id",
+        Product.belongsTo(models.Product_order, {
+            as: "products",
+            foreignKey: "products_id",
     });
-    };
+ };
 
-    return Products
+    return Product
 };
