@@ -72,12 +72,12 @@ INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`, `user_t
 
 
 INSERT INTO `products` (`id`, `name`, `description`, `image`, `category_id`, `price`) VALUES
-	(1, 'duomo', 'Blucher con cordones de estilo elegante.', '/img/products/1duomo', 2, 10995);
+	(1, 'duomo', 'Blucher con cordones de estilo elegante.', '1duomo.jpg', 2, 10995);
 INSERT INTO `products` (`id`, `name`, `description`, `image`, `category_id`, `price`) VALUES
-	(2, 'dean', 'Blucher con cordones y serraje.', '/img/products/1dean', 4, 10995);
+	(2, 'dean', 'Blucher con cordones y serraje.', '2dean.jpg', 4, 10995);
 INSERT INTO `products` (`id`, `name`, `description`, `image`, `category_id`, `price`) VALUES
-	(3, 'lenny', 'Zapato con cordones de piel.', '/img/products/1lenny', 1, 9995);
+	(3, 'lenny', 'Zapato con cordones de piel.', '3lenny.jpg', 1, 9995);
 INSERT INTO `products` (`id`, `name`, `description`, `image`, `category_id`, `price`) VALUES
-	(4, 'empire', 'Modelo de vestir presenta una suela muy flexible, lo que permite aumentar su comodidad.', '/img/products/1empire', 1, 6597);
+	(4, 'empire', 'Modelo de vestir presenta una suela muy flexible, lo que permite aumentar su comodidad.', '4empire.jpg', 1, 6597);
 INSERT INTO `products` (`id`, `name`, `description`, `image`, `category_id`, `price`) VALUES
-	(5, 'broddy', 'Blucher de estilo casual, con suela en forma de cuña.', '/img/products/1brody', 2, 5397);
+	(5, 'broddy', 'Blucher de estilo casual, con suela en forma de cuña.', '5brody.jpg', 2, 5397);
