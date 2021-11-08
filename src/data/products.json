@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "nombre": "Duomo",
-    "description": "Blucher sin cordones",
-    "image": "1duomo.jpg",
+    "nombre": "duomo",
+    "description": "Blucher con cordones de estilo elegante.",
+    "image": "image-duomo-1636343654673.jpg",
     "category": "Male",
-    "color": "#f3ff4d",
+    "color": "#bcbcbc",
     "price": "10995",
     "categoria": "H",
     "talla": "S"

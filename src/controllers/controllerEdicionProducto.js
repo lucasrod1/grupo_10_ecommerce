@@ -1,6 +1,7 @@
 const path = require('path')
 const fs = require('fs');
 const db = require('../database/models');
+const Op = db.Sequelize.Op;
 
 
 //Funcion para poder llamar a los productos desde el JSON para que pueda reulizarse y hacer update en caso de que algun menotdo lo requiera.
@@ -9,15 +10,6 @@ function productos(){
     console.log(JSON.parse(jsonFileRead))
     return JSON.parse(jsonFileRead)
 }
-
-//Funcion para listar productos utilizando Sequelize, reeemplazara la funcion anterior (LA QUE INICIA EN LINEA 7) donde se lee el archivo JSON.
-// function products(){
-//     db.Products.findAll({
-//     })
-//     .then(datos => {
-//         console.log(datos)
-//     })
-// }
 
 //Controlador
 const mainController = {
@@ -33,21 +25,31 @@ const mainController = {
         })
     },
     //Esta es esl metodo para la vista de edicion del producto y para poder eliminarlo
-    uniq: (req, res) => {
+    uniq: async (req, res) => {
         db.Products.findByPk(req.params.id)
             .then(function (product){
                 res.render('productCreate/editProductoUniq.ejs', { product : product});
-                console.log(product)
+                // console.log(product)
             });
-    //De esta manera se realizaba con el JSON:
-        // let products = productos();
-        // let product = products.filter( item => {
-        //     return item.id == req.params.id;
-        // })
-        // res.render('productCreate/editProductoUniq.ejs', {product});
     },
     //Esta es es metodo que edita el proeducto que se muestra con el metodo (Uniq)
     edit: (req, res) => {
+        //De esta manera se realiza con update (PENDIENTE DE IMPLEMENTACION)
+        // db.Products.update(
+        //     {
+        //         name: req.body.nombre,
+        //         description: req.body.description,
+        //         image: req.file.filename,
+        //         category_id: req.body.categoria,
+        //         price: req.body.price
+        //     },
+        //     {
+        //         where: { id: req.params.id}
+        //     }
+            
+        // )
+
+        // De esta manera debiamos realizarlo con el archivo JSON:
         let products = productos();
         let productEnd = products.map(function(item){
             if(item.id == req.params.id){
