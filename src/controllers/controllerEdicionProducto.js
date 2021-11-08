@@ -11,31 +11,26 @@ function productos(){
 }
 
 //Funcion para listar productos utilizando Sequelize, reeemplazara la funcion anterior (LA QUE INICIA EN LINEA 7) donde se lee el archivo JSON.
-function products(){
-    db.Products.findAll({
-    })
-    .then(datos => {
-        console.log(datos)
-    })
-}
+// function products(){
+//     db.Products.findAll({
+//     })
+//     .then(datos => {
+//         console.log(datos)
+//     })
+// }
 
 //Controlador
 const mainController = {
-    //Probando findAll con la tabla de Users :) los datos salen de la funcion "products()"" de arriba.
+    // ESTE ES UN ELEMENTO DE PRUEBA - Probando findAll con la tabla de Users :) los datos salen de la funcion "products()"" de arriba.
     index: (req, res) =>{
         console.log(products())
     },
     //Este es el metodo para la vista donde se pueden ver todos los productos existentes
     lista: (req, res) => {
-        let products = db.Products.findAll({
+        db.Products.findAll()
+        .then( function(products){
+            res.render('productCreate/editProductoList.ejs', { products: products });
         })
-        .then(datos => {
-            console.log(datos)
-            return datos
-        })
-        // let products = products();
-        console.log(products)
-        res.render('productCreate/editProductoList.ejs', {products});
     },
     //Esta es esl metodo para la vista de edicion del producto y para poder eliminarlo
     uniq: (req, res) => {

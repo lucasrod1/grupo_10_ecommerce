@@ -18,16 +18,16 @@
     <% products.forEach( (item) => { %>
     <div id= "masterContenedor">  
         <div class="primero elementoId">
-            <label>ID</label> <input type="text" name="id" value="<%= item.Products.dataValues.id %>">
+            <label>ID</label> <input type="text" name="id" value="<%= item.id %>">
         </div>
         <div class="primero elementoId">
-            <label>NOMBRE</label> <input type="text" name="nombre" value="<%= item.Products.dataValues.nombre %>">
+            <label>NOMBRE</label> <input type="text" name="nombre" value="<%= item.name %>">
         </div>
         <div class="primero elementoId">
-            <label>DESCRIPCION</label> <input type="text" name= "description" value="<%= item.Products.dataValues.description %>">
+            <label>DESCRIPCION</label> <input type="text" name= "description" value="<%= item.description %>">
         </div>
         <div class="imagenId elementoId">
-            <label>IMAGEN</label> <input type="file" id="imagenProducto" name= "image" hidden>
+            <label>IMAGEN</label> <input type="file" id="imagenProducto" name="image" hidden>
             <div class ="bordeCuadrito">
                 <div onclick="document.getElementById('imagenProducto').click()" class="fondoGris cuadradito"><img src="/img/products/<%= item.image %>" /></div>
             </div>
