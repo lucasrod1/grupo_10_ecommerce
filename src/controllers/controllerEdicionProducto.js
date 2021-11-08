@@ -34,11 +34,17 @@ const mainController = {
     },
     //Esta es esl metodo para la vista de edicion del producto y para poder eliminarlo
     uniq: (req, res) => {
-        let products = productos();
-        let product = products.filter( item => {
-            return item.id == req.params.id;
-        })
-        res.render('productCreate/editProductoUniq.ejs', {product});
+        db.Products.findByPk(req.params.id)
+            .then(function (product){
+                res.render('productCreate/editProductoUniq.ejs', { product : product});
+                console.log(product)
+            });
+    //De esta manera se realizaba con el JSON:
+        // let products = productos();
+        // let product = products.filter( item => {
+        //     return item.id == req.params.id;
+        // })
+        // res.render('productCreate/editProductoUniq.ejs', {product});
     },
     //Esta es es metodo que edita el proeducto que se muestra con el metodo (Uniq)
     edit: (req, res) => {
