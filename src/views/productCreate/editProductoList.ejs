@@ -35,9 +35,9 @@
         <div class="segundo elementoId">
             <label>CATEGORIA</label> 
                 <select name = "categoria"> 
-                    <option value="H">Hombre </option> 
-                    <option value="M">Mujer</option> 
-                    <option value="Acc"> Accesorios</option>
+                        <option value="<%= item.id %>">
+                            <%= item.category.name %>
+                        </option>
                 </select> 
         </div>
         <div class="segundo elementoId">

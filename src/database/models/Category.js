@@ -20,8 +20,8 @@ module.exports = (sequelize, DataTypes) => {
     const Category = sequelize.define(alias, cols, config);
     Category.associate = function(models){
         // Aca no seria hasMany? Una categoria tiene varios productos - REVISAR
-        Category.belongsTo(models.Products, {
-            as: "category",
+        Category.hasMany(models.Products, {
+            as: "products",  // Este alias es lo que utilizamos cuando lo llamamos para incluirlo en el "include".
             foreignKey: "category_id"
         })
     }

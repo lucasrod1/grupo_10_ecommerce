@@ -4,7 +4,8 @@
   "description": "La empresa Old Milano ofrece productos de alta calidad confeccionados artesanalmente. En nuestra web se ofrece pocas unidades por tipo y modelo de estos productos para poder preservar la exclusividad en nuestros diseños comercializados. Forman parte de estos diseños:",
   "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/app.js"
   },
   "repository": {
     "type": "git",
