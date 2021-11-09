@@ -26,15 +26,15 @@ const mainController = {
     },
     //Esta es esl metodo para la vista de edicion del producto y para poder eliminarlo
     uniq: async (req, res) => {
-        db.Products.findByPk(req.params.id)
-            .then(function (product){
-                res.render('productCreate/editProductoUniq.ejs', { product : product});
-                // console.log(product)
-            });
+        let product =await db.Products.findByPk(req.params.id)
+        let category = await db.Category.findAll()
+        // console.log(category)
+                res.render('productCreate/editProductoUniq.ejs', { product : product , category: category});
+                
     },
     //Esta es es metodo que edita el proeducto que se muestra con el metodo (Uniq)
     edit: (req, res) => {
-        //De esta manera se realiza con update (PENDIENTE DE IMPLEMENTACION)
+        // De esta manera se realiza con update (PENDIENTE DE IMPLEMENTACION)
         // db.Products.update(
         //     {
         //         name: req.body.nombre,
