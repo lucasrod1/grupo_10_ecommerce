@@ -3,7 +3,6 @@ const fs = require('fs');
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
-const Sequelize = require('sequelize')
 const Op = db.Sequelize.Op;
 
 //Funcion para poder listar usuarios
