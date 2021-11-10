@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = "User";
+    let alias = "User";   // Este dato hace referencia a el el nombre del modelo llamado desde el objeto "db" ej: db.User"
     let cols = {
         id: {
             type: DataTypes.INTEGER(10),

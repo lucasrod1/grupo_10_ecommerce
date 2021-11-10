@@ -2,6 +2,8 @@ const path = require('path');
 const fs = require('fs');
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
+const db = require('../database/models');
+const Op = db.Sequelize.Op;
 
 //Funcion para poder listar usuarios
 function userList() {
@@ -19,13 +21,22 @@ const controllersUser = {
         res.render('../views/users/login.ejs');
     },
     //Medodo para validacion de usuario
-    loginValidation: (req, res) => {
-        let userLista = userList();
-        let user = userLista.find( (element) =>{
-            return element.email == req.body.email
-        })
-        
+    loginValidation: async (req, res) => {
+        let user = await db.User.findOne({
+            where: {
+                email: req.body.email
+            }
+        });
+        // console.log(user)
         if(user){
+            let password = await db.User.findOne({
+                where: {
+                    email: user.dataValues.email
+                }
+            });
+            console.log(password)
+
+            // console.log(user)
             if (bcrypt.compareSync(req.body.password, user.password)) {
                 req.session.user = req.body.email;
                 req.session.avatar = user.avatarImage;
@@ -38,6 +49,7 @@ const controllersUser = {
             }
         }
         else{
+            console.log("no hay usuario");
         res.render('../views/users/registro.ejs')
         }
     },
