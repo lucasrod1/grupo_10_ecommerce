@@ -3,6 +3,7 @@ const fs = require('fs');
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
+const Sequelize = require('sequelize')
 const Op = db.Sequelize.Op;
 
 //Funcion para poder listar usuarios
@@ -27,16 +28,12 @@ const controllersUser = {
                 email: req.body.email
             }
         });
-        console.log(user)
         if(user){
             let password = await db.User.findOne({
                 where: {
                     email: user.dataValues.email
                 }
             });
-            console.log(password)
-
-            // console.log(user)
             if (bcrypt.compareSync(req.body.password, user.password)) {
                 req.session.user = req.body.email;
                 req.session.avatar = user.avatarImage;
@@ -49,7 +46,6 @@ const controllersUser = {
             }
         }
         else{
-            console.log("no hay usuario");
         res.render('../views/users/registro.ejs')
         }
     },
@@ -69,23 +65,6 @@ const controllersUser = {
                 user_type_id: 3,
                 avatarImage: req.file ? req.file.filename : "noavatar.png",
             })
-
-            // let users = userList();
-            // let lastId = users.pop()
-            // users.push(lastId)
-            // console.log("aca va el body")
-            // console.log(req.file);
-            // let newUser = {
-            //     id: lastId.id + 1,
-            //     firstName: req.body.firstName,
-            //     lastName: req.body.lastName,
-            //     email: req.body.emailSign,
-            //     password: passwordEncrypt(req.body.passwordSign),
-            //     category: "user",
-            //     avatarImage: req.file.filename
-            // }
-            // users.push(newUser)
-            // fs.writeFileSync(path.join(__dirname, '../data/users.json'), JSON.stringify(users, null, 2))
             res.redirect('/users/login');
         }else {
             //hay que validar los datos y enviarlos a la vista nuevamente con los errores y los datos que si estan ok a sus campos enviados.
@@ -96,16 +75,15 @@ const controllersUser = {
         
         },
         //metodo renderizado para ver el perfil Usuario 
-        profileUser: function(req,res){
-            console.log(req.cookies.user)
+        profileUser: async function(req,res){
             if(req.session.user){
-                 let emailUser = req.session.user;   
-                 let fileUsers = userList();
-                   let user = fileUsers.find((fileUser)=> {
-                       if(emailUser == fileUser.email){
-                        return fileUser;
-                       }           
-                   })
+                // console.log(req.session.user)
+                // let emailUser = req.session.user;
+                let user = await db.User.findOne({
+                    where: {
+                        email: req.session.user,
+                    }
+                })
                     res.render('../views/users/profileUser.ejs',{
                     email: user.email,
                     nombre: user.firstName,
@@ -115,7 +93,6 @@ const controllersUser = {
             }else{
              res.render('../views/users/registro.ejs');   
             }
-
         },
         logout: (req, res) => {
             req.session.destroy();
