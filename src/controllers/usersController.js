@@ -22,23 +22,11 @@ const controllersUser = {
     },
     //Medodo para validacion de usuario
     loginValidation: async (req, res) => {
-        let user = await db.User.findOne({
-            where: {
-                email: req.body.email
-            }
-        });
-        // console.log(user)
+        let user = await db.User.findOne( {where: {email: req.body.email} });
         if(user){
-            let password = await db.User.findOne({
-                where: {
-                    email: user.dataValues.email
-                }
-            });
-            console.log(password)
-
-            // console.log(user)
             if (bcrypt.compareSync(req.body.password, user.password)) {
                 req.session.user = req.body.email;
+                console.log(user)
                 req.session.avatar = user.avatarImage;
                 if (req.body.remember == 'on') {
                     res.cookie('user', req.body.email, { maxAge: (1000 * 60) * 10 })

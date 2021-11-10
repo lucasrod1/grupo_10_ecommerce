@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const db = require('../database/models');
 
 //Funcion para poder listar usuarios
 function userList() {
@@ -7,15 +8,16 @@ function userList() {
     return JSON.parse(jsonFileRead)
 }
 
-function userLogged(req, res, next) {
-    let usersDb = userList();
+async function userLogged(req, res, next) {
+    // let usersDb = userList();
     res.locals.islogged = false;
 
     if(req.cookies.user){
-        // console.log(req.cookies)
-        let userValidated = usersDb.find( usuario => {
-            return req.cookies.user == usuario.email;
-        })
+        console.log(req.cookies)
+        let userValidated = await db.User.findOne({ where: { email: req.cookies.user } });
+        // let userValidated = usersDb.find( usuario => {
+        //     return req.cookies.user == usuario.email;
+        // })
         req.session.user = userValidated.email;
         req.session.avatar = userValidated.avatarImage;
         }
