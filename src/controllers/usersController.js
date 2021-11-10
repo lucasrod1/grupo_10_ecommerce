@@ -46,25 +46,28 @@ const controllersUser = {
         res.render('../views/users/registro.ejs');
     },
     //Medodo para registracion de usuario
-    create: (req, res) => {
+    create: async (req, res) => {
         let errors = validationResult(req);
+        
         if(errors.isEmpty()){
-            let users = userList();
-            let lastId = users.pop()
-            users.push(lastId)
-            console.log("aca va el body")
-            console.log(req.file);
-            let newUser = {
-                id: lastId.id + 1,
-                firstName: req.body.firstName,
-                lastName: req.body.lastName,
-                email: req.body.emailSign,
-                password: passwordEncrypt(req.body.passwordSign),
-                category: "user",
-                avatarImage: req.file.filename
+            let userInfo = await db.User.findByPk(req.body.email)
+            if(!userInfo){
+                cosole.log(req.body.firstName)
+                cosole.log(req.body.lastName)
+                cosole.log(req.body.emailSign)
+                cosole.log(req.body.password)
+                
+                await db.User.create(
+                    {
+                        firstname: req.body.firstName,
+                        lastname: req.body.lastName,
+                        email: req.body.emailSign,
+                        password: req.body.password,
+                        avatarimage: req.file ? req.file.filename : "noavatar.png",
+                    }
+
+                )
             }
-            users.push(newUser)
-            fs.writeFileSync(path.join(__dirname, '../data/users.json'), JSON.stringify(users, null, 2))
             res.redirect('/users/login');
         }else {
             //hay que validar los datos y enviarlos a la vista nuevamente con los errores y los datos que si estan ok a sus campos enviados.
@@ -72,7 +75,7 @@ const controllersUser = {
             // res.send({ errors: errors.mapped(), old: req.body })
             res.render('../views/users/registro.ejs', {errors: errors.mapped(), old: req.body })
         }
-        
+        res.render('../views/users/registro.ejs', { errors: errors.mapped(), old: req.body })
         },
         //metodo renderizado para ver el perfil Usuario 
         profileUser: function(req,res){

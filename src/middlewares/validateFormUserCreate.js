@@ -7,13 +7,13 @@ const validateCreateForm = [
     body('emailValid').notEmpty().withMessage('Debes escribir tu dirección de e-mail.').bail().isEmail().withMessage('Debes escribir un email valido.'),
     body('passwordSign').notEmpty().withMessage('Debes escribir una contraseña.'),
     body('passwordValid').notEmpty().withMessage('Debes confirmar tu contraseña.'),
-    body('avatar').custom((value, { req }) => {
-        let file = req.file;
-        if (!file) {
-            throw new Error('Por favor seleccione su imagen')
-        }
-        return true;
-    })
+    // body('avatar').custom((value, { req }) => {
+    //     let file = req.file;
+    //     if (!file) {
+    //         throw new Error('Por favor seleccione su imagen')
+    //     }
+    //     return true;
+    // })
 ];
 
 module.exports = validateCreateForm;
