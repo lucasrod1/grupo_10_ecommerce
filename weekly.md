@@ -26,14 +26,36 @@ Fecha: 13-09-2021
 Que hicimos: Se armo middlewares, se crearon metodos de registracion, de login.
 Ahora estamos: Armando el frontend para poder mostrar el perfil del usuario logueado, terminando el middleware que permite loguearse y poder navegar por diferentes rutas menteniendo el usuario logueado, y trabajando en metodo login para que guarde una cookie con el recordame y haciendo que esta tambien sea indentificada en el middleware de login.
 
-Fecha: 21-09-2021
+Fecha: 20-09-2021
 Que hicimos: Ordenamos las tarjetas del sprint 5, revisamos pendientes del proyecto.
 Ahora estamos: Organizando el sprint 6, creando las tarjetas en trello para poder dar inicio con las tareas. Se definieron fechas para reunirse y trabajar con el proyecto cada 2 mas alla de las tareas que nos llevamos cada uno para poder avanzar.
 
-Fecha: 12-10-2021
+Fecha: 27-09-2021
 Que hicimos: Ordenamos el tablero, comenzamos a trabajar con el diagrama de relaciones de la DB.
 Ahora estamos: revisando diseño de base de datos para poder realizar una compra.
 
-Fecha: 19-10-2021
+Fecha: 04-10-2021
 Que hicimos: Armamos diagrama de realacion y scripts para poder realizar creacion de DB y carga de datos.
 Ahora estamos: revisando funcionalidades posibles para carrito de compra, comenzando a diseñar la estrategia para poder implementar CRUD con controllers y DB con sequelize.
+
+Fecha: 11-10-2021
+Que hicimos: Se ajusto el diagrama de relaciones y se definieron las relaciones. Se finalizo el Script para pasar al Visual Code.
+Ahora estamos: Revisando las relaciones para plantearlas en el codigo y como interpretar los procesos dentro de la web.
+
+Fecha: 18-10-2021
+Que hicimos: Se plantearon las relaciones actualizadas, y planificamos el proceso de creacion de usuario y compra de productos.
+Ahora estamos: Copiando los scripts de la base de datos al codigo para empezar a escribir los modelos dentro del proyecto.
+
+Fecha: 25-10-2021
+Que hicimos: Se termino de importar los scripts al proyecto para guiarnos al momento de crear los modelos dentro del codigo.
+Ahora estamos: Instalando Sequelize y sus funcionalidades para agregar los modelos al codigo.
+
+Fecha: 01-11-2021
+Que hicimos: Se instalo Sequelize y sus funcionalidades. Pasamos los modelos al codigo.
+Ahora estamos: Se estan estableciendo las relaciones dentro de Sequelize, solucionando problemas de relaciones a medida que probamos los procesos.
+
+Fecha: 08-11-2021
+Que hicimos: Las relaciones de creacion de usuario estan completas y funcionando.
+Ahora estamos: El CRUD para usuarios esta casi terminado, luego vamos a elaborar la de productos.
+
+Fecha: 15-11-2021
