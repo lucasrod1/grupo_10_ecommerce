@@ -33,5 +33,7 @@ router.post('/logout', usersController.logout);
 router.get('/register', usersController.register);
 router.post('/register/create', uploadFile.single('avatar'), validateCreateForm, usersController.create);
 router.get('/profile', usersController.profileUser);
+router.get('/edit', usersController.edit);
+router.post('/edit/update', usersController.update);
 
 module.exports = router;

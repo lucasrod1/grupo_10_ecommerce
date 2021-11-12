@@ -52,6 +52,18 @@ const controllersUser = {
     register: function(req,res){
         res.render('../views/users/registro.ejs');
     },
+    //Metodo para renderizar la pagina de Editar usuario.
+    edit: function(req, res){
+        res.render('../views/users/editUser.ejs');
+    },
+    //Metodo para editar perfil de usuario.
+    update: function(req, res){
+        db.User.findOne({
+            where: {
+                email: req.session.user ? // valor a evaluar ? entonces valor verdadero : sino valor falso.
+            }
+        })
+    },
     //Medodo para registracion de usuario
     create: async (req, res) => {
         let errors = validationResult(req);
