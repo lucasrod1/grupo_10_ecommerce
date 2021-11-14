@@ -58,11 +58,8 @@ const controllersUser = {
     },
     //Metodo para editar perfil de usuario.
     update: function(req, res){
-        db.User.findOne({
-            where: {
-                email: req.session.user ? // valor a evaluar ? entonces valor verdadero : sino valor falso.
-            }
-        })
+        //  db.User.findOne({where: {email: req.session.user ? // valor a evaluar ? entonces valor verdadero : sino valor falso.
+        //  })
     },
     //Medodo para registracion de usuario
     create: async (req, res) => {
@@ -104,6 +101,15 @@ const controllersUser = {
             }else{
              res.render('../views/users/registro.ejs');   
             }
+        },
+        // Metodo para borrar un usuario (falta aplicacion sobre vista/route)
+        destroy: (req,res)=>{
+            db.User.destroy({
+                where: {
+                    email: req.session.user
+                }
+            })
+            res.redirect('/');
         },
         logout: (req, res) => {
             req.session.destroy();
