@@ -57,9 +57,17 @@ const controllersUser = {
         res.render('../views/users/editUser.ejs');
     },
     //Metodo para editar perfil de usuario.
-    update: function(req, res){
-        //  db.User.findOne({where: {email: req.session.user ? // valor a evaluar ? entonces valor verdadero : sino valor falso.
-        //  })
+    update: async (req, res) => {
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            await db.User.findOne({where: {email: req.session.email}})
+            await db.User.update({
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            email: req.body.emailSign,
+            avatarImage: req.file ? req.file.filename : "noavatar.png",
+          },
+        res.render('../views/users/profileUser.ejs'))}
     },
     //Medodo para registracion de usuario
     create: async (req, res) => {

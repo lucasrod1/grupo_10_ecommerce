@@ -31,7 +31,7 @@ const mainController = {
         console.log(category)
                 res.render('productCreate/editProductoUniq.ejs', { product : product , category: category});
     },
-    //Esta es es metodo que edita el proeducto que se muestra con el metodo (Uniq)
+    //Esta es es metodo que edita el producto que se muestra con el metodo (Uniq)
     edit: async (req, res) => {
         // De esta manera se realiza con update (PENDIENTE DE IMPLEMENTACION)
         let productInfo = await db.Products.findByPk(req.params.id)
