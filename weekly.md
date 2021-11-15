@@ -59,3 +59,5 @@ Que hicimos: Las relaciones de creacion de usuario estan completas y funcionando
 Ahora estamos: El CRUD para usuarios esta casi terminado, luego vamos a elaborar la de productos.
 
 Fecha: 15-11-2021
+
+Fecha: 22/11/2021
