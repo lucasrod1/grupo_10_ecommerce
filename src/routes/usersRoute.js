@@ -35,5 +35,6 @@ router.post('/register/create', uploadFile.single('avatar'), validateCreateForm,
 router.get('/profile', usersController.profileUser);
 router.get('/edit', usersController.edit);
 router.post('/edit/update', usersController.update);
+router.delete('/delete', usersController.delete)
 
 module.exports = router;

@@ -112,10 +112,10 @@ const controllersUser = {
             }
         },
         // Metodo para borrar un usuario (falta aplicacion sobre vista/route)
-        destroy: (req,res)=>{
-            db.User.destroy({
+        delete: async (req,res)=>{
+            await db.User.destroy({
                 where: {
-                    email: req.session.user
+                    email: req.session.email
                 }
             })
             res.redirect('/');
