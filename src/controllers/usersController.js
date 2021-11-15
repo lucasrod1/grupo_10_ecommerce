@@ -79,7 +79,6 @@ const controllersUser = {
     },
     //Metodo para editar perfil de usuario.
     update: async (req, res) => {
-        console.log(req.session.user)
         let errors = validationResult(req);
         if(errors.isEmpty()){
         await db.User.update({
@@ -125,6 +124,8 @@ const controllersUser = {
                     email: req.session.user
                 }
             })
+            req.session.destroy();
+            res.cookie('user', null, { maxAge: 1 });
             res.redirect('/');
         },
         logout: (req, res) => {
