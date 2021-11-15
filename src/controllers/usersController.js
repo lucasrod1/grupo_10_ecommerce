@@ -60,14 +60,15 @@ const controllersUser = {
     update: async (req, res) => {
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            await db.User.findOne({where: {email: req.session.email}})
-            await db.User.update({
+        await db.User.update({
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             email: req.body.emailSign,
             avatarImage: req.file ? req.file.filename : "noavatar.png",
+          },{
+              where: {email: req.session.email}
           },
-        res.render('../views/users/profileUser.ejs'))}
+        res.render('/'))}
     },
     //Medodo para registracion de usuario
     create: async (req, res) => {
