@@ -28,11 +28,11 @@ const controllersUser = {
             }
         });
         if(user){
-            let password = await db.User.findOne({
+            let password = await db.User.findOne({  //revisar
                 where: {
                     email: user.dataValues.email
                 }
-            });
+            }); // revisar
             if (bcrypt.compareSync(req.body.password, user.password)) {
                 req.session.user = req.body.email;
                 req.session.avatar = user.avatarImage;
@@ -79,6 +79,7 @@ const controllersUser = {
     },
     //Metodo para editar perfil de usuario.
     update: async (req, res) => {
+        console.log(req.session.user)
         let errors = validationResult(req);
         if(errors.isEmpty()){
         await db.User.update({
@@ -88,11 +89,11 @@ const controllersUser = {
             avatarImage: req.file ? req.file.filename : "noavatar.png",
           },{
               where:{
-                  email: req.session.email
+                  email: req.session.user
                 }//identificar el usuario logeado
           });
-          let userFound = await db.User.findByPk(req.session.email)
-          req.session.email = userFound;
+          let userFound = await db.User.findByPk(req.session.user)
+          req.session.user = userFound;
           res.redirect('/');
     } else { res.render('../views/users/editUser.ejs', {errors: errors.errors})};
     },
@@ -121,7 +122,7 @@ const controllersUser = {
         delete: async (req,res)=>{
             await db.User.destroy({
                 where: {
-                    email: req.session.email
+                    email: req.session.user
                 }
             })
             res.redirect('/');

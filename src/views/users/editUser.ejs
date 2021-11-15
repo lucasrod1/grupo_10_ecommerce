@@ -15,7 +15,7 @@
                             <p class="infoSignIn">En esta seccion vas a poder editar tu perfil de usuario de Old Milano.</p>
                             <p class="infoSignIn">Todos los campos del formulario son obligatorios.</p>
                             <form action="/users/edit" method="POST" enctype="multipart/form-data">
-                                <input type="text" name="firstName" id="firstName" placeholder="*Nombre" value="<%=user.firstName%>">
+                                <input type="text" name="firstName" id="firstName" placeholder="*Nombre">
                                 <p></p>
                                 <div class="text-danger">
                                     <%if(locals.errors && errors.firstName) {%>
@@ -23,7 +23,7 @@
                                     <% } %>
                                 </div>
 
-                                <input type="text" name="lastName" id="lastName" placeholder="*Apellido" value="<%= user.lastName %>">
+                                <input type="text" name="lastName" id="lastName" placeholder="*Apellido">
                                 <p></p>
                                 <div class="text-danger">
                                     <%if(locals.errors && errors.lastName) {%>
@@ -31,7 +31,7 @@
                                     <% } %>
                                 </div>
 
-                                <input type="email" name="emailSign" id="emailSign" placeholder="*E-mail" value="<%= user.emailSign %>">
+                                <input type="email" name="emailSign" id="emailSign" placeholder="*E-mail">
                                 <p></p>
                                 <div class="text-danger">
                                     <%if(locals.errors && errors.emailSign) {%>
