@@ -1,25 +1,12 @@
 const controllerEdicionProducto = require('../controllers/controllerEdicionProducto');
 const express = require('express');
 const router = express.Router();
-const multer = require('multer');
 const path = require('path');
-
-//Configurando el storage para multer:
-const storage = multer.diskStorage({
-    destination: (req, file, callBack) => {
-        let folder = path.join(__dirname, '../../public/img/products');
-        callBack(null, folder);
-    },
-    filename: (req, file, callBack) => {
-        let imageName = file.fieldname + "-" + req.body.nombre + "-" + Date.now() + path.extname(file.originalname)
-        callBack(null, imageName)
-    }
-})
-
-const uploadFile = multer({ storage });
+const uploadFile = require('../middlewares/multerAbmProduct');
 
 //Visualizacion de productos
 router.get('/', controllerEdicionProducto.lista);
+router.get('/index', controllerEdicionProducto.index);
 router.get('/:id/edit', controllerEdicionProducto.uniq);
 router.get('/create', controllerEdicionProducto.create);
 

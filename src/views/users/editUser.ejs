@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel = "stylesheet" href="/css/log-reg.css">
+    <!-- <link rel="stylesheet" href="/css/log-reg.css"> -->
+    <title>Edicion de Perfil</title>  
+    <%- include('../partials/head.ejs') %>  
+    <body>
+        <%- include('../partials/header.ejs')%>
+        <div class="mainDiv">
+            <div class="banner">EDICION DE PERFIL</div>
+            <main>
+                <div class="login-page">
+                    <section id="signUp">
+                        <div class="signIn">
+                            <p class="infoSignIn">En esta seccion vas a poder editar tu perfil de usuario de Old Milano.</p>
+                            <p class="infoSignIn">Todos los campos del formulario son obligatorios.</p>
+                            <form action="/users/edit" method="POST" enctype="multipart/form-data">
+                                <input type="text" name="firstName" id="firstName" placeholder="*Nombre">
+                                <p></p>
+                                <div class="text-danger">
+                                    <%if(locals.errors && errors.firstName) {%>
+                                        <%= errors.firstName.msg %>
+                                    <% } %>
+                                </div>
+
+                                <input type="text" name="lastName" id="lastName" placeholder="*Apellido">
+                                <p></p>
+                                <div class="text-danger">
+                                    <%if(locals.errors && errors.lastName) {%>
+                                        <%= errors.lastName.msg %>
+                                    <% } %>
+                                </div>
+
+                                <input type="email" name="emailSign" id="emailSign" placeholder="*E-mail">
+                                <p></p>
+                                <div class="text-danger">
+                                    <%if(locals.errors && errors.emailSign) {%>
+                                        <%= errors.emailSign.msg %>
+                                    <% } %>
+                                </div>
+
+                                <div class="customFile">
+                                    <label for="avatar" style="font-size: smaller;">Cargar nueva imagen...</label>
+                                    <input type="file" id="uploadFile" name="avatar">
+                                </div>  
+                                <button type="submit">Confirmar Cambios</button>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </body>
+    <%- include('../partials/footer.ejs') %>
+</html>      
