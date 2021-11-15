@@ -14,15 +14,30 @@
                         <div class="signIn">
                             <p class="infoSignIn">En esta seccion vas a poder editar tu perfil de usuario de Old Milano.</p>
                             <p class="infoSignIn">Todos los campos del formulario son obligatorios.</p>
-                            <form action="/users" method="POST" enctype="multipart/form-data">
-                                <input type="text" name="firstName" id="firstName" placeholder="*Nombre">
+                            <form action="/users/edit" method="POST" enctype="multipart/form-data">
+                                <input type="text" name="firstName" id="firstName" placeholder="*Nombre" value="<%=user.firstName%>">
                                 <p></p>
+                                <div class="text-danger">
+                                    <%if(locals.errors && errors.firstName) {%>
+                                        <%= errors.firstName.msg %>
+                                    <% } %>
+                                </div>
 
-                                <input type="text" name="lastName" id="lastName" placeholder="*Apellido">
+                                <input type="text" name="lastName" id="lastName" placeholder="*Apellido" value="<%= user.lastName %>">
                                 <p></p>
+                                <div class="text-danger">
+                                    <%if(locals.errors && errors.lastName) {%>
+                                        <%= errors.lastName.msg %>
+                                    <% } %>
+                                </div>
 
-                                <input type="email" name="emailSign" id="emailSign" placeholder="*E-mail">
+                                <input type="email" name="emailSign" id="emailSign" placeholder="*E-mail" value="<%= user.emailSign %>">
                                 <p></p>
+                                <div class="text-danger">
+                                    <%if(locals.errors && errors.emailSign) {%>
+                                        <%= errors.emailSign.msg %>
+                                    <% } %>
+                                </div>
 
                                 <div class="customFile">
                                     <label for="avatar" style="font-size: smaller;">Cargar nueva imagen...</label>

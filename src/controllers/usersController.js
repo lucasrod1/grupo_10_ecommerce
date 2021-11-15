@@ -52,24 +52,6 @@ const controllersUser = {
     register: function(req,res){
         res.render('../views/users/registro.ejs');
     },
-    //Metodo para renderizar la pagina de Editar usuario.
-    edit: function(req, res){
-        res.render('../views/users/editUser.ejs');
-    },
-    //Metodo para editar perfil de usuario.
-    update: async (req, res) => {
-        let errors = validationResult(req);
-        if(errors.isEmpty()){
-        await db.User.update({
-            firstName: req.body.firstName,
-            lastName: req.body.lastName,
-            email: req.body.emailSign,
-            avatarImage: req.file ? req.file.filename : "noavatar.png",
-          },{
-              where: {email: req.session.email}
-          },
-        res.render('/'))}
-    },
     //Medodo para registracion de usuario
     create: async (req, res) => {
         let errors = validationResult(req);
@@ -91,6 +73,30 @@ const controllersUser = {
         }
         
         },
+    //Metodo para renderizar la pagina de Editar usuario.
+    edit: function(req, res){
+        res.render('../views/users/editUser.ejs');
+    },
+    //Metodo para editar perfil de usuario.
+    update: async (req, res) => {
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+        await db.User.update({
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            email: req.body.emailSign,
+            avatarImage: req.file ? req.file.filename : "noavatar.png",
+          },{
+              where:{
+                  email: req.session.email
+                }//identificar el usuario logeado
+          });
+          let userFound = await db.User.findByPk(req.session.email)
+          req.session.email = userFound;
+          res.redirect('/');
+    } else { res.render('../views/users/editUser.ejs', {errors: errors.errors})};
+    },
+    
         //metodo renderizado para ver el perfil Usuario 
         profileUser: async function(req,res){
             if(req.session.user){

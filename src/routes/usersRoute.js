@@ -34,7 +34,7 @@ router.get('/register', usersController.register);
 router.post('/register/create', uploadFile.single('avatar'), validateCreateForm, usersController.create);
 router.get('/profile', usersController.profileUser);
 router.get('/edit', usersController.edit);
-router.post('/edit/update', usersController.update);
+router.post("/edit", uploadFile.single("avatar"), usersController.update);
 router.delete('/delete', usersController.delete)
 
 module.exports = router;
