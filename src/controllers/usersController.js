@@ -97,7 +97,7 @@ const controllersUser = {
     } else { res.render('../views/users/editUser.ejs', {errors: errors.errors})};
     },
     
-        //metodo renderizado para ver el perfil Usuario 
+        //Metodo renderizado para ver el perfil Usuario 
         profileUser: async function(req,res){
             if(req.session.user){
                 // console.log(req.session.user)
@@ -117,7 +117,7 @@ const controllersUser = {
              res.render('../views/users/registro.ejs');   
             }
         },
-        // Metodo para borrar un usuario (falta aplicacion sobre vista/route)
+        // Metodo para borrar un usuario
         delete: async (req,res)=>{
             await db.User.destroy({
                 where: {
