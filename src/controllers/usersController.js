@@ -22,6 +22,14 @@ const controllersUser = {
     },
     //Medodo para validacion de usuario
     loginValidation: async (req, res) => {
+        let errors = validationResult(req);
+        if(!errors.isEmpty()){
+            return res.render('../views/users/login.ejs', {
+                errors:errors.errors, 
+                old: req.body
+            });
+        }
+        else{
         let user = await db.User.findOne({
             where: {
                 email: req.body.email
@@ -47,6 +55,7 @@ const controllersUser = {
         else{
         res.render('../views/users/registro.ejs')
         }
+    }
     },
     //Medodo renderizacion de sitio para registracion de usuario
     register: function(req,res){
