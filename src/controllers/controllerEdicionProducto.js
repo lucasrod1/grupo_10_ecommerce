@@ -70,7 +70,7 @@ const mainController = {
             {
                 name: req.body.nombre,
                 description: req.body.description,
-                image: req.file ? req.file.filename : productInfo.image,
+                image: req.file ? req.file.filename : "noproduct.png",
                 category_id: req.body.categoria,
                 price: req.body.price
             }
