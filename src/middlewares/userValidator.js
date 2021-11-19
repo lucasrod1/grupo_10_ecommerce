@@ -1,7 +1,8 @@
 const { body } = require('express-validator');
 const bcrypt = require('bcryptjs')
 const db = require('../database/models');
-const { promiseImpl } = require('ejs');
+const path = require('path');
+// const { promiseImpl } = require('ejs');
 
 const userValidator = {
     login: [
@@ -44,6 +45,7 @@ const userValidator = {
         body('avatar').custom(function(value, {req}){
             let allowedImages = ['.JPG', '.jpg', '.png', '.PNG', '.jpeg', '.JPEG', '.gif', '.GIF'];
             let imageType = path.extname(req.file.originalname);
+            console.log(imageType)
             return allowedImages.includes(imageType);
         }).withMessage("Los siguientes formatos son admitidos: jpg, png, jpeg, gif"),
         body('passwordSign').notEmpty().withMessage('Debes escribir una contraseña.').isLength({min: 2, max: 8}),
