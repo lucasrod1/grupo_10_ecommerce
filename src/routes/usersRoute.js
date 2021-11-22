@@ -3,6 +3,7 @@ const router = express.Router();
 const path = require('path');
 const validateCreateForm = require('../middlewares/validateFormUserCreate')
 const uploadFile = require('../middlewares/multerAbmUsers')
+const userValidator = require('../middlewares/userValidator')
 
 //Requiero el paquete para comparar las contraseñas  que tengo hash.
 const bcrypt = require('bcryptjs');
@@ -28,10 +29,10 @@ const validateLogin = [
 ];
 
 router.get('/login', usersController.login);
-router.post('/login', usersController.loginValidation);
+router.post('/login', userValidator.login, usersController.loginValidation);
 router.post('/logout', usersController.logout);
 router.get('/register', usersController.register);
-router.post('/register/create', uploadFile.single('avatar'), validateCreateForm, usersController.create);
+router.post('/register/create', uploadFile.single('avatar'), userValidator.register, usersController.create);
 router.get('/profile', usersController.profileUser);
 router.get('/edit', usersController.edit);
 router.post("/edit", uploadFile.single("avatar"), usersController.update);

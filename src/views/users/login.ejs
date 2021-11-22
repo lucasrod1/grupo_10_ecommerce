@@ -12,9 +12,20 @@
         <div class="banner">ACCEDE CON TU CUENTA</div>
         <main>
             <div class="login-page">
-                <section id="logearse"> 
+                <section id="logearse">
                     <div class="logIn">
                         <p class="infoLogIn">Si ya estas registrado en www.Old-Milano.com, solamente tienes que introducir tu e-mail y contraseña.</p><br>
+                        <div>
+                        <% if(typeof errors != "undefined") { %>
+                        <ul>
+                            <% errors.forEach(function(error){ %>
+                                <li>
+                                    <%= error.msg %>
+                                </li>
+                            <% })%>
+                        </ul>
+                        <% } %>
+                    </div>
                         <form action="/users/login" method="POST">
                         <input type="email" name="email" id="email" placeholder="*E-mail">
                         <p>

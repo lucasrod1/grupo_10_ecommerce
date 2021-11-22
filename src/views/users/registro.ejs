@@ -38,13 +38,6 @@
                                 <% } %>
                             </div>
                             <p></p>
-                            <input type="email" name="emailValid" id="emailValid" placeholder="*Confirmar E-mail" value="<%= locals.old ? old.emailValid : null %>">
-                            <div class="text-danger">
-                                <%if(locals.errors && errors.emailValid) {%>
-                                    <%= errors.emailValid.msg %>
-                                <% } %>
-                            </div>
-                            <p></p>
                             <input type="password" name="passwordSign" id="passwordSign" placeholder="*Contraseña">
                             <div class="text-danger">
                                 <%if(locals.errors && errors.passwordSign) {%>
@@ -63,9 +56,9 @@
                                 <label for="avatar" style="font-size: smaller;">Debes elegir tu avatar...</label>
                                 <input type="file" id="uploadFile" name="avatar">
                                 <div class="text-danger">
-                                <!-- <%if(locals.errors && errors.avatar) {%>
+                                <%if(locals.errors && errors.avatar) {%>
                                     <%= errors.avatar.msg %>
-                                <% } %> -->
+                                <% } %>
                                 </div>
                             </div>  
                             <div class="newsletterCheck">
