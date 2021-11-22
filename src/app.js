@@ -1,7 +1,7 @@
 const express = require('express');
 //Require de modulos route
 const methodOverride = require('method-override');
-const routeFormulario = require('./routes/routeAbmProducto.js');
+const routeAbmProducto = require('./routes/routeAbmProducto.js');
 const mainRoute = require('./routes/mainRoute.js');
 const usersRoute = require('./routes/usersRoute.js');
 const session = require('express-session');
@@ -42,7 +42,7 @@ app.use(loginValidateApp)
 
 // Configuracion de rutas a sitio
 app.use('/', mainRoute);
-app.use('/products', routeFormulario)
+app.use('/products', routeAbmProducto)
 app.use('/users', usersRoute)
 
 // Configuracion Server
