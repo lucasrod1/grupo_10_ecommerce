@@ -70,13 +70,14 @@ SPRINT5 to SPRINT6:
 
 SPRINT6 to SPRINT7:
 1. Comenzar a hacer: 
- Programar las reuniones semanales para trabajo en equipo, y segmentarnos las tareas por tarjeta o punto del sprint.
+ 
 2. Hacer más: 
- Pair programming.
+ Pair programming, dailys.
  Normalizar variables.
 3. Continuar haciendo: 
  Mantener la frecuencia de las reuniones del equipo (dailys).
- Continuar con la comunicacion entre los miembros del equipo de trabajo
+ Continuar con la comunicacion entre los miembros del equipo de trabajo.
+ Continuar programando reuniones semanales para avanzar el codigo.
 4. Hacer menos: 
- No extendernos en las dailys con temas que no refieren a las dailys.
+ 
 6. Dejar de hacer: 
