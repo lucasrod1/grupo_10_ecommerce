@@ -9,7 +9,18 @@
     <title>Formulario</title>
 </head>
 <body>
-    <p><h2 class="title">CREACION Y EDICION DE PRODUCTOS</h2></p> 
+    <p><h2 class="title">CREACION Y EDICION DE PRODUCTOS</h2></p>
+    <div>
+        <% if(typeof errors != "undefined") { %>
+        <ul>
+            <% errors.forEach(function(error){ %>
+                <li>
+                    <%= error.msg %>
+                </li>
+            <% })%>
+        </ul>
+        <% } %>
+    </div> 
     
     <form action="/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
     <div id= "masterContenedor">  

@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const uploadFile = require('../middlewares/multerAbmProduct');
+const productValidator = require('../middlewares/productValidator')
 
 //Visualizacion de productos
 router.get('/', controllerEdicionProducto.lista);
@@ -11,10 +12,10 @@ router.get('/:id/edit', controllerEdicionProducto.uniq);
 router.get('/create', controllerEdicionProducto.create);
 
 //Edicion de producto
-router.put('/:id', uploadFile.single('image'), controllerEdicionProducto.edit);
+router.put('/:id', uploadFile.single('image'), productValidator.product, controllerEdicionProducto.edit);
 router.delete('/:id', controllerEdicionProducto.delete);
 
 //Creacion de productos
-router.post('/', uploadFile.single('image'), controllerEdicionProducto.createProduct);
+router.post('/', uploadFile.single('image'), productValidator.product, controllerEdicionProducto.createProduct);
 
 module.exports = router;
