@@ -1,5 +1,6 @@
 const path = require('path')
 const fs = require('fs');
+const { validationResult } = require('express-validator');
 const db = require('../database/models');
 const Op = db.Sequelize.Op;
 
@@ -33,7 +34,19 @@ const mainController = {
     },
     //Esta es es metodo que edita el producto que se muestra con el metodo (Uniq)
     edit: async (req, res) => {
-        // De esta manera se realiza con update (PENDIENTE DE IMPLEMENTACION)
+        let errors = validationResult(req);
+        let reqId = req.params.id;
+        let product = await db.Products.findByPk(req.params.id)
+        let category = await db.Category.findAll()
+        if (!errors.isEmpty()) {
+            return res.render('productCreate/editProductoUniq.ejs', {
+                errors: errors.errors,
+                old: req.body,
+                product: product,
+                category: category,
+            });
+        }
+        else{
         let productInfo = await db.Products.findByPk(req.params.id)
         await db.Products.update(
             {
@@ -49,6 +62,7 @@ const mainController = {
             
         )
         res.redirect('/products');
+        }
     },
     //Este es el metodo que ejecuta la eliminacion del producto, este se llama desde el boton eliminar en la seccion de edicion de 1 producto.
     delete: async (req, res) => {
@@ -66,7 +80,17 @@ const mainController = {
     },
     //Este es el metodo para poder crear de un nuevo producto (esta en el boton agregar producto)
     createProduct: async (req, res) => {
-        await db.Products.create(
+        let errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            let categories = await db.Category.findAll();
+            return res.render('productCreate/editProductoCreate.ejs', {
+                errors: errors.errors,
+                old: req.body,
+                categories,
+            });
+        }else{
+        
+            await db.Products.create(
             {
                 name: req.body.nombre,
                 description: req.body.description,
@@ -75,7 +99,8 @@ const mainController = {
                 price: req.body.price
             }
             )
-        res.redirect('/products');
+            res.redirect('/products');
+        }
     }
 }
 
