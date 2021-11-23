@@ -5,7 +5,7 @@ const controllerApi = require('../controllers/controllerApi');
 const fs = require('fs');
 
 router.get('/users', controllerApi.users);
-router.get('/users/:id', controllerApi.userId);
+router.get('/users/:id', controllerApi.byUserId);
 // router.post('/login', userValidator.login, usersController.loginValidation);
 // router.post('/logout', usersController.logout);
 // router.get('/register', usersController.register);
