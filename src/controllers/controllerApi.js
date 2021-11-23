@@ -25,5 +25,17 @@ module.exports = {
         };
         console.log(result);
         res.json(result);
+        },
+    products: async (req, res) => {
+        // let productCount = await db.Product.count();
+        let productList = await db.Product.findAll();
+        console.log(productList)
+        console.log(productCount)
+
+        let result = {
+        productCount: productCount,
+        productList: productList,
+        }
+        res.json(result);
+        }
     }
-}
