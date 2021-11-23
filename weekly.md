@@ -59,5 +59,8 @@ Que hicimos: Las relaciones de creacion de usuario estan completas y funcionando
 Ahora estamos: El CRUD para usuarios esta casi terminado, luego vamos a elaborar la de productos.
 
 Fecha: 15-11-2021
+Que hicimos: Finalizamos el sprint 6, comenzamos a preparar el sprint 7 en el trablero de trello.
 
 Fecha: 22/11/2021
+Que hicimos: Comenzamos con el sprint 7, ya se realizaron las validaciones de usuarios para loguin y tambien para registrar usuario, tenemos pendiente realizar la validacion de datos de productos.
+Ahora estamos: haciendo validacion de productos y comenzando a cargar tareas del sprint 8 para poder prepararnos para completar este ultimo sprint y preparar la entrega del proyecto.
