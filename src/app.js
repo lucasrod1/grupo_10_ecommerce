@@ -4,6 +4,7 @@ const methodOverride = require('method-override');
 const routeAbmProducto = require('./routes/routeAbmProducto.js');
 const mainRoute = require('./routes/mainRoute.js');
 const usersRoute = require('./routes/usersRoute.js');
+const apiRoute = require('./routes/apiRoute')
 const session = require('express-session');
 const cookies = require('cookie-parser');
 
@@ -44,6 +45,7 @@ app.use(loginValidateApp)
 app.use('/', mainRoute);
 app.use('/products', routeAbmProducto)
 app.use('/users', usersRoute)
+app.use('/api', apiRoute)
 
 // Configuracion Server
 app.listen(port, () => {
