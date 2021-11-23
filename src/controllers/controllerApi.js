@@ -15,8 +15,15 @@ module.exports = {
         let userId = await db.User.findOne({
             where: { id: req.params.id },
             attributes: { exclude: ['password', 'user_type_id'] },
-        })
-        // console.log(resultJson)
-        // res.send(JSON.stringify(result));
+        });
+        let result = {
+            id: userId.dataValues.id,
+            firstName: userId.dataValues.firstName,
+            lastName: userId.dataValues.firstName,
+            email: userId.dataValues.email,
+            avatarImage: 'http://127.0.0.1/images/users/'+userId.dataValues.avatarImage,
+        };
+        console.log(result);
+        res.send(JSON.stringify(result));
     }
 }
