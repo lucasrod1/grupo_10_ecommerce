@@ -3,7 +3,6 @@ const router = express.Router();
 const path = require('path');
 const controllerApi = require('../controllers/controllerApi');
 const fs = require('fs');
-const { BADFAMILY } = require('dns');
 
 router.get('/users', controllerApi.users);
 router.get('/users/:id', controllerApi.userId);
