@@ -21,7 +21,7 @@ module.exports = {
             firstName: userId.dataValues.firstName,
             lastName: userId.dataValues.firstName,
             email: userId.dataValues.email,
-            avatarImage: 'http://127.0.0.1/images/users/'+userId.dataValues.avatarImage,
+            avatarImage: '/images/users/'+userId.dataValues.avatarImage,
         };
         console.log(result);
         res.json(result);
