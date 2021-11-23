@@ -20,7 +20,7 @@ const { BADFAMILY } = require('dns');
 
 //Aquí aperturo mi archivo de usuarios, ya que al registrarse un usuario es conveniente buscar que no exista una ya registrado con el mismo email o id o el campo que utlicen para identificar al usuario.
 
-let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')))
+// let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')))
 
 //Validaciones para login A IMPLEMENTAR - No implementado.
 const validateLogin = [
