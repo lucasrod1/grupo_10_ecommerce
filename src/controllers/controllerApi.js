@@ -9,7 +9,7 @@ module.exports = {
             userCount: userCount,
             userList: userList,
         }
-        res.send(JSON.stringify(result));
+        res.json(result);
     },
     byUserId: async (req, res) => {
         let userId = await db.User.findOne({
@@ -24,6 +24,6 @@ module.exports = {
             avatarImage: 'http://127.0.0.1/images/users/'+userId.dataValues.avatarImage,
         };
         console.log(result);
-        res.send(JSON.stringify(result));
+        res.json(result);
     }
 }
