@@ -33,11 +33,8 @@ module.exports = {
             group: ['category.name']
         });
         let producList = await db.Products.findAll({
-            include: [{ association: 'category' }]
+            include: [{ association: 'category' }],
         });
-
-        // console.log(productCount)
-        // console.log(producCountGroupByCategory)
         let result = {
         productCount: productCount,
         producCountGroupByCategory: productCountGroupByCategory,
@@ -46,6 +43,20 @@ module.exports = {
         res.json(result);
         },
     prouctsId: async (req, res) => {
-        
+        let productId = await db.Products.findOne({
+            where: { id: req.params.id },
+            include: [{ association: 'category' }],
+        });
+        console.log(productId);
+        let result = {
+            id: productId.dataValues.id,
+            name: productId.dataValues.name,
+            description: productId.dataValues.description,
+            price: productId.dataValues.price,
+            category: productId.dataValues.category,
+            image: '/img/products/' + productId.dataValues.image,
+        };
+        console.log(result);
+        res.json(result);
     }
     }
