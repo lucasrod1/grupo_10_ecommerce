@@ -27,15 +27,25 @@ module.exports = {
         res.json(result);
         },
     products: async (req, res) => {
-        // let productCount = await db.Product.count();
-        let productList = await db.Product.findAll();
-        console.log(productList)
-        console.log(productCount)
+        let productCount = await db.Products.count();
+        let productCountGroupByCategory = await db.Products.count({
+            include: [{ association: 'category'} ],
+            group: ['category.name']
+        });
+        let producList = await db.Products.findAll({
+            include: [{ association: 'category' }]
+        });
 
+        // console.log(productCount)
+        // console.log(producCountGroupByCategory)
         let result = {
         productCount: productCount,
-        productList: productList,
+        producCountGroupByCategory: productCountGroupByCategory,
+        producList: producList,
         }
         res.json(result);
-        }
+        },
+    prouctsId: async (req, res) => {
+        
+    }
     }
