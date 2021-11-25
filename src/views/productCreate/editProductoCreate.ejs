@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="/css/formulario.css">
+    <script src="/js/product.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
@@ -22,13 +23,13 @@
         <% } %>
     </div> 
     
-    <form action="/products" method="POST" enctype="multipart/form-data">
+    <form action="/products" class="product" method="POST" enctype="multipart/form-data">
     <div id= "masterContenedor">  
         <div class="primero elementoId">
-            <label>NOMBRE</label> <input type="text" name="nombre">
+            <label>NOMBRE</label> <input type="text" class="inputs" name="nombre">
         </div>
         <div class="primero elementoId">
-            <label>DESCRIPCION</label> <input type="text" name="description">
+            <label>DESCRIPCION</label> <input type="text" class="inputs" name="description">
         </div>
         <div class="imagenId elementoId">
             <label>IMAGEN</label> <input type="file" id="imagenProducto" name="image" hidden>
@@ -67,7 +68,7 @@
             <div class="precio elementoId">
                 <label>PRECIO</label> 
                 <div class ="bordeCuadrito">
-                <input class = "ancho" type="text" name="price">      
+                <input class = "ancho" type="text" class="inputs" name="price">      
                 </div>
             </div>
     
