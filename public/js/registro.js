@@ -1,42 +1,62 @@
 window.addEventListener('load', function(){
 
-    let error = [];
-
-    let formulario = document.querySelector('.registro');
+    const formulario = document.querySelector('.registro');
 
     formulario.addEventListener('submit', function(e){
         e.preventDefault();
+        var existingError=false;
+
+        var inputs= document.querySelectorAll('.inputs');
+
+        inputs.forEach(function(input){
+            /*  console.log(input)
+            var error = input.parentElement.querySelector('div.invalid-feedback'); */
+            if(input.value == ""){
+                /* error.style.color="red";
+                error.style.fontSize= "12px";
+                input.classList.add('is-invalid');                            
+                error.innerHTML = "El campo esta vacio.";
+                existingError = true;*/
+                
+                input.nextElementSibling.style.color="red";
+                input.nextElementSibling.style.fontSize= "12px";
+                input.classList.add('is-invalid');                            
+                input.nextElementSibling.innerHTML = "El campo esta vacio.";
+                existingError = true;
+
+            }else{
+                input.classList.remove('is-invalid');
+                input.nextElementSibling.innerHTML = "";
+            }
+
+        });
         
+            //Empezamos a capturar los inputs
+            let firstName = document.querySelector("#firstName")
+            if (firstName.value != '' && (firstName.value.lenght < 2)){
+                firstName.nextElementSibling.innerHTML = ('El nombre debe tener un minimo de 2 caracteres');
+            }
+            let emailSign = document.querySelector("#emailSign")
+            if (emailSign.value.indexOf ('@') != -1 && (emailSign.value.indexOf('.'))){
+                emailSign.nextElementSibling.innerHTML = ('Debes ingresar un email válido.');
+            }
+            let lastName = document.querySelector("#lastName")
+            if (lastName.value != '' && (lastName.value.lenght < 2)){
+                lastName.nextElementSibling.innerHTML = ('Su apellido debe tener un minimo de 2 caracteres');
+            }
+            let passwordSign = document.querySelector("#passwordSign")
+            if (passwordSign.value != '' && (passwordSign.value.lenght < 2)){
+                passwordSign.nextElementSibling.innerHTML = ('Ingrese una contraseña con un minimo de 2 caracteres');
+            }
+            let passwordValid = document.querySelector("#passwordValid")
+            if (passwordValid.value != passwordSign.value){
+                passwordValid.nextElementSibling.innerHTML = ('Las contraseñas deben coincidir');    
+            }
+            
+            if (!existingError){
+                this.submit();
 
-        //Empezamos a capturar los inputs
-        let firstName = document.querySelector('#firstName')
-        if (firstName.value != '' && (fistName.value.lenght < 2)){
-            error.push('El nombre debe tener un minimo de 2 caracteres');
         }
-        let emailSign = document.querySelector('#emailSign')
-        if (emailSign.value.indexOf ('@') != -1 && (email.value.indexOf('.'))){
-            error.push('Por favor ingrese un email valido');
-        }
-        let lastName = document.querySelector('#lastName')
-        if (lastName.value != '' && (lastName.value.lenght < 2)){
-            error.push('Por favor ingrese su apellido');
-        }
-        let passwordSign = document.querySelector('#passwordSign')
-        if (passwordSign.value != '' && (passwordSign.value.lenght < 2)){
-            error.push('Ingrese una contraseña con un minimo de 2 caracteres');
-        }
-        let passwordValid = document.querySelector('#passwordValid')
-        if (passwordValid.value != passwordSign){
-            error.push('Las contraseñas deben coincidir');    
-        }
-        
-    if (error.lenght > 0){
-        e.preventDefault();
 
-        let errores = document.querySelector('.text-danger');
-        for (let i = 0; i < error.lenght; i++) {
-            errores.innerHTML += "<li>" + error[i] + "</li>"
-        }
-    }
-
-})})
+    })
+})
