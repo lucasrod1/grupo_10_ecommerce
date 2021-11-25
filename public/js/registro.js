@@ -9,17 +9,9 @@ window.addEventListener('load', function(){
         var inputs= document.querySelectorAll('.inputs');
 
         inputs.forEach(function(input){
-            /*  console.log(input)
-            var error = input.parentElement.querySelector('div.invalid-feedback'); */
             if(input.value == ""){
-                /* error.style.color="red";
-                error.style.fontSize= "12px";
-                input.classList.add('is-invalid');                            
-                error.innerHTML = "El campo esta vacio.";
-                existingError = true;*/
-                
                 input.nextElementSibling.style.color="red";
-                input.nextElementSibling.style.fontSize= "12px";
+                input.nextElementSibling.style.fontSize= "11px";
                 input.classList.add('is-invalid');                            
                 input.nextElementSibling.innerHTML = "El campo esta vacio.";
                 existingError = true;
