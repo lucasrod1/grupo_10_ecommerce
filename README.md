@@ -1,4 +1,6 @@
-La empresa Old Milano ofrece productos de alta calidad confeccionados artesanalmente. En nuestra web se ofrece pocas unidades por tipo y modelo de estos productos para poder preservar la exclusividad en nuestros diseños comercializados. Forman parte de estos diseños:
+La empresa Old Milano ofrece productos de alta calidad confeccionados artesanalmente. En nuestra web se ofrece pocas unidades por tipo y modelo de estos productos para poder preservar la exclusividad en nuestros diseños comercializados. 
+
+Forman parte de estos diseños:
 
 -Calzados Femeninos y Masculinos.
 -Accesorios tales como: Bolsos, Carteras, billeteras, cinturones o similares.
