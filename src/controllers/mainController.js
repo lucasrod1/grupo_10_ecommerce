@@ -15,6 +15,9 @@ const mainController = {
     cart: function (req, res) {
         res.render('productCart.ejs')
     },
+    aboutUs: function (req, res) {
+        res.render ('aboutUs.ejs')
+    },
 }
 
 module.exports = mainController;
