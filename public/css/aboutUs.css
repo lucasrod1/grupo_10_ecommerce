@@ -1,0 +1,128 @@
+
+*{
+   /*  box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+#bigTitle, h1{
+    font-size: 20;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: left;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #212529;
+
+}
+
+.imagenGrande{
+    height: auto; 
+    width: auto; 
+    max-width: 1000px; 
+    max-height: 600px;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+
+}
+.text{
+    color: #f2f2f2;
+    font-size: 30px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 35px;
+}
+.descriptionMiddle {
+    display: block;
+    width: 50%;
+    margin: 50px auto 0px auto;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+}
+.granContainer{
+    display: flex;
+    padding: 40px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.destacadoImagen{
+    height: 500px;
+    background-color: white;
+    border:1px solid;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.imagenCreacion{ 
+    width: 33%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.textoDos{
+    color: #464343;
+    font-size: 18px;
+    position: relative;
+    bottom: 3px;
+    width: 100%;
+    text-align: center;
+}
+.lista{
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    color: #464343;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 0.10; 
+}
+
+.texto3{
+    color: #464343;
+    font-size: 18px;
+    position: relative;
+    padding-top: 15px;
+    bottom: 3px;
+    width: 100%;
+    text-align: center;
+}
+.texto4{
+    color: #464343;
+    font-size: 18px;
+    padding-top: 15px;
+    font-style: italic;
+    position: relative;
+    bottom: 3px;
+    width: 100%;
+    text-align: center;
+    text-decoration-style: solid;
+}
+.destacadoContenedor{
+    display: flex;
+    padding: 40px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.destacadoImagen{
+height: 500px;
+background-color: white;
+border:1px solid;
+margin-bottom: 10px;
+border-radius: 10px;
+}
+
+.destacado{ 
+    width: 33%;
+    padding: 20px;
+    box-sizing: border-box;
+}

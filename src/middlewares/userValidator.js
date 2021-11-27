@@ -6,7 +6,7 @@ const path = require('path');
 
 const userValidator = {
     login: [
-    body('email').notEmpty().withMessage('Debes ingresar un email valido.')
+    body('email').notEmpty().withMessage('Debes ingresar un email válido.')
     .custom(function (value, {req,}){
         return db.User.findOne({
             where: {
@@ -26,9 +26,9 @@ const userValidator = {
     body('password').notEmpty().withMessage('Debes ingresar tu contraseña.')
     ],
     register: [
-        body('firstName').notEmpty().withMessage('Debes escribir tu nombre.'),
-        body('lastName').notEmpty().withMessage('Debes escribir tu apellido.'),
-        body('emailSign').notEmpty().withMessage('Debes escribir tu dirección de e-mail.').bail().isEmail().withMessage('Debes escribir un email valido.')
+        body('firstName').notEmpty().withMessage('Debes escribir tu nombre.').isLength({min: 2}).withMessage('El nombre debe tener un minimo de 2 caracteres'),
+        body('lastName').notEmpty().withMessage('Debes escribir tu apellido.').isLength({min: 2}).withMessage('Su apellido debe tener un minimo de 2 caracteres'),
+        body('emailSign').notEmpty().withMessage('Debes ingresar un email válido.').bail().isEmail().withMessage('Debes ingresar un email válido.')
         .custom(function(value) {
             return db.User.findOne(
                 {
@@ -47,9 +47,9 @@ const userValidator = {
             let imageType = path.extname(req.file.originalname);
             console.log(imageType)
             return allowedImages.includes(imageType);
-        }).withMessage("Los siguientes formatos son admitidos: jpg, png, jpeg, gif"),
-        body('passwordSign').notEmpty().withMessage('Debes escribir una contraseña.').isLength({min: 2, max: 8}),
-        body('passwordValid').notEmpty().withMessage('Debes confirmar tu contraseña.').isLength({ min: 2, max: 8 }).withMessage("La contraseña debe tener minimo 2 caracteres"),
+        }).withMessage("Los siguientes formatos son admitidos: JPG, PNG, JPEG, GIF"),
+        body('passwordSign').notEmpty().withMessage('Debes escribir una contraseña.').isLength({min: 2}).withMessage('Ingrese una contraseña con un minimo de 2 caracteres'),
+        body('passwordValid').notEmpty().withMessage('Debes confirmar tu contraseña.').isLength({ min: 2 }).withMessage('Ingrese una contraseña con un minimo de 2 caracteres'),
     ]
 
     }

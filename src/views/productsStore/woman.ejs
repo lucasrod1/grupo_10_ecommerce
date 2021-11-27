@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="/css/productDisplay.css">
+  <title>Coleccion de mujer</title>
+  <%- include('../partials/head.ejs') %>  
+  <body>
+      <!-- aca empieza el header -->
+      <%- include('../partials/header.ejs') %>
+
+      <!-- Aca empieza el contenido de la categoria de Mujeres -->
+      <main>
+        <h1>ZAPATOS PARA MUJER</h1>
+        <p class="info">La colección de zapatos para mujer se ha diseñado pensando en la versatilidad y resaltando la elegancia de sus diseños. Salones, zapatos de tacón, deportivos, mocasines, elige el tuyo.</p>
+        <nav class="product-filter">
+                <div class="sort">
+                  
+                  <div class="collection-sort">
+                    <label>POR TIPO:</label>
+                    <select>
+                      <option value="/">Todo</option>
+                      <option value="/">De Taco</option>
+                      <option value="/">Deportivo</option>
+                      <option value="/">Mocasines</option>
+                    </select>
+                  </div>
+              
+                  <div class="collection-sort">
+                    <label>POR ORDEN:</label>
+                    <select>
+                      <option value="/">Destacados</option>
+                      <option value="/">Mayor a menor precio</option>
+                      <option value="/">Menor a mayor precio</option>
+                    </select>
+                  </div>
+              
+                </div>
+              
+            </nav>
+            <section class="products">
+
+              <div class="product-container">
+                <% result.forEach( function(elemento) {%>
+                  <div class="product-card">
+                      <img src="/img/products/<%= elemento.image %>" alt="Image">
+                      <h3 class="product-title"><%= elemento.name %></h3>
+                      <span class="product-price">$<%= elemento.price %></span>
+                  </div>
+                  <% })%>
+            </div>
+              
+            </section>
+            
+        </main>
+        <!-- Aca FIN de el contenido produtos de hombre -->
+        <!-- Aca comienza el FOOTER -->
+      <%- include('../partials/footer.ejs') %>
+  </body>
+</html> 

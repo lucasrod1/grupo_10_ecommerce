@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="/css/productDisplay.css">
+  <title>Coleccion Unisex</title>
+  <%- include('../partials/head.ejs') %>  
+  <body>
+      <!-- aca empieza el header -->
+      <%- include('../partials/header.ejs') %>
+
+      <!-- Aca empieza el contenido de la categoria unisex -->
+      <main>
+        <h1>ZAPATOS UNISEX</h1>
+        <p class="info">La colección de zapatos unisex se compone de una gran variedad de estilos pensados para la comodidad y el estilo más elegante: zapatos de vestir, deportivos, bluchers, mocasines, náuticos.</p>
+        <nav class="product-filter">
+                <div class="sort">
+                  
+                  <div class="collection-sort">
+                    <label>POR TIPO:</label>
+                    <select>
+                      <option value="/">Todo</option>
+                      <option value="/">De Vestir</option>
+                      <option value="/">Deportivos</option>
+                      <option value="/">Mocasines</option>
+                      <option value="/">Náuticos</option>
+                    </select>
+                  </div>
+              
+                  <div class="collection-sort">
+                    <label>POR ORDEN:</label>
+                    <select>
+                      <option value="/">Destacados</option>
+                      <option value="/">Mayor a menor precio</option>
+                      <option value="/">Menor a mayor precio</option>
+                    </select>
+                  </div>
+              
+                </div>
+              
+            </nav>
+            <section class="products">
+
+              <div class="product-container">
+                <% result.forEach( function(elemento) {%>
+                  <div class="product-card">
+                      <img src="/img/products/<%= elemento.image %>" alt="Image">
+                      <h3 class="product-title"><%= elemento.name %></h3>
+                      <span class="product-price">$<%= elemento.price %></span>
+                  </div>
+                  <% })%>
+            </div>
+              
+            </section>
+            
+        </main>
+        <!-- Aca FIN de el contenido produtos de hombre -->
+        <!-- Aca comienza el FOOTER -->
+      <%- include('../partials/footer.ejs') %>
+  </body>
+</html> 

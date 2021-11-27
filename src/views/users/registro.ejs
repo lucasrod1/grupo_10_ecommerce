@@ -2,6 +2,7 @@
 <html lang="en">
     <link rel="stylesheet" href="/css/log-reg.css">
     <title>Registro</title>
+    <script src="/js/registro.js"></script>  
     <%- include('../partials/head.ejs') %>  
     <body>
         <!-- Aca empieza el headedr -->
@@ -17,35 +18,35 @@
                         <p class="infoSignIn">Si todavia no tienes una cuenta de usuario en www.Old-Milano.com, utiliza esta opcion para acceder al formulario de registro.</p>
                         <p class="infoSignIn">Todos los campos del formulario son obligatorios.</p>
                         <form action="/users/register/create" class="registro" method="POST" enctype="multipart/form-data">
-                            <input type="text" name="firstName" id="firstName" placeholder="*Nombre" value="<%= locals.old ? old.firstName : null %>">
+                            <input type="text" name="firstName" class="inputs" id="firstName" placeholder="*Nombre" value="<%= locals.old ? old.firstName : null %>">
                             <div class="text-danger">
                                 <%if(locals.errors && errors.firstName) {%>
                                     <%= errors.firstName.msg %>
                                 <% } %>
                             </div>
                             <p></p>
-                            <input type="text" name="lastName" id="lastName" placeholder="*Apellido" value="<%= locals.old ? old.lastName : null %>">
+                            <input type="text" name="lastName" class="inputs" id="lastName" placeholder="*Apellido" value="<%= locals.old ? old.lastName : null %>">
                             <div class="text-danger">
                                 <%if(locals.errors && errors.lastName) {%>
                                     <%= errors.lastName.msg %>
                                 <% } %>
                             </div>
                             <p></p>
-                            <input type="email" name="emailSign" id="emailSign" placeholder="*E-mail" value="<%= locals.old ? old.emailSign : null %>">
+                            <input type="email" name="emailSign" class="inputs" id="emailSign" placeholder="*E-mail" value="<%= locals.old ? old.emailSign : null %>">
                             <div class="text-danger">
                                 <%if(locals.errors && errors.emailSign) {%>
                                     <%= errors.emailSign.msg %>
                                     <% } %>
                                 </div>
                                 <p></p>
-                                <input type="password" name="passwordSign" id="passwordSign" placeholder="*Contraseña">
+                                <input type="password" name="passwordSign" class="inputs" id="passwordSign" placeholder="*Contraseña">
                                 <div class="text-danger">
                                     <%if(locals.errors && errors.passwordSign) {%>
                                         <%= errors.passwordSign.msg %>
                                         <% } %>
                                     </div>
                                     <p></p>
-                            <input type="password" name="passwordValid" id="passwordValid" placeholder="*Confirmar Contraseña">
+                                    <input type="password" name="passwordValid" class="inputs" id="passwordValid" placeholder="*Confirmar Contraseña">
                             <div class="text-danger">
                                 <%if(locals.errors && errors.passwordValid) {%>
                                     <%= errors.passwordValid.msg %>
@@ -102,6 +103,5 @@
     <!-- Aca FIN de el contenido login-regsitro -->
     <!-- Aca comienza el FOOTER -->
     <%- include('../partials/footer.ejs') %>
-    <script src="js/registro.js"></script>  
 </body>
 </html>

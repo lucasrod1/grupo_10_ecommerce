@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="/css/productDisplay.css">
+  <title>Coleccion de Accesorios</title>
+  <%- include('../partials/head.ejs') %>  
+  <body>
+      <!-- aca empieza el header -->
+      <%- include('../partials/header.ejs') %>
+
+      <!-- Aca empieza el contenido de la categoria de accesorios -->
+      <main>
+        <h1>ACCESORIOS</h1>
+        <p class="info">La colección de accesorios incluye una amplia gama de productos para complementar un look de cualquier tipo, carteras, bolsos, billeteras y mucho mas, lo encontras en esta seccion.</p>
+        <nav class="product-filter">
+                <div class="sort">
+                  
+                  <div class="collection-sort">
+                    <label>POR TIPO:</label>
+                    <select>
+                      <option value="/">Todo</option>
+                      <option value="/">Carteras y Bolsos</option>
+                      <option value="/">Billeteras</option>
+                      <option value="/">Collares</option>
+                      <option value="/">Anillos</option>
+                    </select>
+                  </div>
+              
+                  <div class="collection-sort">
+                    <label>POR ORDEN:</label>
+                    <select>
+                      <option value="/">Destacados</option>
+                      <option value="/">Mayor a menor precio</option>
+                      <option value="/">Menor a mayor precio</option>
+                    </select>
+                  </div>
+              
+                </div>
+              
+            </nav>
+            <section class="products">
+
+              <div class="product-container">
+                <% result.forEach( function(elemento) {%>
+                  <div class="product-card">
+                      <img src="/img/products/<%= elemento.image %>" alt="Image">
+                      <h3 class="product-title"><%= elemento.name %></h3>
+                      <span class="product-price">$<%= elemento.price %></span>
+                  </div>
+                  <% })%>
+            </div>
+              
+            </section>
+            
+        </main>
+        <!-- Aca FIN de el contenido produtos de hombre -->
+        <!-- Aca comienza el FOOTER -->
+      <%- include('../partials/footer.ejs') %>
+  </body>
+</html> 
