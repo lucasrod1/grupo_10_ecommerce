@@ -38,65 +38,15 @@
               
             </nav>
             <section class="products">
-
               <div class="product-container">
+                <% result.forEach( function(elemento) {%>
                 <div class="product-card">
-                    <img src="/img/products/hombre/Chambers.jpg" alt="Image">
-                    <h3 class="product-title">Chambers</h3>
-                    <span class="product-price">$9895</span>
+                    <img src="/img/products/<%= elemento.image %>" alt="Image">
+                    <h3 class="product-title"><%= elemento.name %></h3>
+                    <span class="product-price">$<%= elemento.price %></span>
                 </div>
-                <div>
-                  <% result.mensDefault.forEach( function(elemento) {%>
-                    <p><%= elemento.Products.dataValues %></p>
-                  <% })%>
-                </div>
-                <!-- <div class="product-card">
-                    <img src="/img/products/hombre/Cortland.jpg" alt="Image">
-                    <h3 class="product-title">Cortland</h3>
-                    <span class="product-price">$8995</span>
-                </div>
-                <div class="product-card">
-                    <img src="/img/products/hombre/Austin.jpg" alt="Image"> 
-                    <h3 class="product-title">Austin</h3>
-                    <span class="product-price">$8995</span>
-                </div>
-                <div class="product-card">
-                    <img src="/img/products/hombre/Edward.jpg" alt="Image">
-                    <h3 class="product-title">Edward</h3>
-                    <span class="product-price">$7696</span>
-                </div>
-                <div class="product-card">
-                    <img src="/img/products/hombre/Sean.jpg" alt="Image">
-                    <h3 class="product-title">Sean</h3>
-                    <span class="product-price">$10795</span>
-                </div>
-                <div class="product-card">
-                    <img src="/img/products/hombre/Milo.jpg" alt="Image">
-                    <h3 class="product-title">Milo</h3>
-                    <span class="product-price">$10795</span>
-                </div>
-                <div class="product-card">
-                    <img src="/img/products/hombre/Newport.jpg" alt="Image"> 
-                    <h3 class="product-title">Newport</h3>
-                    <span class="product-price">$9596</span>
-                </div>
-                <div class="product-card">
-                    <img src="/img/products/hombre/Rawson.jpg" alt="Image">
-                    <h3 class="product-title">Rawson</h3>
-                    <span class="product-price">$9895</span>
-                </div>
-                <div class="product-card">
-                    <img src="/img/products/hombre/Warren.jpg" alt="Image">
-                    <h3 class="product-title">Warren</h3>
-                    <span class="product-price">$11695</span>
-                </div>
-                <div class="product-card">
-                    <img src="/img/products/hombre/barton.jpg" alt="Image">
-                    <h3 class="product-title">Barton</h3>
-                    <span class="product-price">$8995</span>
-                </div> -->
-            </div>
-              
+                <% })%>
+              </div>
             </section>
             
         </main>

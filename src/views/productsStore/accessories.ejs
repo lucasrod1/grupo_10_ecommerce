@@ -40,56 +40,13 @@
             <section class="products">
 
               <div class="product-container">
-                <div class="product-card">
-                    <img src="/img/products/Accesorios/Billetera.jpg" alt="Image">
-                    <h3 class="product-title">Billetera OS Camel</h3>
-                    <span class="product-price">$6800</span>
-                </div>
-                <div class="product-card">
-                    <img src="/img/products/Accesorios/cartera.jpg" alt="Image">
-                    <h3 class="product-title">Billetera Bifold Preto</h3>
-                    <span class="product-price">$4600</span>
-                </div>
-                <div class="product-card">
-                    <img src="/img/products/Accesorios/carteraM.jpg" alt="Image"> 
-                    <h3 class="product-title">Tote Bag Preto</h3>
-                    <span class="product-price">$17000</span>
-                </div>
-                <div class="product-card">
-                    <img src="/img/products/Accesorios/caseabaco.jpg" alt="Image">
-                    <h3 class="product-title">Case</h3>
-                    <span class="product-price">$6510</span>
-                </div>
-                <div class="product-card">
-                    <img src="/img/products/Accesorios/MarconiMesh.jpg" alt="Image">
-                    <h3 class="product-title">Marconi Mesh</h3>
-                    <span class="product-price">$10800</span>
-                </div>
-                <div class="product-card">
-                    <img src="/img/products/Accesorios/Billetera2.jpg" alt="Image">
-                    <h3 class="product-title">Billetera Bifold Preto con Cierre</h3>
-                    <span class="product-price">$5200</span>
-                </div>
-                <div class="product-card">
-                    <img src="/img/products/Accesorios/Combo3.jpg" alt="Image"> 
-                    <h3 class="product-title">Billetera OS Preto + Emily Mesh</h3>
-                    <span class="product-price">$10800</span>
-                </div>
-                <div class="product-card">
-                    <img src="/img/products/Accesorios/MochilaM.jpg" alt="Image">
-                    <h3 class="product-title">Mochila WXS Preto</h3>
-                    <span class="product-price">$20400</span>
-                </div>
-                <div class="product-card">
-                    <img src="/img/products/Accesorios/Mochilaxs.jpg" alt="Image">
-                    <h3 class="product-title">Mochila XS</h3>
-                    <span class="product-price">$7650</span>
-                </div>
-                <div class="product-card">
-                    <img src="/img/products/Accesorios/rinonera.jpg" alt="Image">
-                    <h3 class="product-title">Riñonera S</h3>
-                    <span class="product-price">$5610</span>
-                </div>
+                <% result.forEach( function(elemento) {%>
+                  <div class="product-card">
+                      <img src="/img/products/<%= elemento.image %>" alt="Image">
+                      <h3 class="product-title"><%= elemento.name %></h3>
+                      <span class="product-price">$<%= elemento.price %></span>
+                  </div>
+                  <% })%>
             </div>
               
             </section>

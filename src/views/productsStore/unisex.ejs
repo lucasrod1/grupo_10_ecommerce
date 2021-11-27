@@ -40,56 +40,13 @@
             <section class="products">
 
               <div class="product-container">
-                <div class="product-card">
-                    <img src="/images/zapatoprueba1.jpg" alt="Image">
-                    <h3 class="product-title">Zapato 1</h3>
-                    <span class="product-price">$250</span>
-                </div>
-                <div class="product-card">
-                    <img src="/images/zapatoprueba1.jpg" alt="Image">
-                    <h3 class="product-title">Zapato 2</h3>
-                    <span class="product-price">$123</span>
-                </div>
-                <div class="product-card">
-                    <img src="/images/zapatoprueba1.jpg" alt="Image"> 
-                    <h3 class="product-title">Zapato 3</h3>
-                    <span class="product-price">$150</span>
-                </div>
-                <div class="product-card">
-                    <img src="/images/zapatoprueba1.jpg" alt="Image">
-                    <h3 class="product-title">Zapato 4</h3>
-                    <span class="product-price">$210</span>
-                </div>
-                <div class="product-card">
-                    <img src="/images/zapatoprueba1.jpg" alt="Image">
-                    <h3 class="product-title">Zapato 5</h3>
-                    <span class="product-price">$120</span>
-                </div>
-                <div class="product-card">
-                    <img src="/images/zapatoprueba1.jpg" alt="Image">
-                    <h3 class="product-title">Zapato 6</h3>
-                    <span class="product-price">$250</span>
-                </div>
-                <div class="product-card">
-                    <img src="/images/zapatoprueba1.jpg" alt="Image"> 
-                    <h3 class="product-title">Zapato 7</h3>
-                    <span class="product-price">$123</span>
-                </div>
-                <div class="product-card">
-                    <img src="/images/zapatoprueba1.jpg" alt="Image">
-                    <h3 class="product-title">Zapato 8</h3>
-                    <span class="product-price">$150</span>
-                </div>
-                <div class="product-card">
-                    <img src="/images/zapatoprueba1.jpg" alt="Image">
-                    <h3 class="product-title">Zapato 9</h3>
-                    <span class="product-price">$210</span>
-                </div>
-                <div class="product-card">
-                    <img src="/images/zapatoprueba1.jpg" alt="Image">
-                    <h3 class="product-title">Zapato 10</h3>
-                    <span class="product-price">$120</span>
-                </div>
+                <% result.forEach( function(elemento) {%>
+                  <div class="product-card">
+                      <img src="/img/products/<%= elemento.image %>" alt="Image">
+                      <h3 class="product-title"><%= elemento.name %></h3>
+                      <span class="product-price">$<%= elemento.price %></span>
+                  </div>
+                  <% })%>
             </div>
               
             </section>
