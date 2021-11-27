@@ -27,37 +27,102 @@
     border-radius: 10px;
 
 }
-.textoGrande{
+.text{
     color: #f2f2f2;
-    font-size: 20px;
+    font-size: 30px;
     padding: 8px 12px;
     position: absolute;
     bottom: 8px;
     width: 100%;
     text-align: center;
+    padding-bottom: 35px;
 }
 .descriptionMiddle {
     display: block;
-    width: 450px;
-    height: 150px;
-    line-height: 40px;
-    text-align: left;
-    margin-bottom: 60px;
-    margin-left: 45px;
-    font: bold;
-}
-
-.fabricando{
-    display: block;
-    margin: auto;
-}
-.listaPeq li{
-    display: flex;
-    box-sizing: border-box;
-    padding: 15px;
-    flex-wrap: wrap;
+    width: 50%;
+    margin: 50px auto 0px auto;
+    font-size: 18px;
+    line-height: 30px;
     text-align: center;
-    flex-direction: row;
+}
+.granContainer{
+    display: flex;
+    padding: 40px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 
 }
 
+.destacadoImagen{
+    height: 500px;
+    background-color: white;
+    border:1px solid;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.imagenCreacion{ 
+    width: 33%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.textoDos{
+    color: #464343;
+    font-size: 18px;
+    position: relative;
+    bottom: 3px;
+    width: 100%;
+    text-align: center;
+}
+.lista{
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    color: #464343;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 0.10; 
+}
+
+.texto3{
+    color: #464343;
+    font-size: 18px;
+    position: relative;
+    padding-top: 15px;
+    bottom: 3px;
+    width: 100%;
+    text-align: center;
+}
+.texto4{
+    color: #464343;
+    font-size: 18px;
+    padding-top: 15px;
+    font-style: italic;
+    position: relative;
+    bottom: 3px;
+    width: 100%;
+    text-align: center;
+    text-decoration-style: solid;
+}
+.destacadoContenedor{
+    display: flex;
+    padding: 40px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.destacadoImagen{
+height: 500px;
+background-color: white;
+border:1px solid;
+margin-bottom: 10px;
+border-radius: 10px;
+}
+
+.destacado{ 
+    width: 33%;
+    padding: 20px;
+    box-sizing: border-box;
+}
