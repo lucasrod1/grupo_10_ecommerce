@@ -5,6 +5,7 @@ const routeAbmProducto = require('./routes/routeAbmProducto.js');
 const mainRoute = require('./routes/mainRoute.js');
 const usersRoute = require('./routes/usersRoute.js');
 const apiRoute = require('./routes/apiRoute')
+const productsStore = require('./routes/productsStore');
 const session = require('express-session');
 const cookies = require('cookie-parser');
 
@@ -43,7 +44,8 @@ app.use(loginValidateApp)
 
 // Configuracion de rutas a sitio
 app.use('/', mainRoute);
-app.use('/products', routeAbmProducto)
+app.use('/products', routeAbmProducto);
+app.use('/productsStore', productsStore);
 app.use('/users', usersRoute)
 app.use('/api', apiRoute)
 
