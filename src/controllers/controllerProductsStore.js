@@ -1,14 +1,14 @@
 module.exports = {
     men: (req, res) => {
-        res.send("Hombre")
+        res.render('../views/productsStore/men.ejs')
     },
     woman: (req, res) => {
-        res.send("Woman")
+        res.render('../views/productsStore/woman.ejs')
     },
     unisex: (req, res) => {
-        res.send("Unisex")
+        res.render('../views/productsStore/unisex.ejs')
     },
-    kids: (req, res) => {
-        res.send("Niños")
+    accessories: (req, res) => {
+        res.render('../views/productsStore/accessories.ejs')
     }
 }

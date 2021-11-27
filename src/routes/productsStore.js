@@ -8,8 +8,8 @@ router.get('/men', controllerProductsStore.men);
 router.get('/men/:id', controllerProductsStore.men);
 router.get('/woman', controllerProductsStore.woman);
 router.get('/woman/:id', controllerProductsStore.woman);
-router.get('/kids', controllerProductsStore.kids);
-router.get('/kids/:id', controllerProductsStore.kids);
+router.get('/accessories', controllerProductsStore.accessories);
+router.get('/accessories/:id', controllerProductsStore.accessories);
 router.get('/unisex', controllerProductsStore.unisex);
 router.get('/unisex/:id', controllerProductsStore.unisex);
 
