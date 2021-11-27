@@ -1,6 +1,17 @@
+const db = require('../database/models')
+const Op = db.Sequelize.Op;
+
 module.exports = {
-    men: (req, res) => {
-        res.render('../views/productsStore/men.ejs')
+    men: async (req, res) => {
+        let productId = await db.Products.findAll({
+            where: { category_id: 2 }
+        });
+        console.log(productId)
+        let result = {
+            mensDefault: productId
+        }
+
+        res.render('../views/productsStore/men.ejs', { result })
     },
     woman: (req, res) => {
         res.render('../views/productsStore/woman.ejs')

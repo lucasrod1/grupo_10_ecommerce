@@ -45,7 +45,12 @@
                     <h3 class="product-title">Chambers</h3>
                     <span class="product-price">$9895</span>
                 </div>
-                <div class="product-card">
+                <div>
+                  <% result.mensDefault.forEach( function(elemento) {%>
+                    <p><%= elemento.Products.dataValues %></p>
+                  <% })%>
+                </div>
+                <!-- <div class="product-card">
                     <img src="/img/products/hombre/Cortland.jpg" alt="Image">
                     <h3 class="product-title">Cortland</h3>
                     <span class="product-price">$8995</span>
@@ -89,7 +94,7 @@
                     <img src="/img/products/hombre/barton.jpg" alt="Image">
                     <h3 class="product-title">Barton</h3>
                     <span class="product-price">$8995</span>
-                </div>
+                </div> -->
             </div>
               
             </section>
