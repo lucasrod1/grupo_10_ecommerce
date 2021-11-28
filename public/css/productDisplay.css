@@ -20,7 +20,7 @@ main{
     margin-top: 1.5%;
     margin-left: 3.6%;
 }
-h1 {
+main h1 {
     margin: 20px 0 10px;
     top: initial;
     font-weight: 500;
@@ -58,6 +58,13 @@ h1 {
     flex: 1 20%;
     text-align: center;
     margin-bottom: 25px;
+}
+.product-card:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.product-card {
+    transition: transform 0.5s ease 0s;
 }
 .product-card img {
     width: 80%;

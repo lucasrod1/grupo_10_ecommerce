@@ -39,11 +39,11 @@
             </nav>
             <section class="products">
               <div class="product-container">
-                <% result.forEach( function(elemento) {%>
+                <% result.forEach( function(product) {%>
                 <div class="product-card">
-                    <img src="/img/products/<%= elemento.image %>" alt="Image">
-                    <h3 class="product-title"><%= elemento.name %></h3>
-                    <span class="product-price">$<%= elemento.price %></span>
+                    <img src="/img/products/<%= product.image ? product.image : '/image/prodsinfoto.jpg' %>" alt="Imagen">
+                    <h3 class="product-title"><%= product.name %></h3>
+                    <span class="product-price">$<%= product.price %></span>
                 </div>
                 <% })%>
               </div>
