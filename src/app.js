@@ -12,7 +12,7 @@ const cookies = require('cookie-parser');
 const path = require('path');
 const app = express();
 const publicPath = path.join(__dirname, '../public');
-const port = 3000;
+const port = 3001;
 
 app.use(express.static(publicPath));
 
