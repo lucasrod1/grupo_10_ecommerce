@@ -28,7 +28,6 @@ module.exports = {
     },
     uniq: async (req, res) => {
         let product = await db.Products.findByPk(req.params.id)
-        console.log(product)
                 res.render('../views/detallesProducto.ejs', { product : product});
     },
 }
