@@ -13,7 +13,7 @@ router.get('/accessories/:id', controllerProductsStore.accessories);
 router.get('/unisex', controllerProductsStore.unisex);
 router.get('/unisex/:id', controllerProductsStore.unisex);
 
-
-
+//Product detail por ID:
+router.get('/detail/:id', controllerProductsStore.uniq);
 
 module.exports = router;

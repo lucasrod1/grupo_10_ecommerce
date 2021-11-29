@@ -42,7 +42,7 @@
               <div class="product-container">
                 <% result.forEach( function(elemento) {%>
                   <div class="product-card">
-                      <img src="/img/products/<%= elemento.image %>" alt="Image">
+                      <a href="/productsStore/detail/<%= elemento.id %>"><img src="/img/products/<%= elemento.image ? elemento.image : '/image/prodsinfoto.jpg' %>" alt="Imagen"></a>
                       <h3 class="product-title"><%= elemento.name %></h3>
                       <span class="product-price">$<%= elemento.price %></span>
                   </div>

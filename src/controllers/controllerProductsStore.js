@@ -25,5 +25,10 @@ module.exports = {
             where: { category_id: 5 }, raw: true
         });
         res.render('../views/productsStore/accessories.ejs', { result })
-    }
+    },
+    uniq: async (req, res) => {
+        let product = await db.Products.findByPk(req.params.id)
+        console.log(product)
+                res.render('../views/detallesProducto.ejs', { product : product});
+    },
 }
