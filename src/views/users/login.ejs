@@ -16,15 +16,17 @@
                     <div class="logIn">
                         <p class="infoLogIn">Si ya estas registrado en www.Old-Milano.com, solamente tienes que introducir tu e-mail y contraseña.</p><br>
                         <div>
-                        <% if(typeof errors != "undefined") { %>
-                        <ul>
-                            <% errors.forEach(function(error){ %>
-                                <li>
-                                    <%= error.msg %>
-                                </li>
-                            <% })%>
-                        </ul>
-                        <% } %>
+                        <div class="text-danger">
+                            <% if(typeof errors != "undefined") { %>
+                                <ul>
+                                <% errors.forEach(function(error){ %>
+                                    <li>
+                                        <%= error.msg %>
+                                    </li>
+                                <% })%>
+                                </ul>
+                            <% } %>
+                        </div>
                     </div>
                         <form action="/users/login" method="POST">
                         <input type="email" name="email" id="email" placeholder="*E-mail">

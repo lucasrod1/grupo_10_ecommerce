@@ -196,6 +196,7 @@ main input{
 }
 
 .text-danger{
+    text-align: center;
     color: #e20026 !important;
     font-size: 11px;
     margin-top: .25rem;
